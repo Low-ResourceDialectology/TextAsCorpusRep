@@ -1,0 +1,71 @@
+# Kurdish (Kurmanji) Website URLs
+# %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+## ??? Unclassified ???
+http://avestakurd.net/
+https://rojevakurd.com/
+https://www.koord.com/
+
+
+## News (All mixed together)
+https://vnexpress.net/tag/trang-web-118467
+
+
+## Education
+
+
+## Political
+
+
+## Social
+
+
+## Religious
+
+
+## Sports
+
+
+## Literary
+
+
+## Scientific
+
+
+## Other
+
+
+
+# Multilinual Website (Text in different languages, maybe via button)
+# %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+## Kurmanji + English
+
+
+## Kurmanji + Sorani
+
+
+
+# Not Kurdish (but maybe looked like it, or is about Kurdish)
+# %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+## Sorani (?)
+http://kurdistannet.info/sali2022/
+https://www.kurdistanpost.nu/
+https://www.kurdiu.org/ku/
+https://www.rojikurd.net/
+https://www.rojikurd.net/tv/
+
+## Arabic
+
+
+## English
+https://kurdistantribune.com/
+https://rojhelat.info/en/
+
+
+# No robots allowed
+# %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+https://www.rudaw.net/kurmanci
+

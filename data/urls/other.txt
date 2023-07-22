@@ -1,0 +1,40 @@
+# Other Website URLs
+# %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+## ??? Unclassified ???
+
+
+## German 
+### News
+https://www.tagesschau.de/
+
+
+## English 
+### News
+https://www.bbc.com/news/world
+
+
+
+
+# Multilinual Website (Text in different languages, maybe via button)
+# %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+## French + German
+https://www.evaneos.fr/ile-maurice/voyage/vocabulaire-de-survie/
+https://www.evaneos.de/ile-maurice/voyage/vocabulaire-de-survie/
+
+## French + English
+https://journals.openedition.org/eccs/1760
+https://journals.openedition.org/eccs/1760?lang=en
+
+https://journals.openedition.org/etudescreoles/729?lang=fr
+https://journals.openedition.org/etudescreoles/729#
+
+
+
+# No robots allowed
+# %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+

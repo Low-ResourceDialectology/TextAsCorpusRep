@@ -21,7 +21,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/christianschuler8989/TextAsCorpusRep">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="images/logo.png" alt="Logo" width="480" height="120">
   </a>
 
   <h3 align="center">TextAsCorpusRep</h3>

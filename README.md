@@ -27,7 +27,7 @@
   <h3 align="center">TextAsCorpusRep</h3>
 
   <p align="center">
-    Text As Corpus Repository for Multilingual Machine Translation of Low-Resource Languages
+    Multilingual Text As Corpus Repository for Machine Translation of Low-Resource Languages
     <br />
     <a href="https://github.com/christianschuler8989/TextAsCorpusRep/tree/main/docs"><strong>Explore the docs »</strong></a>
     <br />

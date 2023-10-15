@@ -1,0 +1,17 @@
+# Mosirien (Mauritian Creole) Additional Data
+# %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+2012_Rajki_deChazal_Diksyoner_Kreol_Morisyen.pdf
+	Diksyoner Kreol Morisyen
+	MAURITIAN-ENGLISH DICTIONARY
+		Compiled by Andras Rajki (2008)
+		Edited and published by Ahuv de Chazal (2012)
+- 387 pages of dictionary
+
+2012_Police-Michel_Carpooran_Florigny_Gramer_Kreol_Morisien.pdf
+	GRAMER KREOL MORISIEN - VOLIM I DOKIMAN REFERANS
+		Dr. Daniella Police-Michel,
+		Assoc. Prof. Arnaud Carpooran,
+		Dr. Guilhem Florigny
+- 171 pages of grammar rules
+

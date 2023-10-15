@@ -1,0 +1,11 @@
+# Other Openly Available Datasets
+# %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Low-resource-Machine-Translation → [[Ngo et al., 2022 - Synthetic Data]]
+→ An Efficient Method for Generating Synthetic Data for Low-Resource Machine Translation
+→ GitHub: https://github.com/ngovinhtn/Low-resource-Machine-Translation
+→ Data
+	→ English-Vietnamese: 231004+ sentences
+	→ French-Vietnamese: 203351+ sentences
+	→ Chinese-Vietnamese: 244076+ sentences
+	→ Japenese-Vietnamese: 244117+ sentences

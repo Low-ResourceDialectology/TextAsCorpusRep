@@ -4,9 +4,8 @@
 ## ??? Unclassified ???
 
 
-
 ## News (All mixed together)
-https://www.tagesschau.de/
+
 
 
 ## Education
@@ -31,19 +30,6 @@ https://www.tagesschau.de/
 
 
 ## Other
-
-
-# Multilinual Website (Text in different languages, maybe via button)
-# %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-## German + English
-
-
-
-
-
-# Not German (but maybe looked like it, or is about German)
-# %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 

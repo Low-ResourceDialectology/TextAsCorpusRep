@@ -1,0 +1,13 @@
+# Vietnamese Openly Available Datasets
+# %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+PhoMT→ [[Doan et al., 2021]]
+→ PhoMT: A High-Quality and Large-Scale Benchmark Dataset for Vietnamese-English Machine Translation
+→ GitHub: https://github.com/VinAIResearch/PhoMT
+	Redirecting to a Form to request the download, including agreement to
+		(1) to use PhoMT for research or educational purposes only, 
+		(2) to not distribute PhoMT or part of PhoMT in any original or modified form, 
+		(3) and to cite the EMNLP 2021 paper "PhoMT: A High-Quality and Large-Scale Benchmark Dataset for Vietnamese-English Machine Translation" whenever PhoMT is employed to help produce published results.
+→ Data
+	→ 3.02M sentence pairs
+

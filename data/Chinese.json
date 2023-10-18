@@ -1,0 +1,37 @@
+{
+	"Wikipedia":
+	{
+		"URL":"",
+		"Language codes":
+		{
+			"ISO 639-1":"",
+			"ISO 639-2":"",
+			"ISO 639-3":"",
+			"Glottolot":"",
+			"Linguasphere":"",
+		},
+		"Official status":
+		{
+			"Official language in":"",
+			"Recognized minority language in":[""],
+			"Regulated by":""
+		},
+		"Info":
+		{
+			"Name":[""],
+			"Pronunciation":[""],
+			"Native to":[""],
+			"Native speakers":[""],
+			"Language family":"",
+			"Early forms:":"",
+			"Dialects":
+			{
+			
+			},
+			"Writing system":[""]
+		}
+	}
+}
+
+
+

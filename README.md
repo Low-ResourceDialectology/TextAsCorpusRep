@@ -214,6 +214,7 @@ A list of helpful resources we would like to give credit to:
 [license-url]: https://github.com/christianschuler8989/TextAsCorpusRep/blob/main/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/christian-schuler-59090a177/
-[project-screenshot]: images/screenshot.png
+[project-screenshot]: images/screenshot2.png
+
 
 

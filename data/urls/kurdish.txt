@@ -1,7 +1,7 @@
 # Kurdish (Kurmanji) Website URLs
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-## ??? Unclassified ???
+## ? Unclassified ?
 http://avestakurd.net/
 https://rojevakurd.com/
 https://www.koord.com/

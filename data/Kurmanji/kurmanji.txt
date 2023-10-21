@@ -1,7 +1,7 @@
 # Kurdish (Kurmanji) Openly Available Datasets
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-- 2023AhmadiSouthernCorpus/
+- 2023AhmadiSouthernCorpus/ → [[Ahmadi et al., 2023 - Southern Kurdish and Laki]]
 Name: Language Identification of Kurdish & Zaza-Gorani Languages
 Authors: Ahmadi, Sina and Azin, Zahra and Belelli, Sara and Anastasopoulos, Antonios
 Description: Approaches to Corpus Creation for Low-Resource Language Technology: the Case of Southern Kurdish and Laki
@@ -12,53 +12,49 @@ Size:
 Note: Also contains data for Central Kurdish, Southern Kurdish, Gorani, Zazaki, Arabic, Persian and Turkish
 Access: git clone git@github.com:sinaahmadi/KurdishLID.git
 
-- 2022AhmadiInterdialect/
+- 2022AhmadiInterdialect/ → [[Ahmadi et al., 2022 - Kurdish Parallel Corpus]]
 Name: Kurdish Parallel Corpus
 Authors: Sina Ahmadi and Hossein Hassani and Daban Q. Jaff
 Description: A parallel corpus of Kurdish (Sorani and Kurmanji) and English
 URL: 
 Github: https://github.com/KurdishBLARK/InterdialectCorpus
-Content: 
-Size:
+Content: 12,327 Sorani-Kurmanji, 1,797 Kurmanji-English, 650 Sorani-English translation pairs
+Size: 34,90134,207 Kurmanji-English, 11,22011,855 Sorani-English, 205,382231,559 Sorani-Kurmanji Tokens
 Note:
 Access: git clone git@github.com:KurdishBLARK/InterdialectCorpus.git
 
-InterdialectCorpus → [[Ahmadi et al., 2022 - Kurdish Parallel Corpus]]
-→ Leveraging Multilingual News Websites for Building a Kurdish Parallel Corpus
-→ GitHub: https://github.com/KurdishBLARK/InterdialectCorpus
-→ Data
-	→ 34,90134,207 (Kurmanji English) 11,22011,855 (SoraniEnglish) 205,382231,559 (Sorani Kurmanji) Tokens
-	→ corpus contains (12,327 SoraniKurmanji) (1,797 KurmanjiEnglish) (650 SoraniEnglish) translation pairs
-	→ News articles from websites
+- 2020AhmadiKurdishTokenization/ → [[Ahmadi, 2020 - Kurdish Tokenization]]
+Name: Kurdish Tokenization 
+Authors: Sina Ahmadi
+Description: A Tokenization System for the Kurdish Language (Sorani & Kurmanji dialects)
+URL: 
+Github: https://github.com/sinaahmadi/KurdishTokenization
+Content: 9,970 Headwords and 1,507 lemmata for Kurmanji, 8,180 Headwords and 1,513 lemmata for Sorani
+Size: 
+Note: 
+Access: git clone git@github.com:sinaahmadi/KurdishTokenization.git
 
-KurdishTokenization → [[Ahmadi, 2020 - Kurdish Tokenization]]
-→ A Tokenization System for the Kurdish Language
-→ GitHub: https://github.com/sinaahmadi/KurdishTokenization
-→ Data
-	→ (9,970 Headwords for Kurmanji, and 1,507 lemmata) (8,180 Headwords, and 1,513 lemmata for Sorani)
-	→ 100 sentences
-	→ Used corpus FreeDicts, the Kurdish Wiktionary, Wîkîferheng. and lexicon Wergor of Sorani
+- 2013EsmailiPewan/ → [[Esmaili et al., 2013]] (Esmaili and Salavati published multiple works in the same year with very similar content)
+Name: pewan
+Authors: Kyumars Sheykh Esmaili, Shahin Salavati
+Description: 
+URL: 
+Github: https://github.com/klpp/pewan/
+Content: Northern Kurdish and Central Kurdish
+Size: 25,572 new articles = 127,272 words
+Note: 
+Access: git clone https://github.com/klpp/pewan/ → extract the **Pewan.zip** → then extract the **Kurmanji.zip**
 
-pewan → [[Esmaili et al., 2013]] x2
-→Building a Test Collection for Sorani Kurdish & Sorani Kurdish versus Kurmanji Kurdish: An empirical comparison
-→ GitHub: https://github.com/klpp/pewan/
-→ Data
-	→Sorani: 115340 news articles → 501054 words
-	→ Kurmanji: 25572 new articles → 127272 words
-
-KurdishMT → [[Ahmadi and Masoud, 2020 - Towards Kurdish MT]]
-→ Towards Machine Translation for the Kurdish Language
-→ GitHub: https://github.com/sinaahmadi/KurdishMT
-→ Data
-	→ **Parallel Corpora**
-		→ Tanzil corpus (Tiedemann, 2012) - 92,354 parallel sentences from the [Tanzil Project](http://tanzil.net)
-		→ [TED corpus](https://wit3.fbk.eu) (Cettolo et al., 2012) 
-		→ KurdNet (Aliabadi et al., 2014) - the Kurdish wordnet (parallel corpus?)
-	→ **Raw Corpora**
-		→ Pewan corpus containing 18M words (Esmaili et al., 2013)
-		→ the Kurdish Textbooks Corpus (KTC) containing 693,800 words (Abdulrahman et al., 2019)
-		→ Veisi et al’s corpus containing 8.1M words (Veisi et al., 2020) 
-		→ Sorani Kurdish folkloric lyrics corpus containing 49,582 words (Ahmadi et al., 2020a)
+- 2020AhmadiKurdishMachineTranslation → [[Ahmadi and Masoud, 2020 - Towards Kurdish MT]]
+Name: Kurdish Machine Translation
+Authors: Sina Ahmadi, Mariam Masoud
+Description: Towards Machine Translation for the Kurdish Language
+URL: https://arxiv.org/abs/2010.06041
+Github: https://github.com/sinaahmadi/KurdishMT#kurdish-machine-translation
+Content: 
+Size: 
+Note: This work used multiple datasets such as Tanzil (Tiedemann, 2012), TED (Cettolo et al., 2012), KurdNet (Aliabadi et al., 2014), Pewan (Esmaili et al., 2013), Kurdish Textbooks Corpus (Abdulrahman et al., 2019), Veisi (Veisi et al., 2020), Folkloric (Ahmadi et al., 2020a)
+Access: git clone git@github.com:sinaahmadi/KurdishMT.git
 
 
 

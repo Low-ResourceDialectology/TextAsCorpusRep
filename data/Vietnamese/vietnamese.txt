@@ -1,15 +1,28 @@
 # Vietnamese Openly Available Datasets
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-PhoMT→ [[Doan et al., 2021]]
-→ PhoMT: A High-Quality and Large-Scale Benchmark Dataset for Vietnamese-English Machine Translation
-→ GitHub: https://github.com/VinAIResearch/PhoMT
-	Redirecting to a Form to request the download, including agreement to
-		(1) to use PhoMT for research or educational purposes only, 
-		(2) to not distribute PhoMT or part of PhoMT in any original or modified form, 
-		(3) and to cite the EMNLP 2021 paper "PhoMT: A High-Quality and Large-Scale Benchmark Dataset for Vietnamese-English Machine Translation" whenever PhoMT is employed to help produce published results.
-→ Data
-	→ 3.02M sentence pairs
+- 2022NgoSynthetic → [[Ngo et al., 2022 - Synthetic Data]]
+Name: English - Vietnamese, French - Vietnamese, Chinese - Vietnamese and Japanese - Vietnamese bilingual corpus for Neural Machine Translation
+Authors: Ngo, Thi-Vinh and Nguyen, Phuong-Thai and Ha, Thanh-Le and Dinh, Khac-Quy and Nguyen, Le-Minh
+Description: The data is collected from TED talks.
+URL: https://www.tandfonline.com/doi/full/10.1080/08839514.2022.2101755 (Paper)
+Github: https://github.com/ngovinhtn/Low-resource-Machine-Translation
+Content: English-Vietnamese, French-Vietnamese, Chinese-Vietnamese, Japanese-Vietnamese sentence pairs
+Size: 223,825 Eng-Vie, 205,396 Fra-Vie, 246688 Zho-Vie, 245,905 Jap-Vie
+Note: This work collected bilingual datasets Chinese-Vietnamese, Japanese-Vietnamese from the TED Talks domain and release at 1. https://github.com/ngovinhtn/Low-resourceMachine-Translation.git 2. www.phontron.com/kytea/ 3. https://taku910.github.io/mecab/ 4. https://spacy.io/ 5. https://opus.nlpl.eu/CCAligned.php 6. https://github.com/quanpn90/NMTGMinor 7. https://github.com/google-research/bert 8. https://github.com/mjpost/sacrebleu 9. https://www.ted.com/talks 10. https://www2.nict.go.jp/astrec-att/member/mutiyama/ALT/ 11. https://github.com/fxsjy/jieba 12. https://github.com/moses-smt/mosesdecoder/tree/master/scripts
+Access: git clone git@github.com:ngovinhtn/Low-resource-Machine-Translation.git
+
+- 2021DoanPhoMT/ → [[Doan et al., 2021 - PhoMT Vietnamese-English]]
+Name: PhoMT: A High-Quality and Large-Scale Benchmark Dataset for Vietnamese-English Machine Translation
+Authors: Long Doan and Linh The Nguyen and Nguyen Luong Tran and Thai Hoang and Dat Quoc Nguyen
+Description: PhoMT is a high-quality and large-scale Vietnamese-English parallel dataset of 3.02M sentence pairs.
+URL: https://arxiv.org/abs/2110.12199 (Paper)
+Github: https://github.com/VinAIResearch/PhoMT#phomt-a-high-quality-and-large-scale-benchmark-dataset-for-vietnamese-english-machine-translation
+Content: Vietnamese and English sentence pairs
+Size: 3,020,000 pairs
+Note: 
+Access: Prior to download, this form has to be filled out: https://docs.google.com/forms/d/e/1FAIpQLSfShfLzQ3w9ErBc6sId55s83o9tOv2qz6zMd_6lNCD7n791NQ/viewform including agreement to (1) to use PhoMT for research or educational purposes only, (2) to not distribute PhoMT or part of PhoMT in any original or modified form, (3) and to cite the EMNLP 2021 paper "PhoMT: A High-Quality and Large-Scale Benchmark Dataset for Vietnamese-English Machine Translation" whenever PhoMT is employed to help produce published results.
+
 
 
 # Vietnamese Additional Data

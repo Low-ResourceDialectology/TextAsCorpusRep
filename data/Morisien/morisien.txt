@@ -1,7 +1,7 @@
 # Mosirien (Mauritian Creole) Openly Available Datasets
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-- 2022DabreMorisienMT/
+- 2022DabreMorisienMT/ → [[Dabre and Sukhoo, 2022 - MorisienMT]] & [[Dabre and Sukhoo, 2022a]]
 Name: KreolMorisienMT 
 Authors: (Dabre and Sukhoo, 2022) & (Dabre and Sukhoo, 2022a)
 Desciption: A Dataset for Mauritian Creole Machine Translation & MorisienMT: A Dataset for Mauritian Creole Machine Translation

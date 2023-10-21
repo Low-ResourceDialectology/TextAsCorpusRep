@@ -1,0 +1,46 @@
+
+# Chinese
+
+
+# English
+
+
+# French
+
+
+# German
+
+
+# Kobani
+
+
+# Kurmanji
+
+
+# Morisien
+pdftotext 2012_Police-Michel_Carpooran_Florigny_Gramer_Kreol_Morisien.pdf 2012_Police-Michel_Carpooran_Florigny_Gramer_Kreol_Morisien.txt
+
+pdftotext 2012_Rajki_deChazal_Diksyoner_Kreol_Morisyen.pdf 2012_Rajki_deChazal_Diksyoner_Kreol_Morisyen.txt
+
+
+
+# Ukrainian
+
+
+# Vietnamese
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

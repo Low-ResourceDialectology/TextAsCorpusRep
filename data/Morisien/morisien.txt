@@ -1,3 +1,56 @@
+# Mosirien (Mauritian Creole) Openly Available Datasets
+# %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+- 2022DabreMorisienMT/
+Name: KreolMorisienMT 
+Authors: (Dabre and Sukhoo, 2022) & (Dabre and Sukhoo, 2022a)
+Desciption: A Dataset for Mauritian Creole Machine Translation & MorisienMT: A Dataset for Mauritian Creole Machine Translation
+URL: https://huggingface.co/datasets/prajdabre/KreolMorisienMT
+Github: https://github.com/prajdabre/KreolMorisienNLG
+Content:
+Size: ?? Tokens
+Note:
+
+##### → Morisia-App as APK-file  !!! DOES NOT WORK :(
+To run APK-files (Android-Applications like the Morisia-App for the Smartphone)
+###### Installation via snap [URL](https://techpiezo.com/linux/install-anbox-in-ubuntu-22-04/)
+`sudo snap install --devmode --beta anbox
+###### Run Anbox
+`anbox session-manager
+→ In new tab run
+`anbox.appmgr
+
+
+
+
+# Mosirien (Mauritian Creole) Additional Data
+# %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+- 2012_Rajki_deChazal_Diksyoner_Kreol_Morisyen.pdf
+Name: Diksyoner Kreol Morisyen
+Authors: Compiled by Andras Rajki (2008) Edited and published by Ahuv de Chazal (2012)
+Description: MAURITIAN-ENGLISH DICTIONARY
+URL: 
+Github:
+Content: Morisien and English
+Size: 387 pages of dictionary
+Note:
+
+- 2012_Police-Michel_Carpooran_Florigny_Gramer_Kreol_Morisien.pdf
+Name: GRAMER KREOL MORISIEN - VOLIM I DOKIMAN REFERANS
+Authors: Dr. Daniella Police-Michel, Assoc. Prof. Arnaud Carpooran, Dr. Guilhem Florigny
+Description: 
+URL: 
+Github:
+Content: Morisien
+Size: 171 pages of grammar rules
+Note: Many errors
+
+
+
+
+
+
+
 # Morisien Website URLs
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -42,8 +95,8 @@ https://www.amazon.de/-/en/Iloe/dp/2919300164
 https://www.amazon.de/Assimil-Multilingual-conversation-mauricien-Conversation/dp/2700506618/ref=d_pd_sim_sccl_2_1/261-4761866-9120734?pd_rd_w=HjG1a&content-id=amzn1.sym.fe386e47-e363-4643-b76f-199f77bdc577&pf_rd_p=fe386e47-e363-4643-b76f-199f77bdc577&pf_rd_r=3AXV25XYJ1G093QH2THC&pd_rd_wg=btHJ1&pd_rd_r=f287b395-129a-4973-a6fa-e107024845c1&pd_rd_i=2700506618&psc=1
 https://www.amazon.de/Mon-premier-imagier-bilingue-Mauricien/dp/2733860682/ref=d_pd_sim_sccl_1_1/261-4761866-9120734?pd_rd_w=G5tIo&content-id=amzn1.sym.fe386e47-e363-4643-b76f-199f77bdc577&pf_rd_p=fe386e47-e363-4643-b76f-199f77bdc577&pf_rd_r=VMCP1J5AC82QAWA079C9&pd_rd_wg=y1Mid&pd_rd_r=12a145ce-8fb0-490c-a1e9-1c987c824513&pd_rd_i=2733860682&psc=1
 
+
 # Multilinual Website (Text in different languages, maybe via button)
-# %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 ## Morisien + English
 
@@ -53,7 +106,6 @@ https://www.amazon.de/Mon-premier-imagier-bilingue-Mauricien/dp/2733860682/ref=d
 
 
 # Not Morisien (but maybe looked like it, or is about Morisien)
-# %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 ## French
 https://www.researchgate.net/publication/272434800_Se-ki_en_creole_mauricien
@@ -62,6 +114,8 @@ https://langues-romanes.uoh.univ-montp3.fr/content/le-creole-mauricien
 
 
 # No robots allowed
-# %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
 
 

@@ -1,0 +1,58 @@
+# Russian Openly Available Datasets
+# %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+# Russian Additional Data
+# %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+# Russian Website URLs
+# %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+## ??? Unclassified ???
+
+
+
+## News (All mixed together)
+
+
+
+## Education
+
+
+## Political
+
+
+## Social
+
+
+## Religious
+
+
+## Sports
+
+
+## Literary
+
+
+## Scientific
+
+
+## Other
+
+
+# Multilinual Website (Text in different languages, maybe via button)
+
+## Russian + English
+
+
+
+# Not Russian (but maybe looked like it, or is about Russian)
+
+
+
+# No robots allowed
+
+

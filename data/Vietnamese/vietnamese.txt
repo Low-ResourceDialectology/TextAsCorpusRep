@@ -1,5 +1,20 @@
+# Vietnamese Openly Available Datasets
+# %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+PhoMT→ [[Doan et al., 2021]]
+→ PhoMT: A High-Quality and Large-Scale Benchmark Dataset for Vietnamese-English Machine Translation
+→ GitHub: https://github.com/VinAIResearch/PhoMT
+	Redirecting to a Form to request the download, including agreement to
+		(1) to use PhoMT for research or educational purposes only, 
+		(2) to not distribute PhoMT or part of PhoMT in any original or modified form, 
+		(3) and to cite the EMNLP 2021 paper "PhoMT: A High-Quality and Large-Scale Benchmark Dataset for Vietnamese-English Machine Translation" whenever PhoMT is employed to help produce published results.
+→ Data
+	→ 3.02M sentence pairs
+
+
 # Vietnamese Additional Data
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 2019_Tran_Easy_Vietnamese.pdf
 - 195 pages
@@ -55,19 +70,69 @@ https://tve-4u.org/attachments/he-mien-dich-daniel-m-davis-epub.94918/
 
 
 
+# Vietnamese Website URLs
+# %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+## ??? Unclassified ???
+https://bizfly.vn/techblog/cac-trang-web-pho-bien-nhat-viet-nam.html
+https://nhanh.vn/nhung-trang-web-viet-nam-duoc-yeu-thich-nhat-hien-nay-n57128.html
+https://nhanhoa.com/tin-tuc/trang-web-truy-cap-nhieu-nhat-viet-nam.html
+https://soha.vn/
+https://thanhnien.vn/
+
+
+## News (All mixed together)
+https://vnexpress.net/tag/trang-web-118467
+https://www.bbc.com/vietnamese/topics/cz74k4z574gt
+
+
+## Education
+https://giaoduc.net.vn/
+https://moet.gov.vn/Pages/home.aspx
+
+
+## Political
 
 
 
+## Social
+
+
+## Religious
+
+
+## Sports
+https://thethao247.vn/
+
+## Literary
+https://metaisach.com/
+https://tve-4u.org/
+## free books
+https://capsachvo.substack.com/
+
+
+## Scientific
+https://khoahoc.tv/
+
+
+## Other
+
+
+# Multilinual Website (Text in different languages, maybe via button)
+
+## Vietnamese + English
+
+
+## Vietnamese + Chinese
 
 
 
+# Not Vietnamese (but maybe looked like it, or is about Vietnamese)
+
+## Chinese
 
 
-
-
-
-
-
+# No robots allowed
 
 
 

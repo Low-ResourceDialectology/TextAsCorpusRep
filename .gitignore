@@ -1,5 +1,7 @@
 Additional/
 Datasets/
 Urls/
+Temp/
+Corpus/
 
-
+nltk_data/

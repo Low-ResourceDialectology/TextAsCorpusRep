@@ -1,0 +1,184 @@
+# Kurdish (Kurmanji) Openly Available Datasets
+# %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+- 2023AhmadiSouthernCorpus/
+Name: Language Identification of Kurdish & Zaza-Gorani Languages
+Authors: Ahmadi, Sina and Azin, Zahra and Belelli, Sara and Anastasopoulos, Antonios
+Description: Approaches to Corpus Creation for Low-Resource Language Technology: the Case of Southern Kurdish and Laki
+URL: 
+Github: https://github.com/sinaahmadi/KurdishLID/tree/main
+Content: 2400 lines of Kurmanji text in latin script and also in arabic script
+Size: 
+Note: Also contains data for Central Kurdish, Southern Kurdish, Gorani, Zazaki, Arabic, Persian and Turkish
+Access: git clone git@github.com:sinaahmadi/KurdishLID.git
+
+- 2022AhmadiInterdialect/
+Name: Kurdish Parallel Corpus
+Authors: Sina Ahmadi and Hossein Hassani and Daban Q. Jaff
+Description: A parallel corpus of Kurdish (Sorani and Kurmanji) and English
+URL: 
+Github: https://github.com/KurdishBLARK/InterdialectCorpus
+Content: 
+Size:
+Note:
+Access: git clone git@github.com:KurdishBLARK/InterdialectCorpus.git
+
+InterdialectCorpus → [[Ahmadi et al., 2022 - Kurdish Parallel Corpus]]
+→ Leveraging Multilingual News Websites for Building a Kurdish Parallel Corpus
+→ GitHub: https://github.com/KurdishBLARK/InterdialectCorpus
+→ Data
+	→ 34,90134,207 (Kurmanji English) 11,22011,855 (SoraniEnglish) 205,382231,559 (Sorani Kurmanji) Tokens
+	→ corpus contains (12,327 SoraniKurmanji) (1,797 KurmanjiEnglish) (650 SoraniEnglish) translation pairs
+	→ News articles from websites
+
+KurdishTokenization → [[Ahmadi, 2020 - Kurdish Tokenization]]
+→ A Tokenization System for the Kurdish Language
+→ GitHub: https://github.com/sinaahmadi/KurdishTokenization
+→ Data
+	→ (9,970 Headwords for Kurmanji, and 1,507 lemmata) (8,180 Headwords, and 1,513 lemmata for Sorani)
+	→ 100 sentences
+	→ Used corpus FreeDicts, the Kurdish Wiktionary, Wîkîferheng. and lexicon Wergor of Sorani
+
+pewan → [[Esmaili et al., 2013]] x2
+→Building a Test Collection for Sorani Kurdish & Sorani Kurdish versus Kurmanji Kurdish: An empirical comparison
+→ GitHub: https://github.com/klpp/pewan/
+→ Data
+	→Sorani: 115340 news articles → 501054 words
+	→ Kurmanji: 25572 new articles → 127272 words
+
+KurdishMT → [[Ahmadi and Masoud, 2020 - Towards Kurdish MT]]
+→ Towards Machine Translation for the Kurdish Language
+→ GitHub: https://github.com/sinaahmadi/KurdishMT
+→ Data
+	→ **Parallel Corpora**
+		→ Tanzil corpus (Tiedemann, 2012) - 92,354 parallel sentences from the [Tanzil Project](http://tanzil.net)
+		→ [TED corpus](https://wit3.fbk.eu) (Cettolo et al., 2012) 
+		→ KurdNet (Aliabadi et al., 2014) - the Kurdish wordnet (parallel corpus?)
+	→ **Raw Corpora**
+		→ Pewan corpus containing 18M words (Esmaili et al., 2013)
+		→ the Kurdish Textbooks Corpus (KTC) containing 693,800 words (Abdulrahman et al., 2019)
+		→ Veisi et al’s corpus containing 8.1M words (Veisi et al., 2020) 
+		→ Sorani Kurdish folkloric lyrics corpus containing 49,582 words (Ahmadi et al., 2020a)
+
+
+
+# Kurdish (Kurmanji) Additional Data
+# %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+2008_Kurmanji_Kurdish_For_The_Beginners.pdf
+	Harvard Faculty of Arts and Sciences
+	Zaningeha Kurdistane Ya Azad
+	Uppsala Universitet
+- 149 pages of lessons
+
+
+2000_Paul_Kurdisch_Wort_fuer_Wort.pdf
+	Kurdisch - Wort für Wort
+	Kauderwelsch Band 94
+		Ludwig Paul
+- 212 pages of lessons
+
+1996_Rizgar_Learn_Kurdish.pdf
+	Learn Kurdish - A Multi-level course in Kurmanji
+		Baran Rizgar
+- 153 pages of lessons
+
+
+
+# Kurdish (Kurmanji) Website URLs
+# %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+## ??? Unclassified ???
+http://avestakurd.net/
+https://rojevakurd.com/
+https://www.koord.com/
+
+
+## News (All mixed together)
+https://vnexpress.net/tag/trang-web-118467
+https://amidakurd.net/
+https://bergehname.wordpress.com/?wref=bif
+https://www.bernamegeh.org/
+
+## TV channels/radios websites (offer multipel languages: Kurdish, Arabic, English, Persian ect.)
+https://www.kurdistan24.net/kmr
+https://www.rudaw.net/kurmanci
+https://www.dengiamerika.com/
+
+
+## Education
+https://zimannas.wordpress.com/
+
+## Political
+
+
+## Social
+
+
+## Religious
+
+
+## Sports
+
+
+## Literary
+https://www.helbestakurdi.com/
+https://diyarname.com/
+
+
+## Scientific
+
+
+## Technology
+http://linux.ferheng.org/ubuntu2.html
+https://ku.wikipedia.org/wiki/Pergala_xebitandin%C3%AA
+
+## Other
+https://tirsik.net/xerhati.php
+
+
+# Multilinual Website (Text in different languages, maybe via button)
+https://firatnews.com/
+https://hawarnews.com/ar/
+http://www.lotikxane.com/
+https://xwebun.de/
+
+
+## Kurmanji
+http://avestakurd.net/
+https://dengeazad.blogspot.com/
+http://www.nefel.com/
+http://www.netewe.com/
+https://www.rewanbej.com/
+
+## Kurmanji + English
+
+
+## Kurmanji + Sorani
+
+## Wikipedia
+https://ku.wikipedia.org/w/index.php?title=Destp%C3%AAk&variant=ku
+
+# Not Kurdish (but maybe looked like it, or is about Kurdish)
+
+## Sorani (?)
+http://kurdistannet.info/sali2022/
+https://www.kurdistanpost.nu/
+https://www.kurdiu.org/ku/
+https://www.rojikurd.net/
+https://www.rojikurd.net/tv/
+https://mewdamedia.com/
+
+## Arabic
+
+
+## English
+https://kurdistantribune.com/
+https://rojhelat.info/en/
+
+
+# No robots allowed
+
+
+

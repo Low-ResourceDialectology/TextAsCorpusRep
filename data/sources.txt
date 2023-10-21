@@ -1,0 +1,329 @@
+# Chinese
+## Datasets
+- DIRECTORYorFILE
+Name: 
+Authors: 
+Description: 
+URL: 
+Github:
+Content:
+Size:
+Note:
+Access: 
+
+## Additional
+- DIRECTORYorFILE
+Name: 
+Authors: 
+Description: 
+URL: 
+Github:
+Content:
+Size:
+Note:
+Access: 
+
+# English
+## Datasets
+- DIRECTORYorFILE
+Name: 
+Authors: 
+Description: 
+URL: 
+Github:
+Content:
+Size:
+Note:
+Access: 
+
+## Additional
+- DIRECTORYorFILE
+Name: 
+Authors: 
+Description: 
+URL: 
+Github:
+Content:
+Size:
+Note:
+Access: 
+
+# French
+## Datasets
+- DIRECTORYorFILE
+Name: 
+Authors: 
+Description: 
+URL: 
+Github:
+Content:
+Size:
+Note:
+Access: 
+
+## Additional
+- DIRECTORYorFILE
+Name: 
+Authors: 
+Description: 
+URL: 
+Github:
+Content:
+Size:
+Note:
+Access: 
+
+# German
+## Datasets
+- DIRECTORYorFILE
+Name: 
+Authors: 
+Description: 
+URL: 
+Github:
+Content:
+Size:
+Note:
+Access: 
+
+
+Ger-Fre - freedict-deu-fra-2022.11.18.dictd - https://freedict.org/downloads/#gnu/linux
+Ger-Eng - freedict-deu-eng-1.9-fd1.dictd - https://freedict.org/downloads/#gnu/linux
+Ger-Kur - freedict-deu-kur-0.2.2.dictd - https://freedict.org/downloads/#gnu/linux
+
+## Additional
+- DIRECTORYorFILE/
+Name: 
+Authors: 
+Description: 
+URL: 
+Github:
+Content:
+Size:
+Note:
+Access: 
+
+
+
+# Kobani
+## Datasets
+- DIRECTORYorFILE
+Name: 
+Authors: 
+Description: 
+URL: 
+Github:
+Content:
+Size:
+Note:
+Access: 
+
+## Additional
+- DIRECTORYorFILE
+Name: 
+Authors: 
+Description: 
+URL: 
+Github:
+Content:
+Size:
+Note:
+Access: 
+
+
+# Kurmanji
+## Datasets
+- 2023AhmadiSouthernCorpus/
+Name: Language Identification of Kurdish & Zaza-Gorani Languages
+Authors: Ahmadi, Sina and Azin, Zahra and Belelli, Sara and Anastasopoulos, Antonios
+Description: Approaches to Corpus Creation for Low-Resource Language Technology: the Case of Southern Kurdish and Laki
+URL: 
+Github: https://github.com/sinaahmadi/KurdishLID/tree/main
+Content: 2400 lines of Kurmanji text in latin script and also in arabic script
+Size: 
+Note: Also contains data for Central Kurdish, Southern Kurdish, Gorani, Zazaki, Arabic, Persian and Turkish
+Access: git clone git@github.com:sinaahmadi/KurdishLID.git
+
+- DIRECTORYorFILE/
+Name: 
+Authors: 
+Description: 
+URL: 
+Github:
+Content:
+Size:
+Note:
+Access: 
+
+
+## Additional
+- DIRECTORYorFILE/
+Name: 
+Authors: 
+Description: 
+URL: 
+Github:
+Content:
+Size:
+Note:
+Access: 
+
+
+
+
+# Morisien
+## Datasets
+- 2022DabreMorisienMT/
+Name: KreolMorisienMT 
+Authors: (Dabre and Sukhoo, 2022) & (Dabre and Sukhoo, 2022a)
+Desciption: A Dataset for Mauritian Creole Machine Translation & MorisienMT: A Dataset for Mauritian Creole Machine Translation
+URL: https://huggingface.co/datasets/prajdabre/KreolMorisienMT
+Github: https://github.com/prajdabre/KreolMorisienNLG
+Content: 45363 lines of Morisien text; 23310 lines of English-Morisien text; 16739 lines of French-Morisien text
+Size:
+Note:
+Access: Simple Download
+
+- DIRECTORYorFILE/
+Name: 
+Authors: 
+Description: 
+URL: 
+Github:
+Content:
+Size:
+Note:
+Access: 
+
+
+## Additional
+- 2012_Rajki_deChazal_Diksyoner_Kreol_Morisyen.pdf
+Name: Diksyoner Kreol Morisyen
+Authors: Compiled by Andras Rajki (2008) Edited and published by Ahuv de Chazal (2012)
+Description: MAURITIAN-ENGLISH DICTIONARY
+URL: 
+Github:
+Content: Morisien and English
+Size: 387 pages of dictionary
+Note:
+Access: Simple Download
+
+- 2012_Police-Michel_Carpooran_Florigny_Gramer_Kreol_Morisien.pdf
+Name: GRAMER KREOL MORISIEN - VOLIM I DOKIMAN REFERANS
+Authors: Dr. Daniella Police-Michel, Assoc. Prof. Arnaud Carpooran, Dr. Guilhem Florigny
+Description: 
+URL: 
+Github:
+Content: Morisien
+Size: 171 pages of grammar rules
+Note: Many errors
+Access: Simple Download
+
+- DIRECTORYorFILE/
+Name: 
+Authors: 
+Description: 
+URL: 
+Github:
+Content:
+Size:
+Note:
+Access: 
+
+
+# Russian
+## Datasets
+- DIRECTORYorFILE
+Name: 
+Authors: 
+Description: 
+URL: 
+Github:
+Content:
+Size:
+Note:
+Access: 
+
+## Additional
+- DIRECTORYorFILE
+Name: 
+Authors: 
+Description: 
+URL: 
+Github:
+Content:
+Size:
+Note:
+Access: 
+
+
+
+# Ukrainian
+## Datasets
+- DIRECTORYorFILE
+Name: 
+Authors: 
+Description: 
+URL: 
+Github:
+Content:
+Size:
+Note:
+Access: 
+
+## Additional
+- DIRECTORYorFILE
+Name: 
+Authors: 
+Description: 
+URL: 
+Github:
+Content:
+Size:
+Note:
+Access: 
+
+
+# Vietnamese
+## Datasets
+- DIRECTORYorFILE/
+Name: 
+Authors: 
+Description: 
+URL: 
+Github:
+Content:
+Size:
+Note:
+Access: 
+
+
+## Additional
+- DIRECTORYorFILE/
+Name: 
+Authors: 
+Description: 
+URL: 
+Github:
+Content:
+Size:
+Note:
+Access: 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

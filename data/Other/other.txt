@@ -1,3 +1,24 @@
+# Other Openly Available Datasets
+# %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Low-resource-Machine-Translation → [[Ngo et al., 2022 - Synthetic Data]]
+→ An Efficient Method for Generating Synthetic Data for Low-Resource Machine Translation
+→ GitHub: https://github.com/ngovinhtn/Low-resource-Machine-Translation
+→ Data
+	→ English-Vietnamese: 231004+ sentences
+	→ French-Vietnamese: 203351+ sentences
+	→ Chinese-Vietnamese: 244076+ sentences
+	→ Japenese-Vietnamese: 244117+ sentences
+
+
+
+
+# Other Additional Data
+# %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
 # Other Website URLs
 # %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -12,7 +33,6 @@ https://www.bbc.com/news/world
 
 
 # Multilinual Website (Text in different languages, maybe via button)
-# %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 ## French + German
 https://www.evaneos.fr/ile-maurice/voyage/vocabulaire-de-survie/
@@ -28,7 +48,6 @@ https://journals.openedition.org/etudescreoles/729#
 
 
 # No robots allowed
-# %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 

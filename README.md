@@ -178,7 +178,7 @@ Christian Schuler - [@christians89898](https://twitter.com/christians89898) - ch
 
 Deepesha Saurty - 
 
-Tramy Thi Tran - 
+Tramy Thi Tran - [@TranyMyy] - tramy.thi.tran@studium.uni-hamburg.de
 
 Raman Ahmed - 
 

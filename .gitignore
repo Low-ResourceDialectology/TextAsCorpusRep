@@ -7,4 +7,6 @@ Corpus/
 datasets/
 preprocessed/
 
+venvTextAsCorpusRep/
+
 nltk_data/

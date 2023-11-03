@@ -4,4 +4,7 @@ Urls/
 Temp/
 Corpus/
 
+datasets/
+preprocessed/
+
 nltk_data/

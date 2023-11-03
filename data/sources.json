@@ -1,0 +1,23 @@
+{
+    "datasets":
+    {
+        "2023AhmadiSouthernCorpus": 
+        {
+            "Publication":"Ahmadi et al., 2023 - Southern Kurdish and Laki",
+            "Name":"Language Identification of Kurdish & Zaza-Gorani Languages",
+            "Authors":"Ahmadi, Sina and Azin, Zahra and Belelli, Sara and An-astasopoulos, Antonios",
+            "Description":"Approaches to Corpus Creation for Low-Resource Language Technology: the Case of Southern Kurdish and Laki",
+            "URL":"",
+            "Github":"https://github.com/sinaahmadi/KurdishLID/tree/main",
+            "Content":"2400 lines of Kurmanji text in latin script and also in arabic script",
+            "Size":"",
+            "Use":"2400 lines of Kurmanji text in latin",
+            "License":"MIT License [URL](https://github.com/sinaahmadi/KurdishLID/blob/main/LICENSE)",
+            "Note":"Also contains data for Central Kurdish, Southern Kurdish, Gorani, Zazaki, Arabic, Persian and Turkish",
+            "Access":"git clone git@github.com:sinaahmadi/KurdishLID.git"
+        }  
+    }
+
+}
+
+

@@ -85,7 +85,7 @@ The project targets native speakers, language experts, and language technology p
 
 ### Built With
 
-List of major frameworks/libraries used to bootstrap this project.
+List of major frameworks/libraries used/considered to bootstrap this project.
 
 * BeautifulSoup
 * Scrapy
@@ -100,10 +100,85 @@ List of major frameworks/libraries used to bootstrap this project.
 
 
 
+## Getting Started
+<!-- GETTING STARTED -->
+To get a local copy up and running follow these simple steps.
+
+### Prerequisites
+* You need a Python installation (tested with: 3.11.5 on macOS & 3.10.9 on Ubuntu)
+  - For how to install Python on Windoof refer to: [Using Python on Windows](https://docs.python.org/3.10/using/windows.html)
+  - For how to install Python on macOS refer to: [Using Python on a Mac](https://docs.python.org/3.10/using/mac.html)
+  - For how to install Python on Linux refer to: The person who introduced you to Linux, and please tell them "The Lannisters send their regards!" (or go to [Using Python on Unix platforms](https://docs.python.org/3.10/using/unix.html))
+* You need to use a terminal (at least once ;) )
+For more information about how to work with a terminal, refer to [Microsoft's Guide](https://learn.microsoft.com/en-us/windows/terminal/install) for Windoof, [Apple's Guide](https://support.apple.com/de-de/guide/terminal/apd5265185d-f365-44cb-8b09-71a064a42125/2.12/mac/11.0) for macOS, and [Ubuntu's Guide](https://ubuntu.com/tutorials/command-line-for-beginners#1-overview) for Linux systems.
+
+
+### Installation
+Create a directory for the corpus and all your projects to be saved in.
+For this description we will call it "MyAwesomeDirectory"
+Then navigate into this directory and open the terminal from within it.
+
+1. Clone this repository to get a local copy on your system:
+Execute the following lines inside of your terminal.
+   ```console
+   git clone git@github.com:Low-ResourceDialectology/TextAsCorpusRep.git
+   ```
+2. (Optional, but recommended) Create a virtual environment:
+   1. (If not yet installed) Install python venv:
+   ```console
+   python3 -m pip install virtualenv
+   ```
+   or alternatively (at least on Ubuntu) via:
+   ```console
+   apt install python3.10-venv
+   ```
+   2. Create an environment named "venvTextAsCorpusRep"
+   ```console
+   python -m venv venvTextAsCorpusRep
+   ```
+   3. Activate the virtual environment every time before starting work
+   ```console
+   source venvTextAsCorpusRep/bin/activate
+   ```
+3. Navigate into the cloned corpus-directory named "TextAsCorpusRep", so you end up
+   ```console
+   cd TextAsCorpusRep
+   ```
+   Assuming you cloned the repository into your "/Home/Download/" directory, you would type
+   ```console
+   cd /Home/Download/MyAwesomeDirectory/TextAsCorpusRep
+   ```
+4. Install the requirements:
+   ```console
+   python -m pip install -r requirements.txt
+   ```
+5. Start with collecting the data (then continue in <a href="#usage">Usage</a> section below):
+   ```console
+   python collecting_data.py
+   ```
+
+
+
 <!-- USAGE -->
 ## Usage
 
 TODO: How to explore/read/use the corpus data.
+
+
+### (First steps) on Ubuntu 22.04
+
+
+### (First steps) on Windows 10
+
+
+### (First steps) on Mac
+
+
+### Continuing for any operating system
+
+
+
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -113,7 +188,7 @@ TODO: How to explore/read/use the corpus data.
 ## Roadmap
 
 - [x] Set up this Repository
-- [ ] Prior Exploration of Available Data Sets
+- [x] Prior Exploration of Available Data Sets
 - [ ] Phase 1: Initial Data Acquisition
     - [ ] Web Crawling and Scraping
         - [ ] Language specific (News-) Websites

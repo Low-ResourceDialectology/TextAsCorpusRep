@@ -2,4 +2,4 @@ nltk
 beautifulsoup4
 lxml
 pandas
-
+GitPython

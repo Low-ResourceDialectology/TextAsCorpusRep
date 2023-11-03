@@ -25,7 +25,7 @@ def main(languages):
 	######################
 	# Some datasets are monolingual, but many contain multiple languages and to prevent duplicates,
 	# storing will be centralized for the original data.
-	collected_data_path = './../data/datasets/'
+	collected_data_path = './../data/data_datasets/'
 
 	# Lists of directories based on available data from online sources by language
 	## These are currently managed manually.

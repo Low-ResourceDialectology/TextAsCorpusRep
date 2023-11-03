@@ -4,8 +4,9 @@ Urls/
 Temp/
 Corpus/
 
-datasets/
-preprocessed/
+data_datasets/
+data_preprocessed/
+data_explored/
 
 venvTextAsCorpusRep/
 

@@ -101,8 +101,8 @@ def main(languages):
 		print("Start preprocessing for languages: "+str(languages)) # Debugging
 		
 		# Path to directory containing collected datasets and output directory
-		datasets_path = "./../data/datasets/"
-		preprocessed_path = './../data/preprocessed/'
+		datasets_path = "./../data/data_datasets/"
+		preprocessed_path = './../data/data_preprocessed/'
 
 		# If the directory does not already exist
 		if not os.path.exists(preprocessed_path):

@@ -106,7 +106,7 @@ def main():
 	def data_exploring(languages, explore=False):
 		if explore:
 			print("Calling explore_data.py script.")
-			explore_data.main(languages)
+			explore_data.main()
 			return
 
 	mode_corpus()

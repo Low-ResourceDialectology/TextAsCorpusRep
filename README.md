@@ -251,7 +251,7 @@ Distributed under the Apache License. See `LICENSE.txt` for more information.
 
 Christian Schuler - [@christians89898](https://twitter.com/christians89898) - christianschuler8989(4T)gmail.com
 
-Deepesha Saurty - 
+Deepesha Saurty - deepesha.saurty@studium.uni-hamburg.de
 
 Tramy Thi Tran - [@TranyMyy](https://github.com/TranMyy) - tramy.thi.tran@studium.uni-hamburg.de
 

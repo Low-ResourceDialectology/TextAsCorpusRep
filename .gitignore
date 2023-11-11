@@ -8,6 +8,10 @@ data_datasets/
 data_preprocessed/
 data_explored/
 
+applications/
+*.pyc
+
+
 venvTextAsCorpusRep/
 
 nltk_data/

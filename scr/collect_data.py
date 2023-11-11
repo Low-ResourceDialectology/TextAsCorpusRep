@@ -10,7 +10,7 @@
 
 import os
 import shutil
-from git import Repo
+#from git import Repo
 
 """
 Data collection script.

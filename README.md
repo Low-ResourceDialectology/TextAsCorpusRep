@@ -152,9 +152,9 @@ Execute the following lines inside of your terminal.
    ```console
    python -m pip install -r requirements.txt
    ```
-5. Start with collecting the data (then continue in <a href="#usage">Usage</a> section below):
+5. Usage is managed via the main.py script (continue in <a href="#usage">Usage</a> section below):
    ```console
-   python collecting_data.py
+   python main.py -MODE_TO_OPERATE -l LANGUAGE_A LANGUAGE_B LANGUAGE_C
    ```
 
 
@@ -164,18 +164,28 @@ Execute the following lines inside of your terminal.
 
 TODO: How to explore/read/use the corpus data.
 
-
 ### (First steps) on Ubuntu 22.04
-
 
 ### (First steps) on Windows 10
 
-
 ### (First steps) on Mac
-
 
 ### Continuing for any operating system
 
+### Collect datasets
+```console
+python main.py -c -l ger kur mor ukr vie
+```
+
+### Preprocess collected data
+```console
+python main.py -p -l ger kur mor ukr vie
+```
+
+### Explore collected and preprocessed data
+```console
+python main.py -e -l ger kur mor ukr vie
+```
 
 
 

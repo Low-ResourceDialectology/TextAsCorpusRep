@@ -89,6 +89,7 @@ def main():
             # Increase the dataset_counter for the next file
             dataset_counter = dataset_counter + 1
 
+    # TODO: Create directory prior to execution in order to create the json-file
     # Writing to sample.json
     with open(explored_path+'datasets_basic.json', "w") as outfile:
         outfile.write(json_object)

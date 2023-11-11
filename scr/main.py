@@ -20,7 +20,7 @@ source venvTextAsCorpusRep/bin/activate
 python -m pip install -r requirements.txt 
 
 4. Use of this script:
-python3 main.py -c -l ger kur mor ukr vie
+python main.py -c -l ger kur mor ukr vie
 """
 
 import os

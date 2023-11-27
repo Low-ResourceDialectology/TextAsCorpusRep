@@ -7,6 +7,8 @@ Corpus/
 data_datasets/
 data_preprocessed/
 data_explored/
+data_normalized/
+data_aligned/
 
 applications/
 *.pyc

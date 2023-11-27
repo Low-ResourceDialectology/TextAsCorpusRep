@@ -37,6 +37,9 @@ def main():
 	info_mor_kur = info_path + 'aligned_mor_eng_kur.txt'					# Marking aligned text lines (mor-kur)
 	info_mor_all = info_path + 'aligned_mor_all.txt'						# Marking aligned text lines (mor-all)
 
+	aligned_mor_all = aligned_path + 'aligned_mor_all.txt'					# Aligned text lines (mor-all)
+	aligned_mor_all_unique = aligned_path + 'aligned_mor_all_unique.txt'	# Aligned text lines (mor-all)
+
 	# If the directory does not already exist
 	if not os.path.exists(info_path):
 		# Create the directory
@@ -212,7 +215,24 @@ def main():
 				file.write(str(line))
 
 
-	extract_aligned_sentences()
+	#extract_aligned_sentences()
+
+
+	"""
+	Quick fix to remove duplicate text lines in aligned info_file
+	Following: https://stackoverflow.com/questions/66986719/how-to-remove-duplicate-lines-of-a-huge-file-in-python
+	Working with hash to be able to handle even very large files
+	"""
+	def remove_duplicate_lines(input_file, output_file):
+		seen = set()
+		with open(input_file, 'r') as fin, open(output_file, 'w') as fout:
+			for line in fin:
+				h = hash(line)
+				if h not in seen:
+					fout.write(line)
+					seen.add(h)
+
+	remove_duplicate_lines(aligned_mor_all, aligned_mor_all_unique)
 
 
 if __name__ == "__main__":

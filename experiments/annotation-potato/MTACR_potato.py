@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Python Script for working with this corpus
+# Python Script for annotations via potato
 # 
 # Authors: Christian "Doofnase" Schuler, 
 #          Deepesah "Tania" Saurty, 
@@ -8,19 +8,45 @@
 #          Anran "Echo" Wang
 ###############################################################################
 
+""" Sources:
+Potato: the POrtable Text Annotation TOol: https://github.com/davidjurgens/potato#potato-the-portable-text-annotation-tool
+NLLB-Seed Machine Translation Data version 2: https://github.com/openlanguagedata/seed/blob/main/seed/eng_Latn
 """
-User-Guide:
- 1. Prior to first start create a virtual environment named venvTextAsCorpusRep via
-python -m venv venvTextAsCorpusRep
 
- 2. Then activate this environment via
-source venvTextAsCorpusRep/bin/activate
+""" User-Guide:
+ 0. Open a terminal and navigate to your desired directory:
+cd PATH_TO_DIRECTORY/TextAsCorpusRep/experiments/annotation-potato
+( cd /media/QereqolaXebate/CrazyProjects/DDLitLab-TextAsCorpusRep/TextAsCorpusRep/experiments/annotation-potato )
 
- 3. Install the required python packages via
-python -m pip install -r requirements.txt 
+ 1. Clone the github repository to your computer:
+git clone git@github.com:davidjurgens/potato.git
+( alternatively: git clone https://github.com/davidjurgens/potato.git )
 
-4. Use of this script:
-python main.py -c -l ger kur mor ukr vie
+ 2. Prior to first start create a virtual environment named venvPotato via
+python -m venv venvPotato
+(you might have to use python3 instead of python)
+
+ 3. Then activate this environment via
+source venvPotato/bin/activate
+
+ 4. Install the required python packages via
+pip install -r ./potato/requirements.txt
+(you might have to use pip3 instead of pip)
+
+ 5. To check installation, run a simple check-box style annotation on text data via
+python potato/flask_server.py start project-hub/simple_examples/configs/simple-check-box.yaml -p 8000
+
+This will launch the webserver on port 8000 which can be accessed via a webbrowser at 
+http://localhost:8000
+
+ 6. Start our annotation experiment via
+python potato/potato/flask_server.py start MTACR-december/MTACR-textbox.yaml -p 8000
+
+TODO 7. Use of this script via
+python MTACR_potato.py
+
+
+
 """
 
 import os
@@ -31,18 +57,7 @@ import preprocess_data
 import explore_data
 
 """
-Input parameters for this script and selection of different target languages:
-'-c', '--collect'
-'-p', '--preprocess'
-'-e', '--explore' (default?)
-'-l', '--languages'
 
-Included target languages;
-	Chinese: "zho", 	English "eng", 
-	French "fra", 		German "ger", 
-	Kobani "kob", 		Kurmanji "kur", 
-	Morisien "mor",		Russian "rus",
-	Ukrainian "ukr", 	Vietnamese "vie"
 """
 def main():
 	parser = argparse.ArgumentParser(

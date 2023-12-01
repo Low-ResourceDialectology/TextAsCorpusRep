@@ -13,6 +13,8 @@ data_aligned/
 applications/
 *.pyc
 
+experiments/annotation-potato/venvPotato/
+experiments/annotation-potato/potato/
 
 venvTextAsCorpusRep/
 

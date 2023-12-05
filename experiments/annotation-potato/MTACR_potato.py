@@ -34,13 +34,21 @@ pip install -r ./potato/requirements.txt
 (you might have to use pip3 instead of pip)
 
  5. To check installation, run a simple check-box style annotation on text data via
-python potato/flask_server.py start project-hub/simple_examples/configs/simple-check-box.yaml -p 8000
+python potato/potato/flask_server.py start potato/project-hub/simple_examples/configs/simple-check-box.yaml -p 8000
 
 This will launch the webserver on port 8000 which can be accessed via a webbrowser at 
 http://localhost:8000
+→ Username: doof@doof  → Password: 555nase
 
  6. Start our annotation experiment via
+ 6.1 Simple translation test
 python potato/potato/flask_server.py start MTACR-december/MTACR-textbox.yaml -p 8000
+ 6.2 Translate 12 sentences
+python potato/potato/flask_server.py start MTACR-annotation_suite/MTACR-12-trans.yaml -p 8000
+ 6.3 POS-Tag 12 sentences
+python potato/potato/flask_server.py start MTACR-annotation_suite/MTACR-12-pos.yaml -p 8000
+
+ → each of them should be found at:  http://localhost:8000
 
 TODO 7. Use of this script via
 python MTACR_potato.py

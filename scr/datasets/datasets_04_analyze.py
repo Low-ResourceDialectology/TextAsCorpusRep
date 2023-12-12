@@ -1,5 +1,3 @@
-# Moved to datasets_04_analyze.py
-
 # -*- coding: utf-8 -*-
 # Python Script for exploring collected text data
 # 

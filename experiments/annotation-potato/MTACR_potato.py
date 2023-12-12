@@ -10,6 +10,7 @@
 
 """ Sources:
 Potato: the POrtable Text Annotation TOol: https://github.com/davidjurgens/potato#potato-the-portable-text-annotation-tool
+Potato Documentation: https://potato-annotation.readthedocs.io/en/latest/
 NLLB-Seed Machine Translation Data version 2: https://github.com/openlanguagedata/seed/blob/main/seed/eng_Latn
 """
 

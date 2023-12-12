@@ -1,4 +1,13 @@
-# Moved to datasets_05_sort.py
+# -*- coding: utf-8 -*-
+# Python Script to sort data by "Word vs. Sentence" and "Mono- vs.  Bi- vs. Multi-lingual"
+# 
+# Authors: Christian "Doofnase" Schuler, 
+#          Deepesah "Tania" Saurty, 
+#          Tramy Thi "Myy" Tran, 
+#          Raman "Brudi" Ahmad, 
+#          Anran "Echo" Wang
+################################################################################
+
 
 # -*- coding: utf-8 -*-
 # Python Script for finding aligned text lines in collected data

@@ -17,6 +17,8 @@ applications/
 
 experiments/annotation-potato/venvPotato/
 experiments/annotation-potato/potato/
+experiments/embeddings_sentenceBERT/
+experiments/parsing_NLTK/
 
 venvTextAsCorpusRep/
 

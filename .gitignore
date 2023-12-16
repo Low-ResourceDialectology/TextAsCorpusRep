@@ -6,6 +6,7 @@ Urls/
 Temp/
 Corpus/
 
+data/datasets/
 data_datasets/
 data_preprocessed/
 data_explored/

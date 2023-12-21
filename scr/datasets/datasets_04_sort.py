@@ -100,8 +100,9 @@ def main(languages, inputPath, outputPath, dataset_list):
                 #
                 # Monolingual vs. Bilingual → Bilingual
                 #
-                else:
+                elif f_basename != f_ending:
 
+                    logging.debug(f'  Sorting bilingual data for: {f_basename} and {f_ending}')
                     sort_path_bili = sort_path + 'Bilingual/'
                     util.create_directory(sort_path_bili)
 
@@ -138,6 +139,8 @@ def main(languages, inputPath, outputPath, dataset_list):
                     # utils.write_text_file(output_file, text_words)
                     # or
                     # write_text_file_lines(output_file, text_words)
+                else:
+                    logging.debug(f'  Filename not properly formated: {text_file}')
        
 
     # ===========================================

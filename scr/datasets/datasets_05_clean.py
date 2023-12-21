@@ -56,7 +56,7 @@ def main(languages, inputPath, outputPath, dataset_list):
                     # Checking if it is a file
                     if os.path.isfile(text_file):
                                 
-                        logging.debug(f'    Sorting: {text_file}')
+                        #logging.debug(f'    Sorting: {text_file}')
 
                         f_basename = util.get_basename(text_file)
                         f_ending = util.get_fileending(text_file)
@@ -70,9 +70,15 @@ def main(languages, inputPath, outputPath, dataset_list):
 
                         for line in text_data:
 
-                            # Remove punctuation at end of word
-                            word = util.remove_punctuation_end(line.replace("\n", ""))
-                            text_words.append(word)
+                            # Only process non-empty lines
+                            if util.check_for_non_empty_string(line.replace("\n", "")):
+
+                                # Remove punctuation at end of word
+                                word = util.remove_punctuation_end(line.replace("\n", ""))
+                                text_words.append(word)
+
+                            else:
+                                pass
                         
                         util.write_text_file_lines(clean_path_mono_words+f'{f_basename}.{f_ending}', text_words)
 
@@ -91,7 +97,7 @@ def main(languages, inputPath, outputPath, dataset_list):
                     # Checking if it is a file
                     if os.path.isfile(text_file):
                                 
-                        logging.debug(f'    Sorting: {text_file}')
+                        #logging.debug(f'    Sorting: {text_file}')
 
                         f_basename = util.get_basename(text_file)
                         f_ending = util.get_fileending(text_file)
@@ -110,6 +116,9 @@ def main(languages, inputPath, outputPath, dataset_list):
                             #text_sents.append(sent)
                             text_sents.append(line.replace("\n", ""))
                         
+                        #print(f'Some lines from text_sents: {text_sents[0:3]}')
+                        #print(f'target for cleaned sents: {clean_path_mono_sents}{f_basename}.{f_ending}')
+                        
                         util.write_text_file_lines(clean_path_mono_sents+f'{f_basename}.{f_ending}', text_sents)
 
 
@@ -117,6 +126,10 @@ def main(languages, inputPath, outputPath, dataset_list):
     # BILINGUAL
     # ===========================================
     def clean_bilingual(sort_path, clean_path):
+        
+        # Create directory if not existing
+        util.create_directory(clean_path)
+
         #
         # Check for bilingual data directories
         #
@@ -127,23 +140,23 @@ def main(languages, inputPath, outputPath, dataset_list):
             #
             if os.path.isdir(sort_path+'Bilingual/Words'):
                 
-                sort_path_mono_words = sort_path+'Bilingual/Words/'
+                sort_path_bili_words = sort_path+'Bilingual/Words/'
 
                 # For each file in the directory
-                for filename in os.listdir(sort_path_mono_words):
+                for filename in os.listdir(sort_path_bili_words):
                     # Combine the directory path with the filename
-                    text_file = os.path.join(sort_path_mono_words, filename)
+                    text_file = os.path.join(sort_path_bili_words, filename)
                     
                     # Checking if it is a file
                     if os.path.isfile(text_file):
                                 
-                        logging.debug(f'    Sorting: {text_file}')
+                        #logging.debug(f'    Sorting: {text_file}')
 
                         f_basename = util.get_basename(text_file)
                         f_ending = util.get_fileending(text_file)
 
-                        clean_path_mono_words = clean_path + 'Bilingual/Words/'
-                        util.create_directory(clean_path_mono_words)
+                        clean_path_bili_words = clean_path + 'Bilingual/Words/'
+                        util.create_directory(clean_path_bili_words)
 
                         text_words = []
 
@@ -151,35 +164,38 @@ def main(languages, inputPath, outputPath, dataset_list):
 
                         for line in text_data:
 
-                            # Remove punctuation at end of word
-                            #print(type(line)) → <class 'str'>
-                            word = util.remove_punctuation_end(line.replace("\n", ""))
-                            text_words.append(word)
+                            # Only process non-empty lines
+                            if util.check_for_non_empty_string(line.replace("\n", "")):
+
+                                # Remove punctuation at end of word
+                                #print(type(line)) → <class 'str'>
+                                word = util.remove_punctuation_end(line.replace("\n", ""))
+                                text_words.append(word)
                         
-                        util.write_text_file_lines(clean_path_mono_words+f'{f_basename}.{f_ending}', text_words)
+                        util.write_text_file_lines(clean_path_bili_words+f'{f_basename}.{f_ending}', text_words)
 
             #
             # Check for sentences data directories
             #
             if os.path.isdir(sort_path+'Bilingual/Sentences'):
                 
-                sort_path_mono_sents = sort_path+'Bilingual/Sentences/'
+                sort_path_bili_sents = sort_path+'Bilingual/Sentences/'
 
                 # For each file in the directory
-                for filename in os.listdir(sort_path_mono_sents):
+                for filename in os.listdir(sort_path_bili_sents):
                     # Combine the directory path with the filename
-                    text_file = os.path.join(sort_path_mono_sents, filename)
+                    text_file = os.path.join(sort_path_bili_sents, filename)
                     
                     # Checking if it is a file
                     if os.path.isfile(text_file):
                                 
-                        logging.debug(f'    Sorting: {text_file}')
+                        #logging.debug(f'    Sorting: {text_file}')
 
                         f_basename = util.get_basename(text_file)
                         f_ending = util.get_fileending(text_file)
 
-                        clean_path_mono_sents = clean_path + 'Bilingual/Sentences/'
-                        util.create_directory(clean_path_mono_sents)
+                        clean_path_bili_sents = clean_path + 'Bilingual/Sentences/'
+                        util.create_directory(clean_path_bili_sents)
 
                         text_sents = []
 
@@ -192,7 +208,9 @@ def main(languages, inputPath, outputPath, dataset_list):
                             #text_sents.append(sent)
                             text_sents.append(line.replace("\n", ""))
                         
-                        util.write_text_file_lines(sort_path_mono_sents+f'{f_basename}.{f_ending}', text_sents)
+                        #print(f'Some lines from text_sents: {text_sents[0:3]}')
+                        #print(f'target for cleaned sents: {clean_path_bili_sents}{f_basename}.{f_ending}')
+                        util.write_text_file_lines(clean_path_bili_sents+f'{f_basename}.{f_ending}', text_sents)
 
 
     # ===========================================

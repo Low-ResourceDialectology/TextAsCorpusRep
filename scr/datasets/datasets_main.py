@@ -17,38 +17,59 @@ cd /media/QereqolaXebate/CrazyProjects/DDLitLab-TextAsCorpusRep/TextAsCorpusRep/
 # Activate virtual environment
 source ./../../../venvTextAsCorpusRep/bin/activate
 
+# Install requirements
+pip install -r ./../../requirements.txt
+
 # ============================================
 # Step 00 - Run script for dataset preperation
-python datasets_main.py --outputPath ./../../data/datasets/ --infoPath ./../../data/datasets/ \
-    --languages mor kmr vie --prepare -v
+python datasets_main.py --prepare -v \
+    --infoPath ./../../data/datasets/ --inputPath ./../../data/datasets/ --outputPath ./../../data/datasets/ \
+    --languages mor
 
 # Step 01 - Run script for dataset download
-python datasets_main.py --inputPath ./../../data/datasets/ --outputPath ./../../data/datasets/ \
-    --languages mor kmr vie --prepare --download -v
+python datasets_main.py --prepare --download -v \
+    --infoPath ./../../data/datasets/ --inputPath ./../../data/datasets/ --outputPath ./../../data/datasets/ \
+    --languages mor 
 
 # Step 02 - Run script for dataset transform
-python datasets_main.py --inputPath ./../../data/datasets/ --outputPath ./../../data/datasets/ \
-    --languages mor kmr vie --transform -v
+python datasets_main.py --prepare --transform -v \
+    --infoPath ./../../data/datasets/ --inputPath ./../../data/datasets/ --outputPath ./../../data/datasets/ \
+    --languages mor 
 
 # Step 03 - Run script for dataset analysis
-TODO
+python datasets_main.py --analyze -v \
+    --infoPath ./../../data/datasets/ --inputPath ./../../data/datasets/ --outputPath ./../../data/datasets/ \
+    --languages mor 
 
 # Step 04 - Run script for dataset sorting
-python datasets_main.py --inputPath ./../../data/datasets/ --outputPath ./../../data/datasets/ \
-    --languages mor kmr vie --sort -v
+python datasets_main.py --prepare --sort -v \
+    --infoPath ./../../data/datasets/ --inputPath ./../../data/datasets/ --outputPath ./../../data/datasets/ \
+    --languages mor
 
 # Step 05 - Run script for dataset cleaning
-python datasets_main.py --inputPath ./../../data/datasets/ --outputPath ./../../data/datasets/ \
-    --languages mor kmr vie --clean -v
+python datasets_main.py --prepare --clean -v \
+    --infoPath ./../../data/datasets/ --inputPath ./../../data/datasets/ --outputPath ./../../data/datasets/ \
+    --languages mor
 
 # Step 06 - Run script for dataset aggregation
-python datasets_main.py --inputPath ./../../data/datasets/ --outputPath ./../../data/datasets/ \
-    --languages mor kmr vie --aggregate -v
+python datasets_main.py --prepare --aggregate -v \
+    --infoPath ./../../data/datasets/ --inputPath ./../../data/datasets/ --outputPath ./../../data/datasets/ \
+    --languages mor kmr vie 
 
 # Step 07 - Run script for dataset processing
 
 # Step 08 - Run script for dataset evaluation
 
+# =====================================================================
+# Munich-Quick-Fix for processing pdfs and text from website
+Create directories:
+    /01_download/2023BoukieBanane_txt/
+    /01_download/2023BoukieBanane_pdf/
+and move the corresponding files into them.
+
+python datasets_main.py --temporary -v \
+    --infoPath ./../../data/datasets/ --inputPath ./../../data/datasets/ --outputPath ./../../data/datasets/ \
+    --languages mor 
 
 
 
@@ -63,7 +84,6 @@ import os
 import sys
 import textwrap
 
-# pip install datasets
 
 import datasets_00_prepare as ds_prep
 """ 
@@ -111,6 +131,10 @@ import datasets_08_evaluate as ds_eval
 
 """
 
+import datasets_09_temporary as ds_temp
+""" 
+Temporary solution to process pdf files and crawled text from website.
+"""
 
 """ Check for input path to be valid directory """
 def dir_path(string):
@@ -153,25 +177,20 @@ def main(args, loglevel):
     # Dictionaries to hold information that might be used "globally" in multiple scripts.
     # 
     language_info = {}
+    """ Format:
+    language_info = 
+    """
+
     dataset_info = {}
-    dataset_list = []
-    
-
-    """
-    # List of datasets to be processed (based on provided arguments)
-    #dataset_list = ['2022DabreMorisienMT', '2022AhmadiInterdialect', '2017LuongNMT']
-    dataset_list = []
-
-    if 'mor' in language_list:
-        dataset_list.append('2022DabreMorisienMT')
-    if 'kmr' in language_list:
-        dataset_list.append('2022AhmadiInterdialect')
-    if 'vie' in language_list:
-        dataset_list.append('2017LuongNMT')
-
-    logger.debug(f'dataset_list: {dataset_list}')
+    """ Format:
+    dataset_info = 
     """
     
+    dataset_list = []
+    """ Format:
+    dataset_list = ['2022DabreMorisienMT', '2022AhmadiInterdialect', '2017LuongNMT']
+    """
+
 
     """
     Script execution based on input arguments
@@ -183,7 +202,7 @@ def main(args, loglevel):
         if args.prepare:
             logging.info("Start preperation.")
 
-            info_path = args.inputPath+'00_prepare/'
+            info_path = args.infoPath+'00_prepare/'
 
             ds_prep.create_dirs_for_lang(args.outputPath)
 
@@ -237,7 +256,7 @@ def main(args, loglevel):
         if args.analyze:
             logging.info("Start analysis.")
 
-            ds_anal.main(args.languages)
+            ds_anal.main(args.languages, args.inputPath, args.outputPath, dataset_list)
 
         #
         # SORT
@@ -288,6 +307,14 @@ def main(args, loglevel):
 
             ds_eval.main(args.languages)
 
+        #
+        # TEMPORARY
+        # 
+        if args.temporary:
+            logging.info("Start temporary solution for PDFs and text from website.")
+
+            ds_temp.main(args.languages, args.inputPath, args.outputPath, dataset_list)
+
         #else:
         #    logging.info("No suitable mode provided.")
 
@@ -327,6 +354,7 @@ if __name__ == "__main__":
     parser.add_argument('--aggregate', action="store_true", help='')
     parser.add_argument('--process', action="store_true", help='')
     parser.add_argument('--evaluate', action="store_true", help='')
+    parser.add_argument('--temporary', action="store_true", help='')
     
     args = parser.parse_args()
     

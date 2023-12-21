@@ -2,5 +2,7 @@ nltk
 beautifulsoup4
 lxml
 pandas
+datasets
 huggingface_hub
 fasttext
+PyPDF2

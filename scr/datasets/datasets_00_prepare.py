@@ -30,7 +30,7 @@ def create_dirs_for_lang(output_path):
     logging.debug(f'output_path: {output_path}')
 
     # List of dirs to be created for each language
-    list_of_dirs = ['01_download', '02_transform', '03_analyze', '04_sort', '05_clean', '06_aggregate', '07_process', '08_evaluate']
+    list_of_dirs = ['00_prepare', '01_download', '02_transform', '03_analyze', '04_sort', '05_clean', '06_aggregate', '07_process', '08_evaluate']
     for dir in list_of_dirs:
     
         new_dir = output_path+dir
@@ -41,6 +41,26 @@ def create_dirs_for_lang(output_path):
 
 """
 Get information about datasets from provided json file.
+
+Format of dataset_information.json
+{
+    "Datasets":
+    {
+        "2022DabreMorisienMT":
+        {
+            "language":"mor",
+            "source":"huggingface",
+            "id":"prajdabre/KreolMorisienMT",
+            ...
+        },
+        "2022AhmadiInterdialect":
+        {
+            ...
+        }
+    }
+}
+
+
 """
 def read_dataset_information(info_path):
 

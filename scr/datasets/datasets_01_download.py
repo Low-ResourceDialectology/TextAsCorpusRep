@@ -84,8 +84,6 @@ def main(languages, output_path, datasets):
             dataset.save_to_disk(f'{dataset_path}/{dataset_key}')
         #dataset = load_dataset('squad', split='train', cache_dir="PATH/TO/MY/CACHE/DIR")
 
-        
-
     """
 
     """
@@ -102,7 +100,7 @@ def main(languages, output_path, datasets):
                     "2022DabreMorisienMT":
                     {
                         "language":"mor", 
-                         "id":"prajdabre/KreolMorisienMT",
+                        "id":"prajdabre/KreolMorisienMT",
                         "source":"huggingface"
                     }
                 }

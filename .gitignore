@@ -21,6 +21,10 @@ experiments/annotation-potato/potato/
 experiments/embeddings_sentenceBERT/
 experiments/parsing_NLTK/
 
+experiments/analyze_text_data/data/combined/
+experiments/analyze_text_data/data/intermediate/
+experiments/analyze_text_data/data/models/
+
 venvTextAsCorpusRep/
 
 nltk_data/

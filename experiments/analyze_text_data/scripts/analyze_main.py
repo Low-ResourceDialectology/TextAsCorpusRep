@@ -47,6 +47,12 @@ python analyze_main.py --inputPath ./../data/ --analTC --scriptMode sortIdentifi
 # the text lines can be alphabetically sorted and cleaned (TODO: make cleaning optional or mandatory?)
 python analyze_main.py --inputPath ./../data/ --analTC --scriptMode sortAlphabetically -v
 
+# TODO
+# python analyze_main.py --inputPath ./../data/ --analTC --scriptMode cleanData -v
+
+# Count sentences and words of collected text data per language
+python analyze_main.py --inputPath ./../data/ --analTC --scriptMode countData -v
+
 
 
 """

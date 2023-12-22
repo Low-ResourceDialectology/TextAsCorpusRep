@@ -540,6 +540,157 @@ def main(input_path, script_mode):
 			for sentence in text_lines_sorted:
 				outfile.write(sentence+'\n')
 
+	# ===========================================
+	# Morisien - CLEAN SENTENCES UP
+	# ===========================================
+	def clean_data(input_path, filename, language):
+
+		current_file_in = input_path+filename
+		text_lines_identified = util.read_text_file(current_file_in)
+
+		# TODO
+
+	# ===========================================
+	# By Language - COUNT SENTENCES & COUNT WORDS
+	# ===========================================
+	def count_text_data(input_path, filenames, intermediate_seednllb, output_path, dataset_language, dataset_name):
+
+		# Create directory if not existing
+		util.create_directory(output_path)
+		current_filename = util.get_basename(input_path+dataset_name)
+
+		text_content = []
+		# Collect all text from all files into "text_content"
+		for filename in filenames:
+			current_file_in = input_path+filename
+			text_lines = util.read_text_file(current_file_in)
+			for line in text_lines:
+				text_content.append(line)
+		# → text_content = [ from_file_one, from_file_two, ... ]
+
+		#
+		# Still containing duplicates in the data
+		#
+		# Count text lines
+		number_textlines = len(text_content)
+
+		"""
+		# TODO: Handling multiple input files AND single input files
+		if not dataset_name == "NLLB Seed":
+			# Turn text into sentences
+			all_text_one_string = ""
+			for line in text_content:
+				for string in line:
+					all_text_one_string + string
+
+			sentences_all = util.split_text_into_sentences(all_text_one_string)
+		else:
+			sentences_all = text_content
+		"""
+		sentences_all = text_content
+
+		# Count sentences
+		number_sentences = len(sentences_all)
+		
+		"""
+		# Count words (first attempt)
+		# This does not make sense... But why?
+		number_words_all = 0
+		words_all_unique = []
+		for sent in sentences_all:
+			for word in sent:
+				number_words_all += 1
+				if not word in words_all_unique:
+					words_all_unique.append(word)
+		# → 876015 words and only 208 unique words?!?!
+		"""
+		# Build frequency dictionary (just for counting words . . .)
+		word_frequency_dictionary = {}
+		for sent in sentences_all:
+			for word in sent.split():
+				if word not in word_frequency_dictionary:
+					word_frequency_dictionary[word] = 1
+				elif word in word_frequency_dictionary:
+					word_frequency_dictionary[word] += 1
+
+		# Count words
+		number_words_all = 0
+		for word in word_frequency_dictionary:
+			number_words_all += word_frequency_dictionary[word]
+
+		# Count unique words
+		number_words_all_unique = len(word_frequency_dictionary)
+
+		#
+		# Now without any duplicated data
+		#
+		# Count unique text lines in unique data
+		unique_textlines = []
+		for text_line in text_content:
+			if not text_line in unique_textlines:
+				unique_textlines.append(text_line)
+
+		number_textlines_unique = len(unique_textlines)
+
+		# Count unique sentences in unique data
+		unique_sentences = []
+		for sentence in sentences_all:
+			if not sentence in unique_sentences:
+				unique_sentences.append(sentence)
+		
+		number_sentences_unique = len(unique_sentences)
+
+		# Build frequency dictionary 
+		word_frequency_dictionary_unique = {}
+		for sent in unique_sentences:
+			for word in sent.split():
+				if word not in word_frequency_dictionary_unique:
+					word_frequency_dictionary_unique[word] = 1
+				elif word in word_frequency_dictionary_unique:
+					word_frequency_dictionary_unique[word] += 1
+
+		# Sort frequency dictionary 
+		sorted_word_frequency_dictionary_unique = sorted(word_frequency_dictionary_unique.items(), key=lambda x:x[1], reverse = True)
+		sorted_word_frequency_dictionary_unique = dict(sorted_word_frequency_dictionary_unique)
+
+		# Count words in unique data
+		unique_number_words = 0
+		for word in sorted_word_frequency_dictionary_unique:
+			unique_number_words += sorted_word_frequency_dictionary_unique[word]
+
+		# Count unique words in unique data
+		unique_number_words_unique = len(sorted_word_frequency_dictionary_unique) # Number of items in this dict is number of unique words
+		
+		# Serializing json
+		json_object = json.dumps(sorted_word_frequency_dictionary_unique, indent=4)
+		
+		# Writing to sample.json
+		with open(f'{intermediate_seednllb}{current_filename}-word_frequency_dictionary.json', "w") as outfile:
+			outfile.write(json_object)
+		
+		
+
+		metadata = {
+			"Dataset Name":dataset_name,
+			"Dataset Language":dataset_language,
+			"Number of Lines":number_textlines,
+			"Number of Sentences":number_sentences,
+			"Number of Words (with duplicate sentences)":number_words_all,
+			"Number of unique Words (with duplicate sentences)":number_words_all_unique,
+			"Number of unique Lines":number_textlines_unique,
+			"Number of unique Sentences":number_sentences_unique,
+			"Number of Words":unique_number_words,
+			"Number of unique Words":unique_number_words_unique,
+		}
+
+		# Serializing json
+		metadata_json_object = json.dumps(metadata, indent=4)
+
+		# Save all metadata/information to file
+		with open(f'{intermediate_seednllb}{current_filename}-metadata.json', "w") as outfile:
+			outfile.write(metadata_json_object)
+		
+
 
 
 	# ===========================================
@@ -610,23 +761,28 @@ def main(input_path, script_mode):
 	input_dabremt = input_path+"input/DabreMT/"
 	input_seednllb = input_path+"input/SeedNLLB/"
 
+	# Names of the textfiles for each dataset
 	filenames_boukiebanane = ['DataSet-boukiebanabe.txt','liv-e_01.txt','liv-e_02.txt','liv-e_03.txt','liv-e_04.txt','liv-e_05.txt','liv-e_06.txt','liv-e_07.txt','liv-e_08.txt','liv-e_09.txt','liv-e_10.txt','liv-e_11.txt','liv-e_12.txt','liv-e_13.txt','liv-e_14.txt','liv-e_15.txt','liv-e_16.txt','BILENGISM-OTANTIK-PA-PAR-PA.txt','LITERESI-BILENG-PREVOK.txt','LIV_E_APRENOV19.txt','MERSI-BONDIE-EBOOK.txt','OUPANISHAD-livE.txt','UNIVERSAL-BILINGUAL-FUNCTIONAL-LITERACY.txt']
 	filenames_dabremt = ['sentences_mor.mor'] # 'sentences_eng.mor','sentences_mor.eng'
 	filenames_dabremt_all = ['sentences_eng.mor','sentences_mor.eng','sentences_mor.mor','words_eng.mor','words_mor.eng','words_mor.mor']
 	filenames_seednllb = ['eng_Latn']
 
+	# Paths for intermediate data (used later, but not so important)
 	intermediate_boukiebanane = input_path+"intermediate/BoukieBanane/"
 	intermediate_dabremt = input_path+"intermediate/DabreMT/"
 	intermediate_seednllb = input_path+"intermediate/SeedNLLB/"
 
+	# The final sentences/words to be translated/used in the project
 	output_boukiebanane = input_path+"output/BoukieBanane/"
 	output_dabremt = input_path+"output/DabreMT/"
 	output_seednllb = input_path+"output/SeedNLLB/"
 
+	# Metadata and information about the data
 	result_boukiebanane = input_path+"result/BoukieBanane/"
 	result_dabremt = input_path+"result/DabreMT/"
 	result_seednllb = input_path+"result/SeedNLLB/"
 	
+	# Location for language identification model
 	model_cache_dir_for_glot_lid = input_path+"models/"
 
 	all_data_combined_path = input_path+"combined/"
@@ -640,12 +796,16 @@ def main(input_path, script_mode):
 	# 
 	#combine_all_data([input_boukiebanane, filenames_boukiebanane],[input_dabremt, filenames_dabremt],[input_seednllb, filenames_seednllb],all_data_combined_path)
 	#TAKES LONG #identify_languages(all_data_combined_path, "all_text_sentences.txt", model_cache_dir_for_glot_lid)
-	# Sort identified sentences
+	# ===========================================
+	# Sort identified sentences 
+	# ===========================================
 	if "sortIdentified" in script_mode:
 		filename = "language_identifications.txt"
 		sort_by_identified_languages(all_data_combined_path, filename, confidence_threshold_1, confidence_threshold_2, confidence_threshold_3 )
 
-	# Sort predicted sentences
+	# ===========================================
+	# Sort predicted sentences 
+	# ===========================================
 	if "sortAlphabetically" in script_mode:
 		sort_sentences_alphabetically(all_data_combined_path, f'predicted_morisien-{confidence_threshold_1}.txt', f'Morisien-{confidence_threshold_1}')
 		sort_sentences_alphabetically(all_data_combined_path, f'predicted_morisien-{confidence_threshold_2}.txt', f'Morisien-{confidence_threshold_2}')
@@ -662,13 +822,36 @@ def main(input_path, script_mode):
 		sort_sentences_alphabetically(all_data_combined_path, f'predicted_other-{confidence_threshold_3}.txt', f'Other-{confidence_threshold_3}')
 		sort_sentences_alphabetically(all_data_combined_path, f'predicted_other-less-{confidence_threshold_3}.txt', f'Other-less-{confidence_threshold_3}')
 
+	# ===========================================
+	# Clean the text lines (remove special characters and punctuation and such)
+	# ===========================================
+	if "cleanData" in script_mode:
+		clean_data()
+
+	# ===========================================
+	# Count collected text data (sentences and words)
+	# ===========================================
+	"""
+	Input: Path_to_files, Names_of_text_files_containing_text_data
+	Output: Frequency_dictionary, Number_words, Number_unique_words, Number_sentences, Number_unique_sentences
+	"""
+	if "countData" in script_mode:
+		count_text_data(input_seednllb, filenames_seednllb, intermediate_seednllb, result_seednllb, "English", "NLLB Seed")
+		count_text_data(input_path+"combined_22_12_2023_confidence_thresholds/", ["sorted_Morisien-0.9.txt"], all_data_combined_path, all_data_combined_path, "Morisien", "DabreMT and BoukieBanane")
 
 
+
+
+	# ===========================================
 	# Split large files into smaller files
+	# ===========================================
 	#split_files_up(all_data_combined_path, "sorted_Morisien.txt", "Morisien")
 	#split_files_up(all_data_combined_path, "sorted_English.txt", "English")
 	#split_files_up(all_data_combined_path, "sorted_Other.txt", "Other")
 
+	# ===========================================
+	# 
+	# ===========================================
 
 	# 
 	# BoukieBanane data

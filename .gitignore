@@ -22,6 +22,8 @@ experiments/embeddings_sentenceBERT/
 experiments/parsing_NLTK/
 
 experiments/analyze_text_data/data/combined/
+experiments/analyze_text_data/data/combined_21_12_2023_basic_approach/
+experiments/analyze_text_data/data/combined_22_12_2023_confidence_thresholds/
 experiments/analyze_text_data/data/intermediate/
 experiments/analyze_text_data/data/models/
 

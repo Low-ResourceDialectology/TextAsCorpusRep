@@ -38,6 +38,16 @@ SeedNLLB (from Github): eng_Latn
 # =====================================================================
 python analyze_main.py --inputPath ./../data/ --anal01 -v
 
+# =====================================================================
+# Based on previously identified sentences via GlotLID (filename: "language_identifications.txt")
+# Sort into Morisien, English, Other languages based on 3 thresholds for confidence of prediction
+python analyze_main.py --inputPath ./../data/ --analTC --scriptMode sortIdentified -v
+
+# Once text lines have been sorted into files according to predicted language label and confidence,
+# the text lines can be alphabetically sorted and cleaned (TODO: make cleaning optional or mandatory?)
+python analyze_main.py --inputPath ./../data/ --analTC --scriptMode sortAlphabetically -v
+
+
 
 """
 
@@ -49,7 +59,7 @@ import os
 import sys
 import textwrap
 
-
+import analyze_text_content as anal_tc
 import analyze_01 as anal_01
 """ 
 Temporary solution to process pdf files and crawled text from website.
@@ -123,6 +133,13 @@ def main(args, loglevel):
 
             anal_01.main(args.inputPath)
 
+        #
+        # ANALYZE TEXT CONTENT
+        #
+        if args.analTC:
+            logging.info("Start Analysis of Text Content")
+            anal_tc.main(args.inputPath, args.scriptMode) 
+            
         #else:
         #    logging.info("No suitable mode provided.")
 
@@ -153,8 +170,10 @@ if __name__ == "__main__":
     parser.add_argument('-op', '--outputPath', type=str ,help='path to output files.')
     parser.add_argument('--infoPath', type=str ,help='path to language and dataset information files.')
     parser.add_argument('-l', '--languages', type=str, nargs='+', help='list of language ids.')
+    parser.add_argument('--scriptMode', type=str, nargs='+', help='mode of script execution.')
     parser.add_argument('--prepare', action="store_true", help='')
     parser.add_argument('--anal01', action="store_true", help='')
+    parser.add_argument('--analTC', action="store_true", help='')
     
     args = parser.parse_args()
     

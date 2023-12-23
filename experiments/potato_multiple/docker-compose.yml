@@ -1,0 +1,65 @@
+version: '3.3'
+networks:
+  potato-anno:
+services:
+  
+  potato:
+    build: ./
+    command: >
+      sh -c " potato start afrihate"
+    volumes:
+      - ./:/opt/
+    ports:
+      - 18001:8001
+    networks:
+      potato-anno:
+  potato_hatesom:
+    build: ./
+    command: >
+      sh -c " potato start afrihatesom"
+    volumes:
+      - ./:/opt/
+    ports:
+      - 17001:7001
+    networks:
+      potato-anno:
+  potatotig:
+    build: ./
+    command: >
+      sh -c " potato start afrihatetig"
+    volumes:
+      - ./:/opt/
+    ports:
+      - 15001:5001
+    networks:
+      potato-anno:
+  potatosemrel:
+    build: ./
+    command: >
+      sh -c " potato start sem_rel"
+    volumes:
+      - ./:/opt/
+    ports:
+      - 19002:9001
+    networks:
+      potato-anno:
+  potatosemrel2:
+    build: ./
+    command: >
+      sh -c " potato start sem_rel2"
+    volumes:
+      - ./:/opt/
+    ports:
+      - 16002:6001
+    networks:
+      potato-anno:
+  saint:
+    build: ./
+    command: >
+      sh -c " potato start saint"
+    volumes:
+      - ./:/opt/
+    ports:
+      - 14002:4001
+    networks:
+      potato-anno:

@@ -1,0 +1,11 @@
+#
+# Potato Setup for multiple annotation-tasks in parallel for the MTACR project
+#
+
+
+# Instructions from Seid's mail:
+PFA the two required files for dockerizing. Put this in the same level as the potato-folder.
+Try them locally and send me the whole files (you can zip all together) 
+
+
+

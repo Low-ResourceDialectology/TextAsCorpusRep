@@ -1,0 +1,982 @@
+{
+    "Datasets":
+    {
+        "2001HaigKurdishNewspaper":
+        {
+            "Status":"ready",
+            "Notes":"notes",
+            "Language":"",
+            "Access":"Manual-download from https://multicast.aspra.uni-bamberg.de/resources/kurdish/data/ccknt/ccknt.txt",
+            "Platform":"homepage",
+            "Platform ID":[""],
+            "Name":"The Corpus of Contemporary Kurdish Newspaper Texts (CCKNT) ",
+            "Description":"The **CCKNT** comprises written Northern Kurdish (Kurmanjî) journalistic texts, compiled from online newspaper texts in 1999.",
+            "Year":2001,
+            "URL":"https://multicast.aspra.uni-bamberg.de/resources/kurdish/"
+        },
+        "2012MorisienGramer":
+        {
+            "Status":"ready",
+            "Notes":"Added manually",
+            "Language":"mor",
+            "Access":"Manual-download from https://www.academia.edu/24691305/GRAMER_KREOL_MORISIEN_Volim_1_Dokiman_Referans_Government_of_Mauritius_Press_f%C3%A9vrier_2012_ISBN_978_99949_20_85_3",
+            "Platform":"website",
+            "Platform ID":["https://www.academia.edu/24691305/GRAMER_KREOL_MORISIEN_Volim_1_Dokiman_Referans_Government_of_Mauritius_Press_f%C3%A9vrier_2012_ISBN_978_99949_20_85_3"],
+            "Name":"Gramer Kreol Morisien",
+            "Description":"GRAMER KREOL MORISIEN. Volim 1: Dokiman Referans, Government of Mauritius Press, février 2012. ISBN: 978-99949-20-85-3",
+            "Year":2012,
+            "URL":"https://www.academia.edu/24691305/GRAMER_KREOL_MORISIEN_Volim_1_Dokiman_Referans_Government_of_Mauritius_Press_f%C3%A9vrier_2012_ISBN_978_99949_20_85_3"
+        },
+        "2013EsmailiPewan":
+        {
+            "Status":"ready",
+            "Notes":"TODO: Get access to entire corpus",
+            "Language":"kmr",
+            "Access":"https://github.com/klpp/pewan/raw/master/Pewan.zip",
+            "Platform":"github",
+            "Platform ID":["https://github.com/klpp/pewan/raw/master/Pewan.zip"],
+            "Name":"pewan",
+            "Description":"description",
+            "Year":2013,
+            "URL":"url"
+        },
+        "2016ElliottMulti30k":
+        {
+            "Status":"ready",
+            "Notes":"notes",
+            "Language":"deu",
+            "Access":"access",
+            "Platform":"github",
+            "Platform ID":[
+                "https://github.com/lium-lst/wmt17-mmt/raw/master/data/train.de.gz",
+                "https://github.com/lium-lst/wmt17-mmt/raw/master/data/train.en.gz",
+                "https://github.com/lium-lst/wmt17-mmt/raw/master/data/train.fr.gz",
+                "https://github.com/lium-lst/wmt17-mmt/raw/master/data/val.de.gz",
+                "https://github.com/lium-lst/wmt17-mmt/raw/master/data/val.en.gz",
+                "https://github.com/lium-lst/wmt17-mmt/raw/master/data/val.fr.gz"],
+            "Name":"Multilingual English-German Image Descriptions",
+            "Description":"Decription_of_dataset",
+            "Year":2016,
+            "Authors":["Desmond Elliott", "Stella Frank", "Khalil Sima'an", "Lucia Specia"],
+            "Homepage":"https://github.com/lium-lst/wmt17-mmt",
+            "Data":
+            {
+                "URL":"https://github.com/lium-lst/wmt17-mmt",
+                "License":"license",
+                "Size MB":"size_in_mb",
+                "Size Documents":"size_in_documents",
+                "Size Sentences":"size_in_sentences",
+                "Size Words":"size_in_words",
+                "Size Tokens":"size_in_tokens",
+                "File Format":"file_format"                
+            },
+            "Publications":
+            {
+                "elliott2016Multi30KMultilingualEnglishGerman":
+                {
+                    "Title":"Multi30K: Multilingual English-German Image Descriptions",
+                    "Year":2016,
+                    "URL":"https://arxiv.org/abs/1605.00459",
+                    "DOI":"DOI_of_publication",
+                    "Authors":["Desmond Elliott", "Stella Frank", "Khalil Sima'an", "Lucia Specia"]
+                }
+            },
+            "Languages":
+            {
+                "German":
+                {
+                    "Name":"Language_Name",
+                    "Details":"detail_about_language",
+                    "ISO 693-3":"iso",
+                    "Platform":"Literature|Web scraped|Data set|Original work",
+                    "Quality":"Raw|Cleaned|Tagged|Annotated|Gold Standard",
+                    "Relations":
+                    {
+                        "German-English":
+                        {
+                            "Relation":"document aligned|sentence aligned|word aligned|machine translated|human translated",
+                            "Size":" pairs"
+                        },
+                        "German-French":
+                        {
+                            "Relation":"document aligned|sentence aligned|word aligned|machine translated|human translated",
+                            "Size":" pairs"
+                        }
+                    }
+                }
+            }
+        },
+        "2016MatrasKurdishDialectDatabase":
+        {
+            "Status":"todo",
+            "Notes":"notes",
+            "Language":"",
+            "Access":"http://kratylos.org/~raphael/kurdish/database/",
+            "Platform":"",
+            "Platform ID":[""],
+            "Name":"Database of Kurdish Dialects",
+            "Description":"The Dialects of Kurdish",
+            "Year":2016,
+            "URL":"http://kratylos.org/~raphael/kurdish/database-of-kurdish-dialects/index.html"
+        },
+        "2016UniMorphNorthernKurdish":
+        {
+            "Status":"ready",
+            "Notes":"Morphology",
+            "Language":"kmr",
+            "Access":"Part of https://github.com/unimorph",
+            "Platform":"github",
+            "Platform ID":[
+                "https://raw.githubusercontent.com/unimorph/kmr/master/kmr"
+            ],
+            "Name":"UniMorph",
+            "Description":"The Universal Morphology (UniMorph) project is a collaborative effort to improve how NLP handles complex morphology in the world’s languages.",
+            "Year":2016,
+            "URL":"https://unimorph.github.io/"
+        },
+        "2017LuongNMT":
+        {
+            "Status":"todo",
+            "Notes":"In one test-run I included their small nmt-testdata.",
+            "Language":"vie",
+            "Access":"git clone git@github.com:VinAIResearch/VinAI_Translate.git",
+            "Platform":"github",
+            "Platform ID":"",
+            "Name":"A Vietnamese-English Neural Machine Translation System",
+            "Description":"Our pre-trained VinAI Translate models are state-of-the-art text-to-text translation models for Vietnamese-to-English and English-to-Vietnamese, respectively.",
+            "Year":2000,
+            "Authors":["Thien Hai Nguyen","Tuan-Duy H. Nguyen","Duy Phung","Duy Tran-Cong Nguyen","Hieu Minh Tran","Manh Luong","Tin Duy Vo","Hung Hai Bui","Dinh Phung","Dat Quoc Nguyen"],
+            "Homepage":"https://github.com/VinAIResearch/VinAI_Translate",
+            "Languages":
+            {
+                "Language1":
+                {
+                    "Name":"Vietnamese",
+                    "Details":"detail_about_language",
+                    "ISO 693-3":"vie",
+                    "Source":"Literature|Web scraped|Data set|Original work",
+                    "Quality":"Raw|Cleaned|Tagged|Annotated|Gold Standard",
+                    "Relations":
+                    {
+                        "Vietnamese-English":
+                        {
+                            "Relation":"document aligned|sentence aligned|word aligned|machine translated|human translated",
+                            "Size":" pairs"
+                        }
+                    }
+                }
+            },
+            "Data":
+            {
+                "URL":"url",
+                "License":"license",
+                "Size MB":"size_in_mb",
+                "Size Documents":"size_in_documents",
+                "Size Sentences":"size_in_sentences",
+                "Size Words":"size_in_words",
+                "Size Tokens":"size_in_tokens",
+                "File Format":"file_format"                
+            },
+            "Publications":
+            {
+                "publication_name":
+                {
+                    "Title":"A Vietnamese-English Neural Machine Translation System",
+                    "Year":2022,
+                    "URL":"https://www.isca-speech.org/archive/interspeech_2022/nguyen22e_interspeech.html",
+                    "DOI":"",
+                    "Authors":["Thien Hai Nguyen","Tuan-Duy H. Nguyen","Duy Phung","Duy Tran-Cong Nguyen","Hieu Minh Tran","Manh Luong","Tin Duy Vo","Hung Hai Bui","Dinh Phung","Dat Quoc Nguyen"]
+                }
+            }
+        },
+        "2018CraveApertiumNorthernKurdish":
+        {
+            "Status":"ready",
+            "Notes":"notes",
+            "Language":"kmr",
+            "Access":"git clone git@github.com:apertium/apertium-kmr-eng.git",
+            "Platform":"github",
+            "Platform ID":[
+                "https://raw.githubusercontent.com/apertium/apertium-kmr-eng/master/texts/barzani_newroz.kmr.txt",
+                "https://raw.githubusercontent.com/apertium/apertium-kmr-eng/master/texts/kurdistannews.txt",
+                "https://raw.githubusercontent.com/apertium/apertium-kmr-eng/master/texts/xurm-trans-hand.txt",
+                "https://raw.githubusercontent.com/apertium/apertium-kmr-eng/master/texts/xurmatu.txt"],
+            "Name":"apertium-kmr-eng",
+            "Description":"description",
+            "Year":2018,
+            "URL":"https://aclanthology.org/L18-1550/",
+            "URL2":"https://github.com/apertium/apertium-kmr-eng"
+        },
+        "2018GraveFasttextWordVectors":
+        {
+        	"Status":"todo",
+            "Notes":"VERY LARGE FILES! Word vectors",
+            "Language":"mor",
+            "Access":
+            [
+                "https://dl.fbaipublicfiles.com/fasttext/vectors-crawl/cc.ku.300.vec.gz",
+                "https://dl.fbaipublicfiles.com/fasttext/vectors-crawl/cc.ku.300.bin.gz"
+            ],
+            "Platform":"",
+            "Platform ID":"",
+            "Name":"Word vectors for 157 languages",
+            "Description":"We distribute pre-trained word vectors for 157 languages, trained on Common Crawl and Wikipedia using fastText. ",
+            "Year":2018,
+            "URL":"https://fasttext.cc/docs/en/crawl-vectors.html"
+        },
+        "2020AhmadiKurdishTokenization":
+        {
+            "Status":"todo",
+            "Notes":"TODO: Select exact files to get and sort the dictionaries",
+            "Language":"",
+            "Access":"git clone ",
+            "Platform":"",
+            "Platform ID":[""],
+            "Name":"Kurdish Tokenization",
+            "Description":"A Tokenization System for the Kurdish Language (Sorani & Kurmanji dialects)",
+            "Year":2020,
+            "URL":"https://github.com/sinaahmadi/KurdishTokenization"
+        },
+        "2020FatihkurtKurdishTwitter":
+        {
+            "Status":"ready",
+            "Notes":"notes",
+            "Language":"kmr",
+            "Access":"https://raw.githubusercontent.com/ftkurt/kurdish-twitter-data/master/Kurmanji/twitter-data.txt",
+            "Platform":"github",
+            "Platform ID":["https://raw.githubusercontent.com/ftkurt/kurdish-twitter-data/master/Kurmanji/twitter-data.txt"],
+            "Name":"kurdish-twitter-data",
+            "Description":"Kurdish twitter data repository for Kurmanji and Sorani dialects",
+            "Year":2020,
+            "URL":"https://github.com/ftkurt/kurdish-twitter-data"
+        },
+        "2020LeichtfußFreeDict":
+        {
+            "Status":"todo",
+            "Notes":"notes",
+            "Language":"",
+            "Access":
+            [
+                "https://github.com/freedict/fd-dictionaries/raw/master/deu-kur/deu-kur.tei",
+                "https://github.com/freedict/fd-dictionaries/raw/master/kur-deu/kur-deu.tei",
+                "https://raw.githubusercontent.com/freedict/fd-dictionaries/master/kur-eng/kur-eng.tei",
+                "https://github.com/freedict/fd-dictionaries/raw/master/kur-tur/kur-tur.tei"
+            ],
+            "Platform":"",
+            "Platform ID":[""],
+            "Name":"FreeDict - free bilingual dictionaries",
+            "Description":"description",
+            "Year":2020,
+            "URL":"https://freedict.org/"
+        },
+        "2021BfsujasonMAC":
+        {
+            "Status":"ready",
+            "Notes":"What about 'train' next to 'dev' and 'test'?",
+            "Language":"zho",
+            "Access":"git clone git@github.com:bfsujason/mac.git",
+            "Platform":"github",
+            "Platform ID":[
+                "https://raw.githubusercontent.com/bfsujason/mac/main/dev/meta_data.tsv",
+                "https://raw.githubusercontent.com/bfsujason/mac/main/dev/tsv/dev-anno.001_zh.001_en.tsv",
+                "https://raw.githubusercontent.com/bfsujason/mac/main/dev/tsv/dev-anno.001_zh.001_en.tsv",
+                "https://raw.githubusercontent.com/bfsujason/mac/main/dev/tsv/dev-anno.002_zh.002_en.tsv",
+                "https://raw.githubusercontent.com/bfsujason/mac/main/dev/tsv/dev-anno.003_zh.003_en.tsv",
+                "https://raw.githubusercontent.com/bfsujason/mac/main/dev/tsv/dev-anno.004_zh.004_en.tsv",
+                "https://raw.githubusercontent.com/bfsujason/mac/main/dev/tsv/dev-anno.005_zh.005_en.tsv",
+                "https://raw.githubusercontent.com/bfsujason/mac/main/dev/tsv/dev-anno.006_zh.006_en.tsv",
+                "https://raw.githubusercontent.com/bfsujason/mac/main/test/tsv/test-anno.001_zh.001_en.tsv",
+                "https://raw.githubusercontent.com/bfsujason/mac/main/test/tsv/test-anno.002_zh.002_en.tsv",
+                "https://raw.githubusercontent.com/bfsujason/mac/main/test/tsv/test-anno.003_zh.003_en.tsv",
+                "https://raw.githubusercontent.com/bfsujason/mac/main/test/tsv/test-anno.004_zh.004_en.tsv",
+                "https://raw.githubusercontent.com/bfsujason/mac/main/test/tsv/test-anno.005_zh.005_en.tsv",
+                "https://raw.githubusercontent.com/bfsujason/mac/main/test/tsv/test-anno.006_zh.006_en.tsv",
+                "https://raw.githubusercontent.com/bfsujason/mac/main/test/tsv/test-anno.007_zh.007_en.tsv",
+                "https://raw.githubusercontent.com/bfsujason/mac/main/test/tsv/test-anno.008_zh.008_en.tsv",
+                "https://raw.githubusercontent.com/bfsujason/mac/main/test/tsv/test-anno.009_zh.009_en.tsv",
+                "https://raw.githubusercontent.com/bfsujason/mac/main/test/tsv/test-anno.010_zh.010_en.tsv",
+                "https://raw.githubusercontent.com/bfsujason/mac/main/test/tsv/test-anno.011_zh.011_en.tsv",
+                "https://raw.githubusercontent.com/bfsujason/mac/main/test/tsv/test-anno.012_zh.012_en.tsv",
+                "https://raw.githubusercontent.com/bfsujason/mac/main/test/tsv/test-anno.013_zh.013_en.tsv",
+                "https://raw.githubusercontent.com/bfsujason/mac/main/test/tsv/test-anno.014_zh.014_en.tsv",
+                "https://raw.githubusercontent.com/bfsujason/mac/main/test/tsv/test-anno.015_zh.015_en.tsv",
+                "https://raw.githubusercontent.com/bfsujason/mac/main/test/tsv/test-anno.016_zh.016_en.tsv",
+                "https://raw.githubusercontent.com/bfsujason/mac/main/test/tsv/test-anno.017_zh.017_en.tsv",
+                "https://raw.githubusercontent.com/bfsujason/mac/main/test/tsv/test-anno.018_zh.018_en.tsv",
+                "https://raw.githubusercontent.com/bfsujason/mac/main/test/tsv/test-anno.019_zh.019_en.tsv",
+                "https://raw.githubusercontent.com/bfsujason/mac/main/test/tsv/test-anno.020_zh.020_en.tsv",
+                "https://raw.githubusercontent.com/bfsujason/mac/main/test/tsv/test-anno.021_zh.021_en.tsv",
+                "https://raw.githubusercontent.com/bfsujason/mac/main/test/tsv/test-anno.022_zh.022_en.tsv",
+                "https://raw.githubusercontent.com/bfsujason/mac/main/test/tsv/test-anno.023_zh.023_en.tsv",
+                "https://raw.githubusercontent.com/bfsujason/mac/main/test/tsv/test-anno.024_zh.024_en.tsv"
+            ],
+            "Name":"MAC",
+            "Description":"MAC is a manually aligned Chinese-English parallel corpus of literary texts, consisting of chapters sampled from six Chinese novels and their English translations.",
+            "Year":2021,
+            "Authors":["bfsuason"],
+            "Homepage":"URL",
+            "Data":
+            {
+                "URL":"https://github.com/bfsujason/mac",
+                "License":"license",
+                "Size MB":"size_in_mb",
+                "Size Documents":"size_in_documents",
+                "Size Sentences":"size_in_sentences",
+                "Size Words":"size_in_words",
+                "Size Tokens":"size_in_tokens",
+                "File Format":"file_format"                
+            },
+            "Publications":
+            {
+                "Zotero_citation_key_A":
+                {
+                    "Title":"Title_of_publication_1",
+                    "Year":1234,
+                    "URL":"URL_to_publication",
+                    "DOI":"DOI_of_publication",
+                    "Authors":["Author_A_Name","Author_B_Name"]
+                },
+                "Zotero_citation_key_B":
+                {
+                    "Title":"Title_of_publication_2",
+                    "Year":1234,
+                    "URL":"URL_to_publication",
+                    "DOI":"DOI_of_publication",
+                    "Authors":["Author_A_Name","Author_C_Name"]
+                }
+            },
+            "Languages":
+            {
+                "Language_name_according_to_dataset":
+                {
+                    "Name":"Language_Name",
+                    "Details":"detail_about_language",
+                    "ISO 693-3":"iso",
+                    "Platform":"Literature|Web scraped|Data set|Original work",
+                    "Quality":"Raw|Cleaned|Tagged|Annotated|Gold Standard",
+                    "Relations":
+                    {
+                        "Language_A-Language_B":
+                        {
+                            "Relation":"document aligned|sentence aligned|word aligned|machine translated|human translated",
+                            "Size":" pairs"
+                        },
+                        "Language_A-Language_C":
+                        {
+                            "Relation":"document aligned|sentence aligned|word aligned|machine translated|human translated",
+                            "Size":" pairs"
+                        },
+                        "Language_A-Language_D":
+                        {
+                            "Relation":"document aligned|sentence aligned|word aligned|machine translated|human translated",
+                            "Size":" pairs"
+                        }
+                    }
+                }
+            }
+        },
+        "2021DoanPhoMT":
+        {
+            "Status":"ready",
+            "Notes":"to not distribute the dataset or part of the dataset in any original or modified form.",
+            "Language":"vie",
+            "Access":"Prior to download, this form has to be filled out: https://docs.google.com/forms/d/e/1FAIpQLSfShfLzQ3w9ErBc6sId55s83o9tOv2qz6zMd_6lNCD7n791NQ/viewform including agreement to (1) to use PhoMT for research or educational purposes only, (2) to not distribute PhoMT or part of PhoMT in any original or modified form, (3) and to cite the EMNLP 2021 paper (PhoMT: A High-Quality and Large-Scale Benchmark Dataset for Vietnamese-English Machine Translation) whenever PhoMT is employed to help produce published results. Then extract PhoMT into the raw-data-directory called 2021DoanPhoMT",
+            "Platform":"homepage",
+            "Platform ID":"",
+            "Name":"PhoMT: A High-Quality and Large-Scale Benchmark Dataset for Vietnamese-English Machine Translation",
+            "Description":"PhoMT is a high-quality and large-scale Vietnamese-English parallel dataset of 3.02M sentence pairs.",
+            "Year":2021,
+            "Authors":["Long Doan","Linh The Nguyen","Nguyen Luong Tran","Thai Hoang","Dat Quoc Nguyen"],
+            "Homepage":"homepage",
+            "Data":
+            {
+                "URL":"https://github.com/VinAIResearch/PhoMT#phomt-a-high-quality-and-large-scale-benchmark-dataset-for-vietnamese-english-machine-translation",
+                "License":"license",
+                "Size MB":"1400",
+                "Size Documents":"size_in_documents",
+                "Size Sentences":"size_in_sentences",
+                "Size Words":"size_in_words",
+                "Size Tokens":"size_in_tokens",
+                "File Format":"file_format"                
+            },
+            "Publications":
+            {
+                "publication_name":
+                {
+                    "Title":"title",
+                    "Year":2000,
+                    "URL":"url",
+                    "DOI":"",
+                    "Authors":["author1", "author2"]
+                }
+            },
+            "Languages":
+            {
+                "Vietnamese":
+                {
+                    "Name":"Vietnamese",
+                    "Details":"detail_about_language",
+                    "ISO 693-3":"vie",
+                    "Source":"Literature|Web scraped|Data set|Original work",
+                    "Quality":"Raw|Cleaned|Tagged|Annotated|Gold Standard",
+                    "Relations":
+                    {
+                        "Vietnamese-English":
+                        {
+                            "Relation":"document aligned|sentence aligned|word aligned|machine translated|human translated",
+                            "Size":"3020000 pairs"
+                        }
+                    }
+                }
+            }
+        },
+        "2021MorisienDictionaryEnglish":
+        {
+            "Status":"ready",
+            "Notes":"Added manually",
+            "Language":"mor",
+            "Access":"Manual-download from https://dokumen.pub/diksyoner-kreol-morisyen-mauritian-english-dictionary.html",
+            "Platform":"website",
+            "Platform ID":["https://dokumen.pub/diksyoner-kreol-morisyen-mauritian-english-dictionary.html"],
+            "Name":"Diksyoner Kreol Morisyen. Mauritian-English dictionary",
+            "Description":"description",
+            "Year":2021,
+            "URL":"https://dokumen.pub/diksyoner-kreol-morisyen-mauritian-english-dictionary.html"
+        },
+        "2021MorisienEducationalBooksPupil":
+        {
+            "Status":"ready",
+            "Notes":"notes",
+            "Language":"mor",
+            "Access":"Requested permission and then manual-download from https://fliphtml5.com/bookcase/wrouj",
+            "Platform":"",
+            "Platform ID":[""],
+            "Name":"Kreol Morisien Pupil 2021",
+            "Description":"Educational books from the Mauritius Institute of Education",
+            "Year":2021,
+            "URL":"https://fliphtml5.com/bookcase/wrouj"
+        },
+        "2021MorisienEducationalBooksTeacher":
+        {
+            "Status":"todo",
+            "Notes":"notes",
+            "Language":"mor",
+            "Access":"access",
+            "Platform":"",
+            "Platform ID":[""],
+            "Name":"Kreol Morisien Teacher 2021",
+            "Description":"Educational books from the Mauritius Institute of Education",
+            "Year":2021,
+            "URL":"https://fliphtml5.com/bookcase/udzjb"
+        },
+        "2022AhmadiInterdialect":
+        {
+            "Status":"ready",
+            "Notes":"News articles from websites",
+            "Language":"kmr",
+            "Access":"git clone git@github.com:KurdishBLARK/InterdialectCorpus.git",
+            "Platform":"github",
+            "Platform ID":
+            [
+                "https://raw.githubusercontent.com/KurdishBLARK/InterdialectCorpus/master/CKB-KMR/CKB-KMR_kmr_no_tag.txt",
+                "https://raw.githubusercontent.com/KurdishBLARK/InterdialectCorpus/master/CKB-KMR/CKB-KMR_ckb_no_tag.txt",
+                "https://raw.githubusercontent.com/KurdishBLARK/InterdialectCorpus/master/KMR-ENG/KMR-ENG.ENG_no_tag.txt",
+                "https://raw.githubusercontent.com/KurdishBLARK/InterdialectCorpus/master/KMR-ENG/KMR-ENG.KMR_no_tag.txt"
+            ],
+            "Name":"Kurdish Parallel Corpus",
+            "Description":"A parallel corpus of Kurdish (Sorani and Kurmanji) and English",
+            "Year":2022,
+            "Authors":["Sina Ahmadi","Hossein Hassani","Daban Q. Jaff"],
+            "Homepage":"homepage",
+            "Data":
+            {
+                "URL":"https://github.com/KurdishBLARK/InterdialectCorpus",
+                "License":"Attribution-NonCommercial-ShareAlike 4.0 International Copyright (c) 2020",
+                "Size MB":"size_in_mb",
+                "Size Documents":"size_in_documents",
+                "Size Sentences":"size_in_sentences",
+                "Size Words":"size_in_words",
+                "Size Tokens":"size_in_tokens",
+                "File Format":"file_format"                
+            },
+            "Publications":
+            {
+                "publication_name":
+                {
+                    "Title":"title",
+                    "Year":2000,
+                    "URL":"url",
+                    "DOI":"",
+                    "Authors":["author1", "author2"]
+                }
+            },
+            "Languages":
+            {
+                "Sorani":
+                {
+                    "Name":"Central Kurdish",
+                    "Details":"detail_about_language",
+                    "ISO 693-3":"ckb",
+                    "Source":"Web scraped",
+                    "Quality":"Raw|Cleaned|Tagged|Annotated|Gold Standard",
+                    "Relations":
+                    {
+                        "Sorani-English":
+                        {
+                            "Relation":"translated",
+                            "Size":"650 pairs"
+                        },
+                        "Sorani-Kurmanji":
+                        {
+                            "Relation":"translated",
+                            "Size":"12327 pairs"
+                        }
+                    }
+                },
+                "Kurmanji":
+                {
+                    "Name":"Northern Kurdish",
+                    "Details":"detail_about_language",
+                    "ISO 693-3":"kmr",
+                    "Source":"Web scraped",
+                    "Quality":"Raw|Cleaned|Tagged|Annotated|Gold Standard",
+                    "Relations":
+                    {
+                        "Kurmanji-English":
+                        {
+                            "Relation":"translated",
+                            "Size":"1797 pairs"
+                        },
+                        "Sorani-Kurmanji":
+                        {
+                            "Relation":"translated",
+                            "Size":"12327 pairs"
+                        }
+                    }
+                }
+            }
+        },
+        "2022DabreMorisienMT":
+        {
+            "Status":"ready",
+            "Notes":"notes",
+            "Language":"mor",
+            "Access":"access",
+            "Platform":"huggingface",
+            "Platform ID":"prajdabre/KreolMorisienMT",
+            "Name":"KreolMorisienMT",
+            "Description":"A Dataset for Mauritian Creole Machine Translation & MorisienMT",
+            "Year":2022,
+            "Authors":["Raj Dabre","Aneerav Sukhoo"],
+            "Homepage":"https://github.com/prajdabre/KreolMorisienNLG",
+            "Data":
+            {
+                "URL":"https://huggingface.co/datasets/prajdabre/KreolMorisienMT",
+                "License":"license",
+                "Size MB":"size_in_mb",
+                "Size Documents":"size_in_documents",
+                "Size Sentences":"size_in_sentences",
+                "Size Words":"size_in_words",
+                "Size Tokens":"size_in_tokens",
+                "File Format":"file_format"                
+            },
+            "Publications":
+            {
+                "dabreMorisienMTDatasetMauritian2022":
+                {
+                    "Title":"MorisienMT: A Dataset for Mauritian Creole Machine Translation",
+                    "Year":2022,
+                    "URL":"http://arxiv.org/abs/2206.02421",
+                    "DOI":"10.48550/arXiv.2206.02421",
+                    "Authors":["Raj Dabre","Aneerav Sukhoo"]
+                },
+                "dabreKreolMorisienMTDatasetMauritian2022":
+                {
+                    "Title":"KreolMorisienMT: A Dataset for Mauritian Creole Machine Translation",
+                    "Year":2022,
+                    "URL":"https://aclanthology.org/2022.findings-aacl.3",
+                    "DOI":"",
+                    "Authors":["Raj Dabre","Aneerav Sukhoo"]
+                }
+            },
+            "Languages":
+            {
+                "Morisien":
+                {
+                    "Name":"Morisien",
+                    "Details":"detail_about_language",
+                    "ISO 693-3":"mfe",
+                    "Source":"Literature|Web scraped|Data set|Original work",
+                    "Quality":"Raw|Cleaned|Tagged|Annotated|Gold Standard",
+                    "Relations":
+                    {
+                        "Morisien-English":
+                        {
+                            "Relation":"document aligned|sentence aligned|word aligned|machine translated|human translated",
+                            "Size":" pairs"
+                        },
+                        "Morisien-French":
+                        {
+                            "Relation":"document aligned|sentence aligned|word aligned|machine translated|human translated",
+                            "Size":" pairs"
+                        },
+                        "Morisien":
+                        {
+                            "Relation":"document aligned|sentence aligned|word aligned|machine translated|human translated",
+                            "Size":" pairs"
+                        }
+                    }
+                }
+            }
+        },
+        "2022NgoSynthetic":
+        {
+            "Status":"ready",
+            "Notes":"Check out inclusion of 'dev' and 'test' sets",
+            "Language":"vie",
+            "Access":"git clone git@github.com:ngovinhtn/Low-resource-Machine-Translation.git",
+            "Platform":"github",
+            "Platform ID":
+            [
+                "https://raw.githubusercontent.com/ngovinhtn/Low-resource-Machine-Translation/main/Datasets/cn-vi/train.tok.cn",
+                "https://raw.githubusercontent.com/ngovinhtn/Low-resource-Machine-Translation/main/Datasets/cn-vi/train.tok.true.vi",
+                "https://raw.githubusercontent.com/ngovinhtn/Low-resource-Machine-Translation/main/Datasets/en-vi/train.tok.en",
+                "https://raw.githubusercontent.com/ngovinhtn/Low-resource-Machine-Translation/main/Datasets/en-vi/train.tok.vi",
+                "https://raw.githubusercontent.com/ngovinhtn/Low-resource-Machine-Translation/main/Datasets/fr-vi/train.fr",
+                "https://raw.githubusercontent.com/ngovinhtn/Low-resource-Machine-Translation/main/Datasets/fr-vi/train.vi",
+                "https://raw.githubusercontent.com/ngovinhtn/Low-resource-Machine-Translation/main/Datasets/ja-vi/train.ja-vi.ky.ja",
+                "https://raw.githubusercontent.com/ngovinhtn/Low-resource-Machine-Translation/main/Datasets/ja-vi/train.ja-vi.tok.true.vi"
+            ],
+            "Name":"English - Vietnamese, French - Vietnamese, Chinese - Vietnamese and Japanese - Vietnamese bilingual corpus for Neural Machine Translation",
+            "Description":"The data is collected from TED talks.",
+            "Year":2022,
+            "Authors":["Thi-Vinh Ngo","Phuong-Thai Nguyen","Thanh-Le Ha","Khac-Quy Dinh","Le-Minh Nguyen"],
+            "Homepage":"homepage",
+            "Data":
+            {
+                "URL":"https://github.com/ngovinhtn/Low-resource-Machine-Translation",
+                "License":"license",
+                "Size MB":"322",
+                "Size Documents":"size_in_documents",
+                "Size Sentences":"size_in_sentences",
+                "Size Words":"size_in_words",
+                "Size Tokens":"size_in_tokens",
+                "File Format":"file_format"                
+            },
+            "Publications":
+            {
+                "publication_name":
+                {
+                    "Title":"An Efficient Method for Generating Synthetic Data for Low-Resource Machine Translation",
+                    "Year":2022,
+                    "URL":"https://www.tandfonline.com/doi/full/10.1080/08839514.2022.2101755",
+                    "DOI":"https://doi.org/10.1080/08839514.2022.2101755",
+                    "Authors":["Thi-Vinh Ngo","Phuong-Thai Nguyen","Thanh-Le Ha","Khac-Quy Dinh","Le-Minh Nguyen"]
+                }
+            },
+            "Languages":
+            {
+                "Vietnamese":
+                {
+                    "Name":"Vietnamese",
+                    "Details":"detail_about_language",
+                    "ISO 693-3":"vie",
+                    "Source":"Literature|Web scraped|Data set|Original work",
+                    "Quality":"Raw|Cleaned|Tagged|Annotated|Gold Standard",
+                    "Relations":
+                    {
+                        "Vietnamese-English":
+                        {
+                            "Relation":"document aligned|sentence aligned|word aligned|machine translated|human translated",
+                            "Size":"223825 pairs"
+                        },
+                        "Vietnamese-French":
+                        {
+                            "Relation":"document aligned|sentence aligned|word aligned|machine translated|human translated",
+                            "Size":"205396 pairs"
+                        },
+                        "Vietnamese-Chinese":
+                        {
+                            "Relation":"document aligned|sentence aligned|word aligned|machine translated|human translated",
+                            "Size":"246688 pairs"
+                        },
+                        "Vietnamese-Japanese":
+                        {
+                            "Relation":"document aligned|sentence aligned|word aligned|machine translated|human translated",
+                            "Size":"245905 pairs"
+                        }
+                    }
+                }
+            }
+        },
+        "2023AhmadiSouthernCorpus":
+        {
+            "Status":"ready",
+            "Notes":"Northern Kurdish in Latin and Arabic script.",
+            "Language":"kmr",
+            "Access":"git clone git@github.com:hclent/CreoleVal.git",
+            "Platform":"github",
+            "Platform ID":
+            [
+                "https://raw.githubusercontent.com/sinaahmadi/KurdishLID/main/datasets/NorthernKurdish-latn_train.txt",
+                "https://raw.githubusercontent.com/sinaahmadi/KurdishLID/main/datasets/NorthernKurdish-arab_train.txt"
+            ],
+            "Name":"Language Identification of Kurdish & Zaza-Gorani Languages",
+            "Description":"Approaches to Corpus Creation for Low-Resource Language Technology: the Case of Southern Kurdish and Laki",
+            "Year":2023,
+            "URL":"https://github.com/sinaahmadi/KurdishLID/tree/main"
+        },
+        "2023DevVirahsawmyBoukieBananePDF":
+        {
+            "Status":"ready",
+            "Notes":"Added manually",
+            "Language":"mor",
+            "Access":"Manual-download of the PDF files from https://boukiebanane.com/dev-omnibus-pdf/",
+            "Platform":"homepage",
+            "Platform ID":[""],
+            "Name":"Literature of Dev Virahsawmy",
+            "Description":"Published works of Dev Virahsawmy on BoukieBanane",
+            "Year":2023,
+            "URL":"https://boukiebanane.com/"
+            
+        },
+        "2023DevVirahsawmyBoukieBananeWeb":
+        {
+            "Status":"ready",
+            "Notes":"Added manually",
+            "Language":"mor",
+            "Access":"Selenium-download for text from webside. Saved as mor-boukiebanane_com.txt",
+            "Platform":"homepage",
+            "Platform ID":[""],
+            "Name":"Literature of Dev Virahsawmy",
+            "Description":"Published works of Dev Virahsawmy on BoukieBanane",
+            "Year":2023,
+            "URL":"https://boukiebanane.com/"
+            
+        },
+        "2023LentCreoleVal":
+        {
+            "Status":"todo",
+            "Notes":"Their repository is still under construction... This repository includes data (or otherwise download scripts), scripts for training and evaluation, and models for tasks spanning natural language understanding and generation for Creole languages.",
+            "Language":"Mor",
+            "Access":"git clone git@github.com:hclent/CreoleVal.git",
+            "Platform":"",
+            "Platform ID":[""],
+            "Name":"CreoleVal",
+            "Description":"Multilingual Multitask Benchmarks for Creoles",
+            "Year":2023,
+            "URL":"https://github.com/hclent/CreoleVal"
+        },
+        "2023NLLBSeed":
+        {
+            "Status":"ready",
+            "Notes":"Many aligned languages.",
+            "Language":"eng",
+            "Access":"access",
+            "Platform":"github",
+            "Platform ID":["https://raw.githubusercontent.com/openlanguagedata/seed/main/seed/eng_Latn"],
+            "Name":"Seed Machine Translation Data",
+            "Description":"The open source seed data as part of the NLLB project.",
+            "Year":2023,
+            "Authors":["Jean Maillard","Cynthia Gao","Elahe Kalbassi","Kaushik Ram Sadagopan","Vedanuj Goswami","Philipp Koehn","Angela Fan","Francisco Guzmán"],
+            "Homepage":"https://github.com/openlanguagedata/seed",
+            "Data":
+            {
+                "URL":"https://github.com/openlanguagedata/seed/tree/main/seed",
+                "License":"license",
+                "Size MB":"size_in_mb",
+                "Size Documents":"size_in_documents",
+                "Size Sentences":"size_in_sentences",
+                "Size Words":"size_in_words",
+                "Size Tokens":"size_in_tokens",
+                "File Format":"file_format"                
+            },
+            "Publications":
+            {
+                "maillard2023SmallDataBig":
+                {
+                    "Title":"Small Data, Big Impact: Leveraging Minimal Data for Effective Machine Translation",
+                    "Year":2023,
+                    "URL":"https://aclanthology.org/2023.acl-long.154",
+                    "DOI":"DOI_of_publication",
+                    "Authors":["Jean Maillard","Cynthia Gao","Elahe Kalbassi","Kaushik Ram Sadagopan","Vedanuj Goswami","Philipp Koehn","Angela Fan","Francisco Guzmán"]
+                }
+            },
+            "Languages":
+            {
+                "Language_name_according_to_dataset":
+                {
+                    "Name":"Language_Name",
+                    "Details":"detail_about_language",
+                    "ISO 693-3":"iso",
+                    "Platform":"Literature|Web scraped|Data set|Original work",
+                    "Quality":"Raw|Cleaned|Tagged|Annotated|Gold Standard",
+                    "Relations":
+                    {
+                        "Language_A-Language_B":
+                        {
+                            "Relation":"document aligned|sentence aligned|word aligned|machine translated|human translated",
+                            "Size":" pairs"
+                        },
+                        "Language_A-Language_C":
+                        {
+                            "Relation":"document aligned|sentence aligned|word aligned|machine translated|human translated",
+                            "Size":" pairs"
+                        },
+                        "Language_A-Language_D":
+                        {
+                            "Relation":"document aligned|sentence aligned|word aligned|machine translated|human translated",
+                            "Size":" pairs"
+                        }
+                    }
+                }
+            }
+        },
+        "2023SaichyshynaMulti30k":
+        {
+            "Status":"ready",
+            "Notes":"notes",
+            "Language":"ukr",
+            "Access":"access",
+            "Platform":"huggingface",
+            "Platform ID":"turuta/Multi30k-uk",
+            "Name":"Dataset Multi30k: English-Ukrainian variation",
+            "Description":"Multi30K dataset is designed to develop multilingual multimodal researches. Initially this dataset extends the Flickr30K dataset by adding German translations. The descriptions were collected from a crowdsourcing platform, while the translations were collected from professionally contracted translators. We present a variation of this dataset manually translated for Ukrainian language.",
+            "Year":2023,
+            "Authors":["Nataliia Saichyshyna", "Daniil Maksymenko", "Oleksii Turuta", "Andriy Yerokhin", "Olena Turuta", "Andrii Babii"],
+            "Homepage":"https://huggingface.co/datasets/turuta/Multi30k-uk",
+            "Data":
+            {
+                "URL":"https://huggingface.co/datasets/turuta/Multi30k-uk/tree/main",
+                "License":"license",
+                "Size MB":"size_in_mb",
+                "Size Documents":"size_in_documents",
+                "Size Sentences":"size_in_sentences",
+                "Size Words":"size_in_words",
+                "Size Tokens":"size_in_tokens",
+                "File Format":"file_format"                
+            },
+            "Publications":
+            {
+                "saichyshynaExtensionMulti30KMultimodal2023":
+                {
+                    "Title":"Extension Multi30K: Multimodal Dataset for Integrated Vision and Language Research in Ukrainian",
+                    "Year":2023,
+                    "URL":"https://aclanthology.org/2023.unlp-1.7",
+                    "DOI":"10.18653/v1/2023.unlp-1.7",
+                    "Authors":["Nataliia Saichyshyna", "Daniil Maksymenko", "Oleksii Turuta", "Andriy Yerokhin", "Olena Turuta", "Andrii Babii"]
+                },
+                "Zotero_citation_key_B":
+                {
+                    "Title":"Title_of_publication_2",
+                    "Year":1234,
+                    "URL":"URL_to_publication",
+                    "DOI":"DOI_of_publication",
+                    "Authors":["Author_A_Name","Author_C_Name"]
+                }
+            },
+            "Languages":
+            {
+                "Language_name_according_to_dataset":
+                {
+                    "Name":"Language_Name",
+                    "Details":"detail_about_language",
+                    "ISO 693-3":"iso",
+                    "Platform":"Literature|Web scraped|Data set|Original work",
+                    "Quality":"Raw|Cleaned|Tagged|Annotated|Gold Standard",
+                    "Relations":
+                    {
+                        "Language_A-Language_B":
+                        {
+                            "Relation":"document aligned|sentence aligned|word aligned|machine translated|human translated",
+                            "Size":" pairs"
+                        },
+                        "Language_A-Language_C":
+                        {
+                            "Relation":"document aligned|sentence aligned|word aligned|machine translated|human translated",
+                            "Size":" pairs"
+                        },
+                        "Language_A-Language_D":
+                        {
+                            "Relation":"document aligned|sentence aligned|word aligned|machine translated|human translated",
+                            "Size":" pairs"
+                        }
+                    }
+                }
+            }
+        },
+        "DateAuthorDataset":
+        {
+            "Status":"todo",
+            "Notes":"notes",
+            "Language":"iso",
+            "Access":"access",
+            "Platform":"huggingface|github|website",
+            "Platform ID":"someID|URL",
+            "Name":"Name_of_dataset",
+            "Description":"Decription_of_dataset",
+            "Year":1234,
+            "Authors":["Author_A_Name","Author_B_Name"],
+            "Homepage":"URL",
+            "Data":
+            {
+                "URL":"URL_to_data",
+                "License":"license",
+                "Size MB":"size_in_mb",
+                "Size Documents":"size_in_documents",
+                "Size Sentences":"size_in_sentences",
+                "Size Words":"size_in_words",
+                "Size Tokens":"size_in_tokens",
+                "File Format":"file_format"                
+            },
+            "Publications":
+            {
+                "Zotero_citation_key_A":
+                {
+                    "Title":"Title_of_publication_1",
+                    "Year":1234,
+                    "URL":"URL_to_publication",
+                    "DOI":"DOI_of_publication",
+                    "Authors":["Author_A_Name","Author_B_Name"]
+                },
+                "Zotero_citation_key_B":
+                {
+                    "Title":"Title_of_publication_2",
+                    "Year":1234,
+                    "URL":"URL_to_publication",
+                    "DOI":"DOI_of_publication",
+                    "Authors":["Author_A_Name","Author_C_Name"]
+                }
+            },
+            "Languages":
+            {
+                "Language_name_according_to_dataset":
+                {
+                    "Name":"Language_Name",
+                    "Details":"detail_about_language",
+                    "ISO 693-3":"iso",
+                    "Platform":"Literature|Web scraped|Data set|Original work",
+                    "Quality":"Raw|Cleaned|Tagged|Annotated|Gold Standard",
+                    "Relations":
+                    {
+                        "Language_A-Language_B":
+                        {
+                            "Relation":"document aligned|sentence aligned|word aligned|machine translated|human translated",
+                            "Size":" pairs"
+                        },
+                        "Language_A-Language_C":
+                        {
+                            "Relation":"document aligned|sentence aligned|word aligned|machine translated|human translated",
+                            "Size":" pairs"
+                        },
+                        "Language_A-Language_D":
+                        {
+                            "Relation":"document aligned|sentence aligned|word aligned|machine translated|human translated",
+                            "Size":" pairs"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

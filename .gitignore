@@ -1,5 +1,10 @@
 venvMTACR/
 
+data/raw/
+data/temp/
+data/output/
+data_old/
+
 Additional/
 Datasets/
 Urls/

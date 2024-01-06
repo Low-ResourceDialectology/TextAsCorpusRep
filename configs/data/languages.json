@@ -214,7 +214,7 @@
 		"Cases used":[""],
 		"Tenses used":""
     },
-    "Kurmanji":
+    "Northern Kurdish":
     {
         "Name-eng":"",
         "Name-local":"",
@@ -257,7 +257,7 @@
 		"Cases used":[""],
 		"Tenses used":""
     },
-    "Morisien":
+    "Mauritian Creole":
     {
         "Name-eng":"",
         "Name-local":"",
@@ -420,6 +420,49 @@
 		"Publications Google Scholar":["1170000 (2023-12-13)"],
 		"Publications NLP Google Scholar":["20200 (2023-12-13)"],
 		"Publications language dataset Google Scholar":["47000 (2023-12-13)"],
+		"Existing datasets":[""],
+		"Available datasets":[""],
+		"Available NLP tools":[""],
+		"Word order":"SVO",
+		"Morphological richness":[""],
+		"Genders used":[""],
+		"Cases used":[""],
+		"Tenses used":""
+    },
+	"Japanese":
+    {
+        "Name-eng":"",
+        "Name-local":"",
+        "Name-alternatives":[""],
+        "ISO 639-3":"",
+		"ISO 639-2":"",
+		"ISO 639-1":"",
+		"Glottolog":"",
+		"Linguaspehere":"",
+		"Language family":"",
+		"Macro language":"",
+		"Writing systems":[""],
+		"Native speakers":[""],
+		"Native to":[""],
+		"Official language in":[""],
+		"Recognized minority in":[""],
+		"Regulated by":[""],
+		"Wikipedia id":[""],
+		"Wikipedia articles":[""],
+		"Wikipedia pages":[""],
+		"Wikipedia edits":[""],
+		"Wikipedia admins":[""],
+		"Wikipedia users":[""],
+		"Wikipedia active users":[""],
+		"Wikipedia files":[""],
+		"Wikipedia depth":[""],
+		"Tatoeba":[""],
+		"WALS":[""],
+		"Common Crawl percentage":[""],
+		"Google Translate coverage":[""],
+		"Publications Google Scholar":[""],
+		"Publications NLP Google Scholar":[""],
+		"Publications language dataset Google Scholar":[""],
 		"Existing datasets":[""],
 		"Available datasets":[""],
 		"Available NLP tools":[""],

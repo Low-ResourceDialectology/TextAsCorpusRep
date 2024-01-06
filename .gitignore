@@ -2,6 +2,9 @@ venvMTACR/
 
 data/raw/
 data/temp/
+data/clean/
+data/monolingual/
+data/multilingual/
 data/output/
 data_old/
 

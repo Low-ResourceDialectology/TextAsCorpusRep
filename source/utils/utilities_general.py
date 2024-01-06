@@ -8,13 +8,11 @@
 #          Anran "Echo" Wang
 ###############################################################################
 
-"""
-
-"""
 import gzip # Reading compressed files .gz
 import logging
 import os
 import re
+import shutil
 from statistics import mean
 import string
 import zipfile # Extracting compressed files .zip
@@ -88,6 +86,55 @@ OUTPUT: "KMR-ENG.KMR_no_tag.txt"
 def get_basename(directory_path):
     basename = os.path.basename(directory_path)
     return basename
+
+
+
+"""
+Little helper function to move all sorted files (that are clean) to cleaned files-location.
+"""
+def move_files_from_directory(input_path, output_path, current_dataset_key):
+    sort_path = f'{input_path}{current_dataset_key}/'
+    clean_path = f'{output_path}{current_dataset_key}/'
+    # Create directory if not existing
+    create_directory(clean_path)
+
+    for file_name in os.listdir(sort_path):
+        # Construct full file path
+        sorted_file_path = f'{sort_path}{file_name}'
+        cleaned_file_path = f'{clean_path}{file_name}'
+        # Copy only the files
+        if os.path.isfile(sorted_file_path):
+            shutil.copy(sorted_file_path, cleaned_file_path)
+
+"""
+Little helper function to rename files in cleaned files-location, to get a normalized file naming.
+    e.g.: "train-vie.eng" → "vie.eng"
+
+    input_path = Location of files to rename
+    number_chars_of_name_to_keep = How many characters should stay unchanged
+    direction_to_keep = Counting from start or from end of filename
+"""
+def rename_files_in_directory(input_path, direction_to_keep, number_chars_of_name_to_keep):
+    # For each file in the input_path
+    for file_name in os.listdir(input_path):
+        # Get basename of the file (not the entire path)
+        old_name = f'{input_path}{file_name}'
+        old_name_base = get_filename_without_extension(file_name)
+        old_name_extension = get_fileextension(file_name)
+        
+        # Modify the filename according to direction and number of chars to keep
+        if direction_to_keep == "right":
+            new_name_base = old_name_base[-number_chars_of_name_to_keep:]
+        elif direction_to_keep == "left":
+            new_name_base = old_name_base[:number_chars_of_name_to_keep+1]
+
+        # Put new filename together
+        new_name = f'{input_path}{new_name_base}.{old_name_extension}'
+
+        # Rename the file accordingly
+        logging.debug(f'Renaming {old_name} to {new_name}')
+        os.rename(old_name, new_name)
+
 
 
 # ===========================================
@@ -213,6 +260,52 @@ def write_text_file_lines(output_file, text_data, file_encoding="UTF-8"):
     with open(output_file, 'w', encoding=file_encoding) as f:     
         for line in text_data:
             f.write(line+'\n')
+
+"""
+Write text to file appending to existing content
+"""
+def write_text_file_append(output_file, text_data, file_encoding="UTF-8"):
+    with open(output_file, 'a', encoding=file_encoding) as f:
+        for line in text_data:
+            f.write(line)
+
+"""
+Write text to file appending to existing content
+"""
+def write_text_file_append_lines(output_file, text_data, file_encoding="UTF-8"):
+    with open(output_file, 'a', encoding=file_encoding) as f:
+        for line in text_data:
+            f.write(line+'\n')
+
+"""
+Write text to file appending to existing content, create new file if not exist
+"""
+def write_text_file_append_plus(output_file, text_data, file_encoding="UTF-8"):
+    with open(output_file, 'a+', encoding=file_encoding) as f:
+        for line in text_data:
+            f.write(line)
+
+"""
+Write text to file appending to existing content, create new file if not exist
+"""
+def write_text_file_append_plus_lines(output_file, text_data, file_encoding="UTF-8"):
+    with open(output_file, 'a+', encoding=file_encoding) as f:
+        for line in text_data:
+            f.write(line+'\n')
+
+"""
+Write text to file appending to existing content, create new file if not exist
+"""
+def write_text_file_append_plus_line(output_file, text_data, file_encoding="UTF-8"):
+    with open(output_file, 'a+', encoding=file_encoding) as f:
+        f.write(text_data)
+
+"""
+Write text to file appending to existing content, create new file if not exist
+"""
+def write_text_file_append_plus_line_lines(output_file, text_data, file_encoding="UTF-8"):
+    with open(output_file, 'a+', encoding=file_encoding) as f:
+        f.write(text_data+'\n')
 
 # ++++++++++++++++++++++++++++++++++++++ .json
 """
@@ -362,7 +455,12 @@ def check_for_non_empty_string(input_data):
         return False
     else:
         return True 
-    
+
+"""
+Remove empty lines.
+INPUT: List of Textlines
+OUTPUT: List of Textlines
+"""
 def text_lines_remove_empty_lines(input_data):
     output_lines = []
     for line in input_data:
@@ -370,6 +468,23 @@ def text_lines_remove_empty_lines(input_data):
             # Also remove leading and trailing whitespace
             output_lines.append(line.strip())
     return output_lines
+
+
+"""
+Remove lines such as '\n', ' \n', '.\n', '\n..', ...
+INPUT: List of Textlines
+OUTPUT: List of Textlines
+"""
+def text_lines_remove_almost_empty_lines(input_data):
+    output_lines = []
+    for line in input_data:
+        if line == '\n' or line == ' \n' or line == '.' or line == '..' or line == ',' or line == ',,' or line == '?' or line == '??' or line == '!' or line == '!!' or line == '@' or line == '@@':
+            pass 
+        else:
+            # Also remove leading and trailing whitespace
+            output_lines.append(line.strip())
+    return output_lines
+
 
 """
 First, add a full stop to each line (turning them into sentences)
@@ -422,57 +537,136 @@ def text_lines_short_to_sentences(input_data):
         
     return text_line_sentences
 
+"""
+Split the text into sentences.
 
-# TODO
-def text_lines_to_sentences_sophisticated(text_lines):
+If the text contains substrings "<prd>" or "<stop>", they would lead 
+to incorrect splitting because they are used as markers for splitting.
+
+:param text: text to be split into sentences
+:type text: str
+
+:return: list of sentences
+:rtype: list[str]
+
+Source: https://stackoverflow.com/questions/4576077/how-can-i-split-a-text-into-sentences
+"""
+# TODO: Make it work
+def text_string_to_sentences_sophisticated(input_text_string: str) -> list[str]:
+    # Prepare helpful variables
     alphabets= "([A-Za-z])"
-    prefixes = "(Mr|St|Mrs|Ms|Dr)[.]"
+    prefixes = "(Mr|St|Mrs|Ms|Dr|Prof)[.]"
     suffixes = "(Inc|Ltd|Jr|Sr|Co)"
     starters = "(Mr|Mrs|Ms|Dr|Prof|Capt|Cpt|Lt|He\s|She\s|It\s|They\s|Their\s|Our\s|We\s|But\s|However\s|That\s|This\s|Wherever)"
     acronyms = "([A-Z][.][A-Z][.](?:[A-Z][.])?)"
-    websites = "[.](com|net|org|io|gov|edu|me)"
+    websites = "[.](com|net|org|io|gov|edu|me|de)"
     digits = "([0-9])"
+    #punctuations_dots = "(..|...)" # TODO: Does not work like this... 
+    #punctuations_exclamation = "(.!|..!|...!|!!|!!!)"
+    #punctuations_question = "(.?|..?|...?|??|???)"
     multiple_dots = r'\.{2,}'
 
-    def split_into_sentences(text: str) -> list[str]:
-        """
-        Split the text into sentences.
+    # Process the input_text_string
+    input_text_string = " " + input_text_string + "  "
+    input_text_string = input_text_string.replace("\n"," ")
+    #input_text_string = re.sub("...!","!",input_text_string)
+    #input_text_string = re.sub("...",".",input_text_string)
+    #input_text_string = re.sub(punctuations_dots,".",input_text_string)
+    #input_text_string = re.sub(punctuations_exclamation,"!",input_text_string)
+    #input_text_string = re.sub(punctuations_question,"?",input_text_string)
+    input_text_string = re.sub(prefixes,"\\1<prd>",input_text_string)
+    input_text_string = re.sub(websites,"<prd>\\1",input_text_string)
+    input_text_string = re.sub(digits + "[.]" + digits,"\\1<prd>\\2",input_text_string)
+    input_text_string = re.sub(multiple_dots, lambda match: "<prd>" * len(match.group(0)) + "<stop>", input_text_string)
+    if "Ph.D" in input_text_string: input_text_string = input_text_string.replace("Ph.D.","Ph<prd>D<prd>")
+    input_text_string = re.sub("\s" + alphabets + "[.] "," \\1<prd> ",input_text_string)
+    input_text_string = re.sub(acronyms+" "+starters,"\\1<stop> \\2",input_text_string)
+    input_text_string = re.sub(alphabets + "[.]" + alphabets + "[.]" + alphabets + "[.]","\\1<prd>\\2<prd>\\3<prd>",input_text_string)
+    input_text_string = re.sub(alphabets + "[.]" + alphabets + "[.]","\\1<prd>\\2<prd>",input_text_string)
+    input_text_string = re.sub(" "+suffixes+"[.] "+starters," \\1<stop> \\2",input_text_string)
+    input_text_string = re.sub(" "+suffixes+"[.]"," \\1<prd>",input_text_string)
+    input_text_string = re.sub(" " + alphabets + "[.]"," \\1<prd>",input_text_string)
+    if "”" in input_text_string: input_text_string = input_text_string.replace(".”","”.")
+    if "\"" in input_text_string: input_text_string = input_text_string.replace(".\"","\".")
+    if "!" in input_text_string: input_text_string = input_text_string.replace("!\"","\"!")
+    if "?" in input_text_string: input_text_string = input_text_string.replace("?\"","\"?")
+    #input_text_string = input_text_string.replace("...",".")
+    input_text_string = input_text_string.replace(".",".<stop>")
+    input_text_string = input_text_string.replace("?","?<stop>")
+    input_text_string = input_text_string.replace("!","!<stop>")
+    input_text_string = input_text_string.replace("<prd>",".")
+    sentences = input_text_string.split("<stop>")
+    sentences = [s.strip() for s in sentences]
+    if sentences and not sentences[-1]: sentences = sentences[:-1]
 
-        If the text contains substrings "<prd>" or "<stop>", they would lead 
-        to incorrect splitting because they are used as markers for splitting.
+    return sentences
 
-        :param text: text to be split into sentences
-        :type text: str
 
-        :return: list of sentences
-        :rtype: list[str]
-        """
-        text = " " + text + "  "
-        text = text.replace("\n"," ")
-        text = re.sub(prefixes,"\\1<prd>",text)
-        text = re.sub(websites,"<prd>\\1",text)
-        text = re.sub(digits + "[.]" + digits,"\\1<prd>\\2",text)
-        text = re.sub(multiple_dots, lambda match: "<prd>" * len(match.group(0)) + "<stop>", text)
-        if "Ph.D" in text: text = text.replace("Ph.D.","Ph<prd>D<prd>")
-        text = re.sub("\s" + alphabets + "[.] "," \\1<prd> ",text)
-        text = re.sub(acronyms+" "+starters,"\\1<stop> \\2",text)
-        text = re.sub(alphabets + "[.]" + alphabets + "[.]" + alphabets + "[.]","\\1<prd>\\2<prd>\\3<prd>",text)
-        text = re.sub(alphabets + "[.]" + alphabets + "[.]","\\1<prd>\\2<prd>",text)
-        text = re.sub(" "+suffixes+"[.] "+starters," \\1<stop> \\2",text)
-        text = re.sub(" "+suffixes+"[.]"," \\1<prd>",text)
-        text = re.sub(" " + alphabets + "[.]"," \\1<prd>",text)
-        if "”" in text: text = text.replace(".”","”.")
-        if "\"" in text: text = text.replace(".\"","\".")
-        if "!" in text: text = text.replace("!\"","\"!")
-        if "?" in text: text = text.replace("?\"","\"?")
-        text = text.replace(".",".<stop>")
-        text = text.replace("?","?<stop>")
-        text = text.replace("!","!<stop>")
-        text = text.replace("<prd>",".")
-        sentences = text.split("<stop>")
-        sentences = [s.strip() for s in sentences]
-        if sentences and not sentences[-1]: sentences = sentences[:-1]
-        return sentences
+def text_lines_to_sentences_sophisticated(text_lines):
+
+    text_string = ""
+    for line in text_lines:
+        # Remove line breaks
+        new_line = line.replace('\n','')
+        # Add whitespace inbetween the lines to prevent words merging
+        text_string = f'{text_string} {line}'
+
+    # Give the long string to the function that turns it into sentences.
+    text_sentences = text_string_to_sentences_sophisticated(text_string)
+
+    return text_sentences
+
+
+"""
+Replace punctuations such as '...\n' → '.\n', '..\n' → '.\n', '!!!\n' → '!\n', ...
+INPUT: List of Textlines
+OUTPUT: List of Textlines
+"""
+def text_lines_remove_excessive_punctuation(input_data):
+    output_lines = []
+    for line in input_data:
+        # Also remove leading and trailing whitespace
+        new_line = line.strip()
+        if new_line.endswith('...\n'):
+            new_line = new_line.replace('...\n','.\n')
+        elif new_line.endswith('...'):
+            new_line = new_line.replace('...','.')
+
+        elif new_line.endswith('..\n'):
+            new_line = new_line.replace('..\n','.\n')
+        elif new_line.endswith('..'):
+            new_line = new_line.replace('..','.')
+
+        elif new_line.endswith('!!!\n'):
+            new_line = new_line.replace('!!!\n','!\n')
+        elif new_line.endswith('!!!'):
+            new_line = new_line.replace('!!!','!')
+
+        elif new_line.endswith('!!\n'):
+            new_line = new_line.replace('!!\n','!\n')
+        elif new_line.endswith('!!'):
+            new_line = new_line.replace('!!','!')
+
+        elif new_line.endswith('???\n'):
+            new_line = new_line.replace('???\n','?\n')
+        elif new_line.endswith('???'):
+            new_line = new_line.replace('???','?')
+
+        elif new_line.endswith('??\n'):
+            new_line = new_line.replace('??\n','?\n')
+        elif new_line.endswith('??'):
+            new_line = new_line.replace('??','?')
+
+        
+        elif new_line.endswith('.?\n'):
+            new_line = new_line.replace('.?\n','?\n')
+        elif new_line.endswith('.?'):
+            new_line = new_line.replace('.?','?')
+
+        else:
+            output_lines.append(new_line)
+
+    return output_lines
 
 
 def remove_punctuation_end(input_data):
@@ -502,6 +696,27 @@ def remove_punctuation_end(input_data):
     
     return clean_string
 
+
+"""
+Adds a full stop to every text line, if not existing.
+INPUT: ["textline1", "textline2.", "textline3"]
+OUTPUT: ["textline1.", "textline2.", "textline3."]
+"""
+def text_lines_add_fullstop_end(input_data):
+    
+    output_text_lines = []
+
+    for text_line in input_data:
+        # Add full stop at end if not exists
+        if not text_line.endswith('.'):
+            new_line = f'{text_line}.'
+            output_text_lines.append(new_line)
+        else:
+            output_text_lines.append(text_line)
+
+    return output_text_lines
+
+
 def text_lines_remove_special_characters(input_data):
     clean_text_lines = []
     for line in input_data:
@@ -509,3 +724,38 @@ def text_lines_remove_special_characters(input_data):
         clean_text_lines.append(clean_line.replace('  ',' ').replace('URL','').strip())
 
     return clean_text_lines
+
+
+"""
+
+"""
+#TODO: A tad bit more maybe ;)
+def text_lines_tokenize(input_data):
+    output_data = []
+    for line in input_data:
+        # [^\s]+ == "At least one not whitespace character"
+        new_line = line.replace('[^\s]+, ',' , ')
+        new_line = new_line.replace('[^\s]+. ',' . ')
+        output_data.append(new_line)
+
+        return output_data
+
+
+"""
+
+"""
+#TODO: A tad bit more maybe ;)
+def text_lines_detokenize(input_data):
+    output_data = []
+    for line in input_data:
+        # [^\s]+ == "At least one not whitespace character"
+        new_line = line.replace(' ,',',')
+        new_line = new_line.replace(' .','.')
+        new_line = new_line.replace(' !','!')
+        new_line = new_line.replace(' ?','?')
+        new_line = new_line.replace('( ','(')
+        new_line = new_line.replace(' )',')')
+        output_data.append(new_line)
+
+        return output_data
+

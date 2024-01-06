@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Python Script for all types of text processing
+# Python Script for downloading text data from websites
 # 
 # Authors: Christian "Doofnase" Schuler, 
 #          Deepesah "Tania" Saurty, 
@@ -7,12 +7,18 @@
 #          Raman "Brudi" Ahmad, 
 #          Anran "Echo" Wang
 ###############################################################################
-
 """
-TODO: Move text processing functions from utilities_general.py to here
+Prior Step: Prepare Configuration Files
+This Step: Get and Transform Webdata
+Next Step: Cleaning of Text Data
 """
 
 import logging
 import os
-import string
+import requests
+import sys
+
+
+def main():
+    print(f'TODO: Raman & Selenium integration into this workflow.')
 

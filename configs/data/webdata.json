@@ -1,0 +1,72 @@
+{
+    "Webdata":
+    {
+        "2021MorisienDictionaryEnglish":
+        {
+            "Status":"ready",
+            "Notes":"Added manually",
+            "Language":"mor",
+            "Access":"Manual-download from https://dokumen.pub/diksyoner-kreol-morisyen-mauritian-english-dictionary.html",
+            "Platform":"website",
+            "Platform ID":["https://dokumen.pub/diksyoner-kreol-morisyen-mauritian-english-dictionary.html"],
+            "Name":"Diksyoner Kreol Morisyen. Mauritian-English dictionary",
+            "Description":"description",
+            "Year":2021,
+            "URL":"https://dokumen.pub/diksyoner-kreol-morisyen-mauritian-english-dictionary.html"
+        },
+        "2021MorisienEducationalBooksPupil":
+        {
+            "Status":"ready",
+            "Notes":"Downloaded manually. Files renamed to prevent the following characters in pdf name: - _ . + ( ) ' ' ",
+            "Language":"mor",
+            "Access":"Requested permission and then manual-download from https://fliphtml5.com/bookcase/wrouj",
+            "Platform":"",
+            "Platform ID":[""],
+            "Name":"Kreol Morisien Pupil 2021",
+            "Description":"Educational books from the Mauritius Institute of Education",
+            "Year":2021,
+            "URL":"https://fliphtml5.com/bookcase/wrouj"
+        },
+        "2021MorisienEducationalBooksTeacher":
+        {
+            "Status":"todo",
+            "Notes":"notes",
+            "Language":"mor",
+            "Access":"access",
+            "Platform":"",
+            "Platform ID":[""],
+            "Name":"Kreol Morisien Teacher 2021",
+            "Description":"Educational books from the Mauritius Institute of Education",
+            "Year":2021,
+            "URL":"https://fliphtml5.com/bookcase/udzjb"
+        },
+        "2023DevVirahsawmyBoukieBananePDF":
+        {
+            "Status":"ready",
+            "Notes":"Downloaded manually. Files renamed to prevent the following characters in pdf name: - _ .",
+            "Language":"mor",
+            "Access":"Manual-download of the PDF files from https://boukiebanane.com/dev-omnibus-pdf/",
+            "Platform":"homepage",
+            "Platform ID":[""],
+            "Name":"Literature of Dev Virahsawmy",
+            "Description":"Published works of Dev Virahsawmy on BoukieBanane",
+            "Year":2023,
+            "URL":"https://boukiebanane.com/"
+            
+        },
+        "2023DevVirahsawmyBoukieBananeWeb":
+        {
+            "Status":"ready",
+            "Notes":"Added manually",
+            "Language":"mor",
+            "Access":"Selenium-download for text from webside. Saved as mor-boukiebanane_com.txt",
+            "Platform":"homepage",
+            "Platform ID":[""],
+            "Name":"Literature of Dev Virahsawmy",
+            "Description":"Published works of Dev Virahsawmy on BoukieBanane",
+            "Year":2023,
+            "URL":"https://boukiebanane.com/"
+            
+        }
+    }
+}

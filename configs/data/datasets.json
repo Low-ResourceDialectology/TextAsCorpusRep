@@ -43,9 +43,9 @@
         "2016ElliottMulti30k":
         {
             "Status":"ready",
-            "Notes":"notes",
+            "Notes":"English and French text lines are aligned- German does not seem to be!",
             "Language":"deu",
-            "Access":"access",
+            "Access":"git clone git@github.com:lium-lst/wmt17-mmt.git",
             "Platform":"github",
             "Platform ID":[
                 "https://github.com/lium-lst/wmt17-mmt/raw/master/data/train.de.gz",
@@ -55,7 +55,7 @@
                 "https://github.com/lium-lst/wmt17-mmt/raw/master/data/val.en.gz",
                 "https://github.com/lium-lst/wmt17-mmt/raw/master/data/val.fr.gz"],
             "Name":"Multilingual English-German Image Descriptions",
-            "Description":"Decription_of_dataset",
+            "Description":"Multilingual English-German-French Image Descriptions. This work is expanding upon the Flickr30k dataset https://paperswithcode.com/dataset/flickr30k",
             "Year":2016,
             "Authors":["Desmond Elliott", "Stella Frank", "Khalil Sima'an", "Lucia Specia"],
             "Homepage":"https://github.com/lium-lst/wmt17-mmt",
@@ -65,7 +65,7 @@
                 "License":"license",
                 "Size MB":"size_in_mb",
                 "Size Documents":"size_in_documents",
-                "Size Sentences":"size_in_sentences",
+                "Size Sentences":"30,000 sentence pairs",
                 "Size Words":"size_in_words",
                 "Size Tokens":"size_in_tokens",
                 "File Format":"file_format"                
@@ -110,7 +110,7 @@
         {
             "Status":"todo",
             "Notes":"notes",
-            "Language":"",
+            "Language":"kmr",
             "Access":"http://kratylos.org/~raphael/kurdish/database/",
             "Platform":"",
             "Platform ID":[""],
@@ -430,45 +430,6 @@
                 }
             }
         },
-        "2021MorisienDictionaryEnglish":
-        {
-            "Status":"ready",
-            "Notes":"Added manually",
-            "Language":"mor",
-            "Access":"Manual-download from https://dokumen.pub/diksyoner-kreol-morisyen-mauritian-english-dictionary.html",
-            "Platform":"website",
-            "Platform ID":["https://dokumen.pub/diksyoner-kreol-morisyen-mauritian-english-dictionary.html"],
-            "Name":"Diksyoner Kreol Morisyen. Mauritian-English dictionary",
-            "Description":"description",
-            "Year":2021,
-            "URL":"https://dokumen.pub/diksyoner-kreol-morisyen-mauritian-english-dictionary.html"
-        },
-        "2021MorisienEducationalBooksPupil":
-        {
-            "Status":"ready",
-            "Notes":"notes",
-            "Language":"mor",
-            "Access":"Requested permission and then manual-download from https://fliphtml5.com/bookcase/wrouj",
-            "Platform":"",
-            "Platform ID":[""],
-            "Name":"Kreol Morisien Pupil 2021",
-            "Description":"Educational books from the Mauritius Institute of Education",
-            "Year":2021,
-            "URL":"https://fliphtml5.com/bookcase/wrouj"
-        },
-        "2021MorisienEducationalBooksTeacher":
-        {
-            "Status":"todo",
-            "Notes":"notes",
-            "Language":"mor",
-            "Access":"access",
-            "Platform":"",
-            "Platform ID":[""],
-            "Name":"Kreol Morisien Teacher 2021",
-            "Description":"Educational books from the Mauritius Institute of Education",
-            "Year":2021,
-            "URL":"https://fliphtml5.com/bookcase/udzjb"
-        },
         "2022AhmadiInterdialect":
         {
             "Status":"ready",
@@ -632,7 +593,7 @@
         "2022NgoSynthetic":
         {
             "Status":"ready",
-            "Notes":"Check out inclusion of 'dev' and 'test' sets",
+            "Notes":"Check out inclusion of 'dev' and 'test' sets. Beware peculiar file naming in dataset: train, train.tok, train.tok.true, ...",
             "Language":"vie",
             "Access":"git clone git@github.com:ngovinhtn/Low-resource-Machine-Translation.git",
             "Platform":"github",
@@ -725,34 +686,6 @@
             "Description":"Approaches to Corpus Creation for Low-Resource Language Technology: the Case of Southern Kurdish and Laki",
             "Year":2023,
             "URL":"https://github.com/sinaahmadi/KurdishLID/tree/main"
-        },
-        "2023DevVirahsawmyBoukieBananePDF":
-        {
-            "Status":"ready",
-            "Notes":"Added manually",
-            "Language":"mor",
-            "Access":"Manual-download of the PDF files from https://boukiebanane.com/dev-omnibus-pdf/",
-            "Platform":"homepage",
-            "Platform ID":[""],
-            "Name":"Literature of Dev Virahsawmy",
-            "Description":"Published works of Dev Virahsawmy on BoukieBanane",
-            "Year":2023,
-            "URL":"https://boukiebanane.com/"
-            
-        },
-        "2023DevVirahsawmyBoukieBananeWeb":
-        {
-            "Status":"ready",
-            "Notes":"Added manually",
-            "Language":"mor",
-            "Access":"Selenium-download for text from webside. Saved as mor-boukiebanane_com.txt",
-            "Platform":"homepage",
-            "Platform ID":[""],
-            "Name":"Literature of Dev Virahsawmy",
-            "Description":"Published works of Dev Virahsawmy on BoukieBanane",
-            "Year":2023,
-            "URL":"https://boukiebanane.com/"
-            
         },
         "2023LentCreoleVal":
         {

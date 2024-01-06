@@ -7,6 +7,11 @@
 #          Raman "Brudi" Ahmad, 
 #          Anran "Echo" Wang
 ###############################################################################
+"""
+Prior Step: Prepare Configuration Files
+This Step: Get and Transform Datasets
+Next Step: Cleaning of Text Data
+"""
 
 import logging
 import os
@@ -21,8 +26,7 @@ sys.path.append(r"./../../")
 
 import utils.utilities_general as util_ge
 
-"""
-INPUT (examples):
+""" INPUT (examples):
     languages = ["mor", "kur", "vie"]
     output_path = "./../../data/datasets/"
     datasets =  { 
@@ -34,8 +38,8 @@ INPUT (examples):
                     }
                 }
 """
-def main(languages, datasets, output_path):
-
+def main(languages, datasets, output_path, specific_datasets):
+# TODO: Move main to bottom of script.
     """
     Automated downloading of data from github repositories
     """
@@ -132,12 +136,12 @@ def main(languages, datasets, output_path):
                     }
                 }
     """
-    def manage_downloading_process(languages, output_path, datasets):
+    def manage_downloading_process(languages, output_path, datasets, specific_datasets):
         #logging.info(languages)
         for dataset_key in datasets.keys():
             
-            # Only download datasets for the defined language
-            if datasets[dataset_key]["Language"] in languages:
+            # Only download datasets for the defined language OR when specific dataset(s) are given
+            if datasets[dataset_key]["Language"] in languages or specific_datasets != 'None':
             
                 # Download dataset from Huggingface
                 if datasets[dataset_key]["Platform"] == "huggingface":
@@ -159,7 +163,7 @@ def main(languages, datasets, output_path):
                     logging.info(f'====   The dataset {dataset_key} needs to be requested from the creators.')
                     logging.info(f'++++     Access Information: {datasets[dataset_key]["Access"]}')
         
-    manage_downloading_process(languages, output_path, datasets)
+    manage_downloading_process(languages, output_path, datasets, specific_datasets)
 
 
     """

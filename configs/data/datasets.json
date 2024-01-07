@@ -5,7 +5,7 @@
         {
             "Status":"ready",
             "Notes":"notes",
-            "Language":"",
+            "Languages":["kmr"],
             "Access":"Manual-download from https://multicast.aspra.uni-bamberg.de/resources/kurdish/data/ccknt/ccknt.txt",
             "Platform":"homepage",
             "Platform ID":[""],
@@ -18,7 +18,7 @@
         {
             "Status":"ready",
             "Notes":"Added manually",
-            "Language":"mor",
+            "Languages":["mfe"],
             "Access":"Manual-download from https://www.academia.edu/24691305/GRAMER_KREOL_MORISIEN_Volim_1_Dokiman_Referans_Government_of_Mauritius_Press_f%C3%A9vrier_2012_ISBN_978_99949_20_85_3",
             "Platform":"website",
             "Platform ID":["https://www.academia.edu/24691305/GRAMER_KREOL_MORISIEN_Volim_1_Dokiman_Referans_Government_of_Mauritius_Press_f%C3%A9vrier_2012_ISBN_978_99949_20_85_3"],
@@ -31,7 +31,7 @@
         {
             "Status":"ready",
             "Notes":"TODO: Get access to entire corpus",
-            "Language":"kmr",
+            "Languages":["kmr"],
             "Access":"https://github.com/klpp/pewan/raw/master/Pewan.zip",
             "Platform":"github",
             "Platform ID":["https://github.com/klpp/pewan/raw/master/Pewan.zip"],
@@ -44,7 +44,7 @@
         {
             "Status":"ready",
             "Notes":"English and French text lines are aligned- German does not seem to be!",
-            "Language":"deu",
+            "Languages":["deu","fra","eng"],
             "Access":"git clone git@github.com:lium-lst/wmt17-mmt.git",
             "Platform":"github",
             "Platform ID":[
@@ -81,7 +81,7 @@
                     "Authors":["Desmond Elliott", "Stella Frank", "Khalil Sima'an", "Lucia Specia"]
                 }
             },
-            "Languages":
+            "Language Relations":
             {
                 "German":
                 {
@@ -110,7 +110,7 @@
         {
             "Status":"todo",
             "Notes":"notes",
-            "Language":"kmr",
+            "Languages":["kmr"],
             "Access":"http://kratylos.org/~raphael/kurdish/database/",
             "Platform":"",
             "Platform ID":[""],
@@ -123,7 +123,7 @@
         {
             "Status":"ready",
             "Notes":"Morphology",
-            "Language":"kmr",
+            "Languages":["kmr"],
             "Access":"Part of https://github.com/unimorph",
             "Platform":"github",
             "Platform ID":[
@@ -138,7 +138,7 @@
         {
             "Status":"todo",
             "Notes":"In one test-run I included their small nmt-testdata.",
-            "Language":"vie",
+            "Languages":["vie","eng"],
             "Access":"git clone git@github.com:VinAIResearch/VinAI_Translate.git",
             "Platform":"github",
             "Platform ID":"",
@@ -147,7 +147,7 @@
             "Year":2000,
             "Authors":["Thien Hai Nguyen","Tuan-Duy H. Nguyen","Duy Phung","Duy Tran-Cong Nguyen","Hieu Minh Tran","Manh Luong","Tin Duy Vo","Hung Hai Bui","Dinh Phung","Dat Quoc Nguyen"],
             "Homepage":"https://github.com/VinAIResearch/VinAI_Translate",
-            "Languages":
+            "Language Relations":
             {
                 "Language1":
                 {
@@ -192,8 +192,8 @@
         "2018CraveApertiumNorthernKurdish":
         {
             "Status":"ready",
-            "Notes":"notes",
-            "Language":"kmr",
+            "Notes":"TODO: Get the English pairs",
+            "Languages":["kmr","eng"],
             "Access":"git clone git@github.com:apertium/apertium-kmr-eng.git",
             "Platform":"github",
             "Platform ID":[
@@ -211,7 +211,7 @@
         {
         	"Status":"todo",
             "Notes":"VERY LARGE FILES! Word vectors",
-            "Language":"mor",
+            "Languages":["kmr"],
             "Access":
             [
                 "https://dl.fbaipublicfiles.com/fasttext/vectors-crawl/cc.ku.300.vec.gz",
@@ -228,7 +228,7 @@
         {
             "Status":"todo",
             "Notes":"TODO: Select exact files to get and sort the dictionaries",
-            "Language":"",
+            "Languages":["ckb","kmr"],
             "Access":"git clone ",
             "Platform":"",
             "Platform ID":[""],
@@ -241,7 +241,7 @@
         {
             "Status":"ready",
             "Notes":"notes",
-            "Language":"kmr",
+            "Languages":["kmr"],
             "Access":"https://raw.githubusercontent.com/ftkurt/kurdish-twitter-data/master/Kurmanji/twitter-data.txt",
             "Platform":"github",
             "Platform ID":["https://raw.githubusercontent.com/ftkurt/kurdish-twitter-data/master/Kurmanji/twitter-data.txt"],
@@ -254,7 +254,7 @@
         {
             "Status":"todo",
             "Notes":"notes",
-            "Language":"",
+            "Languages":["kmr","deu","tur","eng"],
             "Access":
             [
                 "https://github.com/freedict/fd-dictionaries/raw/master/deu-kur/deu-kur.tei",
@@ -273,7 +273,7 @@
         {
             "Status":"ready",
             "Notes":"What about 'train' next to 'dev' and 'test'?",
-            "Language":"zho",
+            "Languages":["zho","eng"],
             "Access":"git clone git@github.com:bfsujason/mac.git",
             "Platform":"github",
             "Platform ID":[
@@ -345,7 +345,7 @@
                     "Authors":["Author_A_Name","Author_C_Name"]
                 }
             },
-            "Languages":
+            "Language Relations":
             {
                 "Language_name_according_to_dataset":
                 {
@@ -379,7 +379,7 @@
         {
             "Status":"ready",
             "Notes":"to not distribute the dataset or part of the dataset in any original or modified form.",
-            "Language":"vie",
+            "Languages":["vie","eng"],
             "Access":"Prior to download, this form has to be filled out: https://docs.google.com/forms/d/e/1FAIpQLSfShfLzQ3w9ErBc6sId55s83o9tOv2qz6zMd_6lNCD7n791NQ/viewform including agreement to (1) to use PhoMT for research or educational purposes only, (2) to not distribute PhoMT or part of PhoMT in any original or modified form, (3) and to cite the EMNLP 2021 paper (PhoMT: A High-Quality and Large-Scale Benchmark Dataset for Vietnamese-English Machine Translation) whenever PhoMT is employed to help produce published results. Then extract PhoMT into the raw-data-directory called 2021DoanPhoMT",
             "Platform":"homepage",
             "Platform ID":"",
@@ -410,7 +410,7 @@
                     "Authors":["author1", "author2"]
                 }
             },
-            "Languages":
+            "Language Relations":
             {
                 "Vietnamese":
                 {
@@ -434,7 +434,7 @@
         {
             "Status":"ready",
             "Notes":"News articles from websites",
-            "Language":"kmr",
+            "Languages":["ckb","kmr","eng"],
             "Access":"git clone git@github.com:KurdishBLARK/InterdialectCorpus.git",
             "Platform":"github",
             "Platform ID":
@@ -471,7 +471,7 @@
                     "Authors":["author1", "author2"]
                 }
             },
-            "Languages":
+            "Language Relations":
             {
                 "Sorani":
                 {
@@ -521,7 +521,7 @@
         {
             "Status":"ready",
             "Notes":"notes",
-            "Language":"mor",
+            "Languages":["mfe","eng","fra"],
             "Access":"access",
             "Platform":"huggingface",
             "Platform ID":"prajdabre/KreolMorisienMT",
@@ -560,7 +560,7 @@
                     "Authors":["Raj Dabre","Aneerav Sukhoo"]
                 }
             },
-            "Languages":
+            "Language Relations":
             {
                 "Morisien":
                 {
@@ -594,7 +594,7 @@
         {
             "Status":"ready",
             "Notes":"Check out inclusion of 'dev' and 'test' sets. Beware peculiar file naming in dataset: train, train.tok, train.tok.true, ...",
-            "Language":"vie",
+            "Languages":["vie","eng","fra","zho","jap"],
             "Access":"git clone git@github.com:ngovinhtn/Low-resource-Machine-Translation.git",
             "Platform":"github",
             "Platform ID":
@@ -635,7 +635,7 @@
                     "Authors":["Thi-Vinh Ngo","Phuong-Thai Nguyen","Thanh-Le Ha","Khac-Quy Dinh","Le-Minh Nguyen"]
                 }
             },
-            "Languages":
+            "Language Relations":
             {
                 "Vietnamese":
                 {
@@ -674,8 +674,8 @@
         {
             "Status":"ready",
             "Notes":"Northern Kurdish in Latin and Arabic script.",
-            "Language":"kmr",
-            "Access":"git clone git@github.com:hclent/CreoleVal.git",
+            "Languages":["ckb","kmr","zza"],
+            "Access":"",
             "Platform":"github",
             "Platform ID":
             [
@@ -691,7 +691,7 @@
         {
             "Status":"todo",
             "Notes":"Their repository is still under construction... This repository includes data (or otherwise download scripts), scripts for training and evaluation, and models for tasks spanning natural language understanding and generation for Creole languages.",
-            "Language":"Mor",
+            "Languages":["mfe"],
             "Access":"git clone git@github.com:hclent/CreoleVal.git",
             "Platform":"",
             "Platform ID":[""],
@@ -704,7 +704,7 @@
         {
             "Status":"ready",
             "Notes":"Many aligned languages.",
-            "Language":"eng",
+            "Languages":["eng"],
             "Access":"access",
             "Platform":"github",
             "Platform ID":["https://raw.githubusercontent.com/openlanguagedata/seed/main/seed/eng_Latn"],
@@ -735,7 +735,7 @@
                     "Authors":["Jean Maillard","Cynthia Gao","Elahe Kalbassi","Kaushik Ram Sadagopan","Vedanuj Goswami","Philipp Koehn","Angela Fan","Francisco Guzmán"]
                 }
             },
-            "Languages":
+            "Language Relations":
             {
                 "Language_name_according_to_dataset":
                 {
@@ -769,7 +769,7 @@
         {
             "Status":"ready",
             "Notes":"notes",
-            "Language":"ukr",
+            "Languages":["ukr","eng"],
             "Access":"access",
             "Platform":"huggingface",
             "Platform ID":"turuta/Multi30k-uk",
@@ -808,7 +808,7 @@
                     "Authors":["Author_A_Name","Author_C_Name"]
                 }
             },
-            "Languages":
+            "Language Relations":
             {
                 "Language_name_according_to_dataset":
                 {
@@ -842,7 +842,7 @@
         {
             "Status":"todo",
             "Notes":"notes",
-            "Language":"iso",
+            "Languages":["iso"],
             "Access":"access",
             "Platform":"huggingface|github|website",
             "Platform ID":"someID|URL",
@@ -881,7 +881,7 @@
                     "Authors":["Author_A_Name","Author_C_Name"]
                 }
             },
-            "Languages":
+            "Language Relations":
             {
                 "Language_name_according_to_dataset":
                 {

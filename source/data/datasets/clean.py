@@ -496,42 +496,42 @@ def transform_data(current_dataset_key, current_dataset_info, inputPath, outputP
                 file.write('\n')
         """
 
-        data_morisien_mor = loaded_local_dataset['train'][3:45366]
+        data_morisien_mfe = loaded_local_dataset['train'][3:45366]
         #for dataset_row in data_morisien_mor:
-        logging.debug(f'Length of data_morisien_mor: {len(data_morisien_mor)}')
-        #print(transform_path+'mor.mor')
-        with open(transform_path+'mor.mor', 'w') as file:
-            mormor = data_morisien_mor['input']
-            for line in mormor:
+        logging.debug(f'Length of data_morisien_mfe: {len(data_morisien_mfe)}')
+        #print(transform_path+'mfe.mfe')
+        with open(transform_path+'mfe.mfe', 'w') as file:
+            mfemfe = data_morisien_mfe['input']
+            for line in mfemfe:
                 file.write(line)
                 file.write('\n')
 
         data_morisien_eng = loaded_local_dataset['train'][45366:68676]
         logging.debug(f'Length of data_morisien_eng: {len(data_morisien_eng)}')
-        #print(transform_path+'mor.eng')
-        with open(transform_path+'mor.eng', 'w') as file:
+        #print(transform_path+'mfe.eng')
+        with open(transform_path+'mfe.eng', 'w') as file:
             engeng = data_morisien_eng['input']
             for line in engeng:
                 file.write(line)
                 file.write('\n')
 
-        with open(transform_path+'eng.mor', 'w') as file:
-            engmor = data_morisien_eng['target']
-            for line in engmor:
+        with open(transform_path+'eng.mfe', 'w') as file:
+            engmfe = data_morisien_eng['target']
+            for line in engmfe:
                 file.write(line)
                 file.write('\n')
 
         data_morisien_fra = loaded_local_dataset['train'][68676:]
         logging.debug(f'Length of data_morisien_fra: {len(data_morisien_fra)}')
-        with open(transform_path+'mor.fra', 'w') as file:
+        with open(transform_path+'mfe.fra', 'w') as file:
             frafra = data_morisien_fra['input']
             for line in frafra:
                 file.write(line)
                 file.write('\n')
 
-        with open(transform_path+'fra.mor', 'w') as file:
-            framor = data_morisien_fra['target']
-            for line in framor:
+        with open(transform_path+'fra.mfe', 'w') as file:
+            framfe = data_morisien_fra['target']
+            for line in framfe:
                 file.write(line)
                 file.write('\n')
 

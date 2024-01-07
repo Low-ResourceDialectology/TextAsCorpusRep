@@ -87,6 +87,23 @@ def get_basename(directory_path):
     basename = os.path.basename(directory_path)
     return basename
 
+"""
+Get the head of the path (opposite of basename)
+INPUT: "/games/awesome/dwarffortress"
+OUTPUT: "/games/awesome"
+"""
+def get_dir_path(directory_path):
+    dir_path = os.path.dirname(directory_path)
+    return dir_path
+
+"""
+Get the tail of the path (just like basename)
+INPUT: "/games/awesome/dwarffortress"
+OUTPUT: "dwarffortress"
+"""
+def get_dir_basename(directory_path):
+    dir_basename = os.path.basename(directory_path)
+    return dir_basename
 
 
 """

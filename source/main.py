@@ -22,7 +22,8 @@ import data.datasets.extract_data as extract_ds
 import data.webdata.download as down_wd
 import data.webdata.clean as clean_wd
 import data.webdata.assess_quality as assess_wd
-import evals.language_ident as lid_ds
+import evals.language_ident as lid_wd
+import evals.analyse_text as anal_text
 
 """ Setup: ====================================================================
     # Navigate to "environments" folder of project-directory
@@ -50,7 +51,7 @@ source ./../environments/venvMTACR/bin/activate
 
     # Run script with arguments (shown below for each step with examples)
     # --configPath is by default './../configs/general/paths.ini'
-python main.py --languages mor   # This does not anything but check that there is no crash
+python main.py --languages mfe   # This does not anything but check that there is no crash
 """
 
 """ 
@@ -81,9 +82,9 @@ python main.py --languages mor   # This does not anything but check that there i
     # OUTPUT: Raw (language/text) data
     # DESCRIPTION: 
 # For a language
-python main.py --getDatasets --languages mor --debug
+python main.py --getDatasets --languages mfe --debug
 # For multiple languages
-python main.py --getDatasets --languages mor kmr vie deu eng zho ukr --debug
+python main.py --getDatasets --languages mfe kmr vie deu eng zho ukr --debug
 # For a specific dataset
 python main.py --getDatasets --debug --specificDataset 2001HaigKurdishNewspaper
 python main.py --getDatasets --debug --specificDataset 2012MorisienGramer
@@ -116,9 +117,9 @@ python main.py --getDatasets --debug --specificDataset 2023SaichyshynaMulti30k
     #   1. paths.ini
     #   2. webdata.json
 # For a language
-python main.py --getWebdata --languages mor --debug
+python main.py --getWebdata --languages mfe --debug
 # For multiple languages
-python main.py --getWebdata --languages mor kmr vie deu eng zho ukr --debug
+python main.py --getWebdata --languages mfe kmr vie deu eng zho ukr --debug
 # For a specific URL
 python main.py --getWebdata --debug --specificURL #TODO: How to parse URLs without issues?
 python main.py --getWebdata --debug --specificURL #TODO: Parsing&Storing? 2021MorisienDictionaryEnglish
@@ -134,9 +135,9 @@ python main.py --getWebdata --debug --specificURL #TODO: Parsing&Storing? 2023De
 # OUTPUT: Clean data (Each line 1 sentence or word)
 # DESCRIPTION: 
 # For a language
-python main.py --cleaningOfTextData --languages mor --debug
+python main.py --cleaningOfTextData --languages mfe --debug
 # For multiple languages
-python main.py --cleaningOfTextData --languages mor kmr vie deu eng zho ukr --debug
+python main.py --cleaningOfTextData --languages mfe kmr vie deu eng zho ukr --debug
 # For a specific dataset
 python main.py --cleaningOfTextData --debug --specificDataset 2001HaigKurdishNewspaper
 python main.py --cleaningOfTextData --debug --specificDataset 2012MorisienGramer
@@ -161,11 +162,11 @@ python main.py --cleaningOfTextData --debug --specificDataset 2023SaichyshynaMul
 
 # The cleaning process includes "transforming", "sorting", and "cleaning" 
 #   each of these steps can be deactivated, to then only execute the remaining ones.
-python main.py --cleaningOfTextData --cleaningNoTransform --languages mor --debug
-python main.py --cleaningOfTextData --cleaningNoSort --languages mor --debug
-python main.py --cleaningOfTextData --cleaningNoClean --languages mor --debug
+python main.py --cleaningOfTextData --cleaningNoTransform --languages mfe --debug
+python main.py --cleaningOfTextData --cleaningNoSort --languages mfe --debug
+python main.py --cleaningOfTextData --cleaningNoClean --languages mfe --debug
 # Only the final cleaning-step of the cleaning-process for all languages
-python main.py --cleaningOfTextData --cleaningNoTransform --cleaningNoSort --languages mor kmr vie deu eng zho ukr --debug
+python main.py --cleaningOfTextData --cleaningNoTransform --cleaningNoSort --languages mfe kmr vie deu eng zho ukr --debug
 
 
 # ============================================
@@ -174,9 +175,9 @@ python main.py --cleaningOfTextData --cleaningNoTransform --cleaningNoSort --lan
 # OUTPUT: Clean data (Each line 1 sentence or word)
 # DESCRIPTION: 
 # For a language
-python main.py --cleaningOfWebData --languages mor --debug
+python main.py --cleaningOfWebData --languages mfe --debug
 # For multiple languages
-python main.py --cleaningOfWebData --languages mor kmr vie deu eng zho ukr --debug
+python main.py --cleaningOfWebData --languages mfe kmr vie deu eng zho ukr --debug
 # For a specific URL
 python main.py --cleaningOfWebData --debug --specificURL #TODO: How to parse URLs without issues?
 python main.py --cleaningOfWebData --debug --specificURL #TODO: Parsing&Storing? 2021MorisienDictionaryEnglish
@@ -192,7 +193,7 @@ python main.py --cleaningOfWebData --debug --specificURL #TODO: Parsing&Storing?
 #   1. experiment_mtacr_a.ini (with Confidence thresholds)
 # OUTPUT: Language data (Each line with identified language & confidence)
 # DESCRIPTION: 
-python main.py --languageIdentification --configPath ./../configs/experiment/mtacr_a.ini --languages mor --debug
+python main.py --languageIdentification --configPath ./../configs/experiment/mtacr_a.ini --languages mfe --debug
 
 
     # ============================================
@@ -270,6 +271,26 @@ python main.py --languageIdentification --configPath ./../configs/experiment/mta
 # OUTPUT: Multilingual language model
 # DESCRIPTION: 
 
+
+# ============================================
+# Train Multilingual Language Model
+# INPUT: Platinum aligned data between various languages
+# OUTPUT: Multilingual language model
+# DESCRIPTION: 
+
+
+
+# ============================================
+# Analyze Text Data
+# INPUT: Text in various level of quality
+# OUTPUT: Tables & Plots
+# DESCRIPTION: To better understand the data and how it changes in processing
+# For a language
+python main.py --analyzeText --languages mfe --debug
+# For multiple languages
+python main.py --analyzeText --languages mfe kmr vie deu eng zho ukr --debug
+
+
 """
 
 
@@ -318,6 +339,7 @@ def main(args, loglevel):
     config_data_datasets_path = config.get('General', 'config_data_datasets_path')
     config_data_webdata_path = config.get('General', 'config_data_webdata_path')
     config_data_languages = config.get('General', 'config_data_languages')
+
     data_raw_dataset_path = config.get('General', 'data_raw_dataset_path')
     data_raw_webdata_path = config.get('General', 'data_raw_webdata_path')
     data_temp_datasets_path = config.get('General', 'data_temp_datasets_path')
@@ -328,17 +350,24 @@ def main(args, loglevel):
     data_sort_webdata_path = config.get('General', 'data_sort_webdata_path')
     data_clean_datasets_path = config.get('General', 'data_clean_datasets_path')
     data_clean_webdata_path = config.get('General', 'data_clean_webdata_path')
-    data_monolingual_clean_path = config.get('General', 'data_monolingual_clean_path')
+    
+    data_monolingual_plain_path = config.get('General', 'data_monolingual_plain_path')
     data_monolingual_bronze_path = config.get('General', 'data_monolingual_bronze_path')
     data_monolingual_silver_path = config.get('General', 'data_monolingual_silver_path')
     data_monolingual_gold_path = config.get('General', 'data_monolingual_gold_path')
     data_monolingual_platinum_path = config.get('General', 'data_monolingual_platinum_path')
+    
+    data_multingual_plain_path = config.get('General', 'data_multingual_plain_path')
+    data_multingual_bronze_path = config.get('General', 'data_multingual_bronze_path')
     data_multingual_silver_path = config.get('General', 'data_multingual_silver_path')
     data_multingual_gold_path = config.get('General', 'data_multingual_gold_path')
     data_multingual_platinum_path = config.get('General', 'data_multingual_platinum_path')
+    
     data_model_download_path = config.get('General', 'data_model_download_path')
     data_model_monolingual_path = config.get('General', 'data_model_monolingual_path')
     data_model_multingual_path = config.get('General', 'data_model_multingual_path')
+
+    logs_path = config.get('General', 'logs_path')
 
     # ==== Directory paths for this project / experiment
     # ++++ Here, the (default) paths from above can be changed as desired
@@ -454,11 +483,11 @@ def main(args, loglevel):
     def language_identification():
         current_processing_step = "Language Identification"
         logging.info(f'==== {current_processing_step} ====')
-        lid_ds.main(info_datasets_ready,          # Only select datasets marked "ready"
+        lid_wd.main(info_datasets_ready,          # Only select datasets marked "ready"
                     data_sort_webdata_path,       # Location of sorted data (from webdata)
                     data_clean_webdata_path,      # Location of cleaned data (from webdata)
                     #data_clean_datasets_path,     # Location of cleaned data (from datasets)
-                    #data_monolingual_clean_path,  # Location for identified monolingual data
+                    #data_monolingual_plain_path,  # Location for identified monolingual data
                     data_model_download_path,     # Base-Location to cache models
                     data_model_langid_path,       # Location of current language identification model
                     language_identification_confidence_thresholds) # List of confidence thresholds
@@ -470,8 +499,8 @@ def main(args, loglevel):
         extract_ds.main(info_datasets_ready,          # Only select datasets marked "ready"
                         data_clean_datasets_path,     # Location of cleaned data (datasets)
                         data_clean_webdata_path,      # Location of cleaned data (webdata)
-                        data_monolingual_clean_path,  # Location for (mono) clean language data
-                        data_multingual_silver_path)  # Location for (multi) clean language data
+                        data_monolingual_plain_path,  # Location for (mono) clean/plain language data
+                        data_multingual_plain_path)   # Location for (multi) clean/plain language data
 
 
     def author_review_by_rarity_classes():
@@ -524,6 +553,40 @@ def main(args, loglevel):
         current_processing_step = "Train Multilingual Language Model"
         logging.info(f'==== {current_processing_step} ====')
         pass
+
+    def analyze_text():
+        current_processing_step = "Analyze Text Data"
+        logging.info(f'==== {current_processing_step} ====')
+        list_of_data_paths_to_analyze = [
+             # Datasets
+            data_raw_dataset_path,           # Location to store downloaded data
+            data_transform_datasets_path,    # (Temp) Location for transformed data
+            data_sort_datasets_path,         # (Temp) Location for sorted data
+            data_clean_datasets_path,        # Location for cleaned data  
+            # Webdata
+            data_raw_webdata_path,           #
+            data_transform_webdata_path,     # 
+            data_sort_webdata_path,          # 
+            data_clean_webdata_path,         # Location of cleaned data (webdata)
+            # Monolingual
+            data_monolingual_plain_path,     # Location for (mono) clean language data
+            data_monolingual_bronze_path,    #
+            data_monolingual_silver_path,    # Location for (mono) clean language data
+            data_monolingual_gold_path,      #
+            data_monolingual_platinum_path,  #
+            # Multilingual
+            data_multingual_plain_path,     # 
+            data_multingual_bronze_path,     # 
+            data_multingual_silver_path,     # Location for (multi) clean language data
+            data_multingual_gold_path,       #
+            data_multingual_platinum_path    #
+        ]
+        anal_text.main(languages_selected,              # Languages selected via input arguments
+                       #info_datasets_ready,            # Only select datasets marked "ready"
+                       list_of_data_paths_to_analyze,   #
+                       logs_path                        # Location for the analyzis logs
+        )
+        
 
 
     """
@@ -594,6 +657,10 @@ def main(args, loglevel):
         if args.trainMultilingualLanguageModel:
             pass
 
+        # 
+        if args.analyzeText:
+            pass
+
 
 
     mode_script()
@@ -639,11 +706,14 @@ if __name__ == "__main__":
     parser.add_argument('--nativeSpeakerMonolingualAnnotation', action="store_true", help='')
     parser.add_argument('--postProcessAndReviewAnnotatedData', action="store_true", help='')
     parser.add_argument('--nativeSpeakerLinguisticExpertsMonolingualAnnotation', action="store_true", help='')
+
     parser.add_argument('--automaticMachineTranslation', action="store_true", help='')
     parser.add_argument('--expertTranslatorsTranslation', action="store_true", help='')
     parser.add_argument('--bilingualNativeSpeakerAnnotation', action="store_true", help='')
     parser.add_argument('--trainMonolingualLanguageModel', action="store_true", help='')
     parser.add_argument('--trainMultilingualLanguageModel', action="store_true", help='')
+
+    parser.add_argument('--analyzeText', action="store_true", help='')
     # The 'action="store_true"' is used to store the default value "False" and only contain "True" if the flag has been set.
     # Example: we define --dwarf, action='store_true' and --fortress, action='store_false'
     #          we call the script with --dwarf --fortress → dwarf=True and fortress=False

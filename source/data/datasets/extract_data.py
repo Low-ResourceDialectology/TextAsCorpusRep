@@ -24,17 +24,17 @@ import utils.utilities_general as util_ge
 
 def extract_from_datasets(
         data_clean_datasets_path, 
-        data_monolingual_clean_path, 
-        data_multingual_silver_path):
+        data_monolingual_plain_path, 
+        data_multingual_plain_path):
     
     logging.debug(f'====== Extracting data from datasets')
     logging.debug(f'++++++ inputPath: {data_clean_datasets_path}')
-    logging.debug(f'++++++ outputPath (mono): {data_monolingual_clean_path}')
-    logging.debug(f'++++++ outputPath (multi): {data_multingual_silver_path}')
+    logging.debug(f'++++++ outputPath (mono): {data_monolingual_plain_path}')
+    logging.debug(f'++++++ outputPath (multi): {data_multingual_plain_path}')
 
     # Create directories if not existing
-    util_ge.create_directory(data_monolingual_clean_path)
-    util_ge.create_directory(data_multingual_silver_path)
+    util_ge.create_directory(data_monolingual_plain_path)
+    util_ge.create_directory(data_multingual_plain_path)
 
     # Get the paths to all clean datasets
     clean_datasets = glob.glob(f'{data_clean_datasets_path}/*')
@@ -62,6 +62,7 @@ def extract_from_datasets(
             # Check for alignments and other information from file-name
 
             # Filenames with a '-' have specific information prior to it
+            # TODO: Handling File-Info: Either work via this name, or start collecting "Info" and "Metadata" in earlier steps?
             if '-' in clean_file_filename:
                 filename_info = clean_file_filename.rsplit('-',0)
                 clean_file_filename = clean_file_filename.rsplit('-',1)
@@ -91,7 +92,7 @@ def extract_from_datasets(
             output_file_names = []
             output_info_file_names = []
             if monolingual_data == True:
-                output_file_path = f'{data_monolingual_clean_path}{clean_file_extension}/'
+                output_file_path = f'{data_monolingual_plain_path}{clean_file_extension}/'
                 
                 for aligned_language in filename_alignments_list:
                     new_output_file_name = f'{aligned_language}.{clean_file_extension}'
@@ -100,7 +101,7 @@ def extract_from_datasets(
                     new_output_info_file_name = f'{aligned_language}-{clean_file_extension}.info'
                     output_info_file_names.append(new_output_info_file_name)
             else: # "Multilingual == True"
-                output_file_path = f'{data_multingual_silver_path}{clean_file_extension}/'
+                output_file_path = f'{data_multingual_plain_path}{clean_file_extension}/'
 
                 for aligned_language in filename_alignments_list:
                     new_output_file_name = f'{aligned_language}.{clean_file_extension}'
@@ -126,37 +127,36 @@ def extract_from_datasets(
 
                 # Check (somehow?) if word, sentence, or paragraph
                 # TODO: Find better way than splitting on whitespace
-
                 # If current content is word, change output location accordingly
-                if len(clean_text_line.split(' ')) == 1:
-                    content_type = 'word'
-    
+                #if len(clean_text_line.split(' ')) == 1:
+                #    content_type = 'word'
                 # If current content is sentence, change output location accordingly
-                else:
-                    content_type = 'sent'
-
+                #else:
+                #    content_type = 'sent'
                 # If current content is paragraph, change output location accordingly
                 # TODO: Not possible with current cleaning-process-setup
 
+                content_type = 'data'
+
                 # Get "Meta Data" (such as length of content, contained characters, encoding, ...)
-                clean_text_line_length = len(clean_text_line)
+                # TODO: Move all the "Meta Data" stuff to a later part of processing pipeline to not overload this section here.
+                #clean_text_line_length = len(clean_text_line)
 
                 # Append the current "Content" AND the current "Info" AND "Meta Data"
                 # → So that the content and corresponding informations files stay aligned
                 #for output_file_name, output_info_file_name in output_file_names_and_info_file_names:
                 for output_file_name in output_file_names:
+                    # Writing clean test data to output file
                     util_ge.write_text_file_append_plus_line(f'{output_file_path}{content_type}-{output_file_name}', clean_text_line)
                     #logging.debug(f'File to append to+: {output_file_path}{content_type}-{output_file_name}')
                     #util_ge.write_text_file_append_plus_line(f'{output_file_path}{content_type}-{output_info_file_name}',f'{filename_info}\t{clean_text_line_length}')
                     
-                    # Quick-Fix for weird filenaming
-                    #name_part_01 = output_file_name.rsplit(".",0)
-                    name_part_02 = output_file_name.rsplit(".",1)
+                    # Quick-Fix for weird filenaming (Pair-Programming with Myy)
+                    #name_part_01 = output_file_name.rsplit(".",1)
                     #logging.debug(f'name_part_01: {name_part_01}')
-                    #logging.debug(f'name_part_02: {name_part_02}')
-                    output_info_file_name = f'{name_part_02[0]}-{name_part_02[1]}.info'
+                    #output_info_file_name = f'{name_part_01[0]}-{name_part_01[1]}.info'
                     
-                    util_ge.write_text_file_append_plus_line(f'{output_file_path}{content_type}-{output_info_file_name}',f'{clean_text_line_length}')
+                    #util_ge.write_text_file_append_plus_line(f'{output_file_path}{content_type}-{output_info_file_name}',f'{clean_text_line_length}')
                     #logging.debug(f'File for info to append to+: {output_file_path}{content_type}-{output_info_file_name}')
 
 
@@ -164,8 +164,8 @@ def extract_from_datasets(
 
 def extract_from_webdata(
         data_clean_webdata_path, 
-        data_monolingual_clean_path, 
-        data_multingual_silver_path):
+        data_monolingual_plain_path, 
+        data_multingual_plain_path):
     pass
     # For each clean data directory (webdata)
 
@@ -202,21 +202,21 @@ def extract_from_webdata(
     info_datasets_ready,          # Only select datasets marked "ready"
     data_clean_datasets_path,     # Location of cleaned data (datasets)
     data_clean_webdata_path,      # Location of cleaned data (webdata)
-    data_monolingual_clean_path,  # Location for (mono) clean language data
-    data_multingual_silver_path)  # Location for (multi) clean language data
+    data_monolingual_plain_path,  # Location for (mono) clean language data
+    data_multingual_plain_path)  # Location for (multi) clean language data
 """
 def main(info_datasets_ready, 
          data_clean_datasets_path, 
          data_clean_webdata_path, 
-         data_monolingual_clean_path, 
-         data_multingual_silver_path):
+         data_monolingual_plain_path, 
+         data_multingual_plain_path):
     
     # Start extraction from clean data based on datasets
-    extract_from_datasets(data_clean_datasets_path,data_monolingual_clean_path,data_multingual_silver_path)
+    extract_from_datasets(data_clean_datasets_path,data_monolingual_plain_path,data_multingual_plain_path)
 
     # Start extraction from clean data based on webdata
     # TODO: Implement
-    #extract_from_datasets(data_clean_webdata_path,data_monolingual_clean_path,data_multingual_silver_path)
+    #extract_from_datasets(data_clean_webdata_path,data_monolingual_plain_path,data_multingual_plain_path)
 
 
 if __name__ == "__main__":

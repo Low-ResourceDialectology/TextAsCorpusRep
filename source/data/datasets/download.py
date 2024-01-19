@@ -27,12 +27,12 @@ sys.path.append(r"./../../")
 import utils.utilities_general as util_ge
 
 """ INPUT (examples):
-    languages = ["mor", "kur", "vie"]
+    languages = ["mfe", "kmr", "vie"]
     output_path = "./../../data/datasets/"
     datasets =  { 
                     "2022DabreMorisienMT":
                     {
-                        "language":"mor", 
+                        "language":"mfe", 
                         "id":"prajdabre/KreolMorisienMT",
                         "source":"huggingface"
                     }
@@ -65,7 +65,7 @@ def main(languages, datasets, output_path, specific_datasets):
                 logging.info(f"GitHub-File already exists at {current_savepath}{current_filename}. Skipping download.")
                 continue
 
-            write_mode = 'wb' if current_extension in ('gz','zip','jpg','png','exe') else 'w'
+            write_mode = 'wb' if current_extension in ('gz','zip','jpg','png','exe','pdf') else 'w'
             
             # Server response handling
             response = requests.get(dataset_id)
@@ -125,12 +125,12 @@ def main(languages, datasets, output_path, specific_datasets):
 
     """
     Input:
-    languages = ["mor", "kur", "vie"]
+    languages = ["mfe", "kmr", "vie"]
     output_path = "./../../data/datasets/"
     datasets =  { 
                     "2022DabreMorisienMT":
                     {
-                        "language":"mor", 
+                        "language":"mfe", 
                         "id":"prajdabre/KreolMorisienMT",
                         "source":"huggingface"
                     }

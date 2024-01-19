@@ -315,7 +315,7 @@ Write text to file appending to existing content, create new file if not exist
 """
 def write_text_file_append_plus_line(output_file, text_data, file_encoding="UTF-8"):
     with open(output_file, 'a+', encoding=file_encoding) as f:
-        f.write(text_data)
+        f.write(text_data.replace('\n','')+'\n')
 
 """
 Write text to file appending to existing content, create new file if not exist
@@ -733,7 +733,47 @@ def text_lines_add_fullstop_end(input_data):
 
     return output_text_lines
 
+"""
+Remove special characters from a single line of text
+"""
+def text_line_remove_special_characters_punctuation(input_data):
+    clean_text_line = input_data \
+    .replace('\n',' ').replace('\t',' ') \
+    .replace('/','').replace('\\','') \
+    .replace('.','').replace(':','') \
+    .replace(',','').replace(';','') \
+    .replace('?','').replace('!','') \
+    .replace('"','').replace('=','') \
+    .replace("'","").replace('’','') \
+    .replace('“','').replace('”','') \
+    .replace('(','').replace(')','') \
+    .strip() \
+    .replace('                 ',' ') \
+    .replace('                ',' ') \
+    .replace('               ',' ') \
+    .replace('              ',' ') \
+    .replace('             ',' ') \
+    .replace('            ',' ') \
+    .replace('           ',' ') \
+    .replace('          ',' ') \
+    .replace('         ',' ') \
+    .replace('        ',' ') \
+    .replace('       ',' ') \
+    .replace('      ',' ') \
+    .replace('     ',' ') \
+    .replace('    ',' ') \
+    .replace('   ',' ') \
+    .replace('  ',' ') \
+    .replace('  ',' ')
+    #.replace('-','').replace('–','') \
+                        
+    return clean_text_line
 
+
+
+"""
+
+"""
 def text_lines_remove_special_characters(input_data):
     clean_text_lines = []
     for line in input_data:
@@ -766,13 +806,42 @@ def text_lines_detokenize(input_data):
     output_data = []
     for line in input_data:
         # [^\s]+ == "At least one not whitespace character"
-        new_line = line.replace(' ,',',')
-        new_line = new_line.replace(' .','.')
-        new_line = new_line.replace(' !','!')
-        new_line = new_line.replace(' ?','?')
-        new_line = new_line.replace('( ','(')
-        new_line = new_line.replace(' )',')')
+        new_line = line \
+            .replace(' ,',',').replace(' ;',';') \
+            .replace(' .','.').replace(' :',':') \
+            .replace(' 。','。').replace(' ，','，') \
+            .replace(' !','!').replace(' ?','?') \
+            .replace('( ','(').replace(' )',')') \
+            .replace(' ’ ','’').replace('\t',' ') \
+            .replace('“ ','“').replace(' ”','”') \
+            .replace('  ',' ').replace('  ',' ')
+        
         output_data.append(new_line)
 
         return output_data
 
+
+"""
+Text "cleaning" → lower-case and no special characters
+"""
+def clean_text_line_lower(text_lines):
+
+    clean_lines = []
+    # TODO: Removing the fullstops for the time being, due to skipping fast_align
+    # and therefore introducting undesired duplicates such as "street" and "street."
+
+    # Cleaning and tokenizing the text files
+    for text_line in text_lines:
+        #new_text_line = text_line.replace('. ','').replace(', ',' , ').replace('’ ',' ’ ').replace("'"," ' ").replace('\n','').lower()
+        new_text_line = re.sub("[^A-ZîÎêÊûÛşŞçÇ ]","",text_line,0,re.IGNORECASE)
+        #if not new_text_line.endswith('.'):
+        #    new_text_line = new_text_line+'.'
+        
+        output_text_line = ""
+        for string in new_text_line:
+            new_string = string.lower()
+            output_text_line = output_text_line + new_string
+        
+        clean_lines.append(output_text_line)
+    
+    return clean_lines

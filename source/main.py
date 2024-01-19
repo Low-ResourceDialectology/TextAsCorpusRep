@@ -74,13 +74,13 @@ python main.py --languages mfe   # This does not anything but check that there i
 
 
 
-    # ============================================
-    # Get and Transform Datasets
-    # INPUT: Configuration file + dataset information
-    #   1. paths.ini
-    #   2. datasets.json
-    # OUTPUT: Raw (language/text) data
-    # DESCRIPTION: 
+# ============================================
+# Get and Transform Datasets
+# INPUT: Configuration file + dataset information
+#   1. paths.ini
+#   2. datasets.json
+# OUTPUT: Raw (language/text) data
+# DESCRIPTION: 
 # For a language
 python main.py --getDatasets --languages mfe --debug
 # For multiple languages
@@ -109,13 +109,13 @@ python main.py --getDatasets --debug --specificDataset 2023SaichyshynaMulti30k
     
     
     
-    # ============================================
-    # Get and Transform Webdata
-    # INPUT: Configuration file + URLs
-    # OUTPUT: Raw (language/text) data
-    # DESCRIPTION: 
-    #   1. paths.ini
-    #   2. webdata.json
+# ============================================
+# Get and Transform Webdata
+# INPUT: Configuration file + URLs
+# OUTPUT: Raw (language/text) data
+# DESCRIPTION: 
+#   1. paths.ini
+#   2. webdata.json
 # For a language
 python main.py --getWebdata --languages mfe --debug
 # For multiple languages
@@ -130,7 +130,7 @@ python main.py --getWebdata --debug --specificURL #TODO: Parsing&Storing? 2023De
 
 
 # ============================================
-# Cleaning of Text Data (Datasets)
+# Cleaning of Text Data (Datasets) 
 # INPUT: Configuration file + Raw (language/text) data
 # OUTPUT: Clean data (Each line 1 sentence or word)
 # DESCRIPTION: 
@@ -138,6 +138,7 @@ python main.py --getWebdata --debug --specificURL #TODO: Parsing&Storing? 2023De
 python main.py --cleaningOfTextData --languages mfe --debug
 # For multiple languages
 python main.py --cleaningOfTextData --languages mfe kmr vie deu eng zho ukr --debug
+# NOTE: Takes a really long time for 2013EsmailiPewan (30+ min) & for 2022NgoSynthetic (180+ min) ?!?!
 # For a specific dataset
 python main.py --cleaningOfTextData --debug --specificDataset 2001HaigKurdishNewspaper
 python main.py --cleaningOfTextData --debug --specificDataset 2012MorisienGramer
@@ -194,7 +195,7 @@ python main.py --cleaningOfWebData --debug --specificURL #TODO: Parsing&Storing?
 # OUTPUT: Language data (Each line with identified language & confidence)
 # DESCRIPTION: 
 python main.py --languageIdentification --configPath ./../configs/experiment/mtacr_a.ini --languages mfe --debug
-
+# TODO: Connect earlier implementation
 
     # ============================================
     # Author Review by Rarity Classes
@@ -223,33 +224,41 @@ python main.py --languageIdentification --configPath ./../configs/experiment/mta
 # DESCRIPTION: 
 
 
-    # ============================================
-    # Automatic Machine Trandslation
-    # INPUT: Gold language data
-    # OUTPUT: Bronze aligned data (bi-text)
-    # DESCRIPTION: 
+# ============================================
+# Automatic Machine Trandslation
+# INPUT: Gold language data
+# OUTPUT: Bronze aligned data (bi-text)
+# DESCRIPTION: 
+
+# ============================================
+# Extract from Clean Data (Available Datasets & Crawled Webdata)
+# INPUT: Collected Datasets + Crawled Data
+# OUTPUT: Plain data (mono and multi) #NOTE-Old: Silver aligned data (bi-text) + Bronze-Quality Language Data (Monolingual)
+# DESCRIPTION: Extract the data and sort by "word" vs. "sentence" vs. "paragraph"
+# TODO: Repeated execution create duplicates!
+python main.py --debug --extractCleanData --languages mfe --specificDataset 2022DabreMorisienMT
+python main.py --debug --extractCleanData --languages mfe kmr vie deu eng zho ukr
+
+# DESCRIPTION: Collect words and frequency dictionaries from extracted data
+# TODO: Repeated execution create duplicates!
+python main.py --debug --extractCleanData --executionMode count --languages mfe --specificDataset 2022DabreMorisienMT
+python main.py --debug --extractCleanData --executionMode count --languages mfe kmr vie deu eng zho ukr --specificDataset 2022DabreMorisienMT
+
+
+# ============================================
+# Expert Translators Translation
+# INPUT: Gold language data
+# OUTPUT: Gold aligned data (bi-text)
+# DESCRIPTION: 
 
     # ============================================
-    # Extract from Clean Data (Available Datasets & Crawled Webdata)
-    # INPUT: Collected Datasets + Crawled Data
-    # OUTPUT: Silver aligned data (bi-text) + Bronze-Quality Language Data (Monolingual)
-    # DESCRIPTION: 
-    python main.py --extractCleanData --debug
-
-    # ============================================
-    # Expert Translators Translation
-    # INPUT: Gold language data
-    # OUTPUT: Gold aligned data (bi-text)
-    # DESCRIPTION: 
+    # Train Monolingual Language Model
 
         # ============================================
-        # Train Monolingual Language Model
+        # Automatic Evaluation via Metrics
 
-            # ============================================
-            # Automatic Evaluation via Metrics
-
-            # ============================================
-            # Native Speakers Evaluate Model
+        # ============================================
+        # Native Speakers Evaluate Model
 
 # ============================================
 # Bilingual Native Speaker Annotation
@@ -258,11 +267,11 @@ python main.py --languageIdentification --configPath ./../configs/experiment/mta
 # DESCRIPTION: 
 
 
-    # ============================================
-    # Bilingual Native Speaker Annotation (Repeated)
-    # INPUT: Gold OR Platinum aligned data (bi-text)
-    # OUTPUT: Additional Platinum OR Higher-confidence Platinum aligned data (bi-text)
-    # DESCRIPTION: 
+# ============================================
+# Bilingual Native Speaker Annotation (Repeated)
+# INPUT: Gold OR Platinum aligned data (bi-text)
+# OUTPUT: Additional Platinum OR Higher-confidence Platinum aligned data (bi-text)
+# DESCRIPTION: 
 
 
 # ============================================
@@ -287,6 +296,8 @@ python main.py --languageIdentification --configPath ./../configs/experiment/mta
 # DESCRIPTION: To better understand the data and how it changes in processing
 # For a language
 python main.py --analyzeText --languages mfe --debug
+python main.py --analyzeText --languages eng --debug
+python main.py --analyzeText --languages kmr --debug
 # For multiple languages
 python main.py --analyzeText --languages mfe kmr vie deu eng zho ukr --debug
 
@@ -364,6 +375,10 @@ def main(args, loglevel):
     data_multingual_platinum_path = config.get('General', 'data_multingual_platinum_path')
     
     data_model_download_path = config.get('General', 'data_model_download_path')
+    data_model_download_glotlid_path  = config.get('General', 'data_model_download_glotlid_path')
+        # = ./../data/model/download/langid_glotLID/
+    language_identification_confidence_thresholds = config.get('General', 'language_identification_confidence_thresholds')
+        # = [0.9, 0.8, 0.7, 0.6]
     data_model_monolingual_path = config.get('General', 'data_model_monolingual_path')
     data_model_multingual_path = config.get('General', 'data_model_multingual_path')
 
@@ -372,8 +387,13 @@ def main(args, loglevel):
     # ==== Directory paths for this project / experiment
     # ++++ Here, the (default) paths from above can be changed as desired
     if args.languageIdentification == True:
-        language_identification_confidence_thresholds = config.get('Language Identification', 'language_identification_confidence_thresholds')
-        data_model_langid_path  = config.get('Language Identification', 'data_model_langid_path')
+        #language_identification_confidence_thresholds = config.get('Language Identification', 'language_identification_confidence_thresholds')
+        #data_model_download_glotlid_path  = config.get('Language Identification', 'data_model_langid_path')
+        data_model_download_glotlid_path  = config.get('General', 'data_model_download_glotlid_path')
+        # = ./../data/model/download/langid_glotLID/
+        language_identification_confidence_thresholds = config.get('General', 'language_identification_confidence_thresholds')
+        # = [0.9, 0.8, 0.7, 0.6]
+
 
     info_datasets_ready = {}
     info_datasets_todo = {}
@@ -393,8 +413,18 @@ def main(args, loglevel):
         
         # By default no specific dataset declared, keep selecting by "Language" and "Status"
         if args.specificDataset == "None":
+            include_dataset = False
             for key in info_datasets_all["Datasets"].keys():
-                if info_datasets_all["Datasets"][key]["Language"] in languages_selected:
+
+                #if info_datasets_all["Datasets"][key]["Languages"][0] in languages_selected:
+                # Compare each of the selectec languages (such as: kmr, vie, mfe)
+                for language in languages_selected:
+                    # with each language in the current dataset (such as: ckb, kmr, eng)
+                    for dataset_language in info_datasets_all["Datasets"][key]["Languages"]:
+                        if language == dataset_language:
+                            include_dataset = True
+                
+                if include_dataset == True:
                     if info_datasets_all["Datasets"][key]["Status"] == "ready":
                         info_datasets_ready[key] = info_datasets_all["Datasets"][key]
                     elif info_datasets_all["Datasets"][key]["Status"] == "todo":
@@ -409,9 +439,9 @@ def main(args, loglevel):
                     info_datasets_ready[key] = info_datasets_all["Datasets"][key]
 
         for key in info_datasets_ready.keys():
-            logging.info(f'Dataset ready: {key} for language: {info_datasets_ready[key]["Language"]}')
+            logging.info(f'Dataset ready: {key} for language: {info_datasets_ready[key]["Languages"][0]}')
         for key in info_datasets_todo.keys():
-            logging.info(f'Dataset todo: {key} for language: {info_datasets_todo[key]["Language"]}')
+            logging.info(f'Dataset todo: {key} for language: {info_datasets_todo[key]["Languages"][0]}')
 
     # ++++ Webdata TODO: The following is a plain copy from the dataset-code above! Rework to properly handle webdata!
     elif args.getWebdata == True or args.cleaningOfWebData == True:
@@ -423,7 +453,7 @@ def main(args, loglevel):
         # By default no specific URL declared, keep selecting by "Language" and "Status"
         if args.specificURL == "None":
             for key in info_webdata_all["Webdata"].keys():
-                if info_webdata_all["Webdata"][key]["Language"] in languages_selected:
+                if info_webdata_all["Webdata"][key]["Languages"][0] in languages_selected:
                     if info_webdata_all["Webdata"][key]["Status"] == "ready":
                         info_webdata_ready[key] = info_webdata_all["Webdata"][key]
                     elif info_webdata_all["Webdata"][key]["Status"] == "todo":
@@ -438,9 +468,9 @@ def main(args, loglevel):
                     info_webdata_ready[key] = info_webdata_all["Webdata"][key]
 
         for key in info_webdata_ready.keys():
-            logging.info(f'URL ready: {key} for language: {info_webdata_ready[key]["Language"]}')
+            logging.info(f'URL ready: {key} for language: {info_webdata_ready[key]["Languages"][0]}')
         for key in info_webdata_todo.keys():
-            logging.info(f'URL todo: {key} for language: {info_webdata_todo[key]["Language"]}')
+            logging.info(f'URL todo: {key} for language: {info_webdata_todo[key]["Languages"][0]}')
 
 
     """
@@ -477,7 +507,16 @@ def main(args, loglevel):
     def cleaning_of_web_data():
         current_processing_step = "Cleaning of Text Data (Webdata)"
         logging.info(f'==== {current_processing_step} ====')
-        clean_wd.main #TODO: Implement properly (Ideally first finish get_webdata())
+        clean_wd.main(info_datasets_ready,          # Only select datasets marked "ready"
+                      data_raw_webdata_path,        # Location of raw data to clean
+                      data_transform_webdata_path,  # (Temp) Location for transformed data
+                      data_sort_webdata_path,       # Location of sorted data (from webdata)
+                      data_clean_webdata_path,
+                      args.cleaningNoTransform,     # Flag if transforming step should be done (default=True)
+                      args.cleaningNoSort,          # Flag if sorting step should be done (default=True)
+                      args.cleaningNoClean,         # Flag if cleaning step should be done (default=True)
+                      data_model_download_glotlid_path,
+                      language_identification_confidence_thresholds)
 
 
     def language_identification():
@@ -494,13 +533,20 @@ def main(args, loglevel):
 
 
     def extract_clean_data():
-        current_processing_step = "Extract from Clean Data"
+        if args.executionMode == 'None':
+            current_processing_step = "Extract from Clean Data"
+
+        elif args.executionMode == 'count':
+            current_processing_step = "Collect and Count from Extracted Data"
+
         logging.info(f'==== {current_processing_step} ====')
         extract_ds.main(info_datasets_ready,          # Only select datasets marked "ready"
                         data_clean_datasets_path,     # Location of cleaned data (datasets)
                         data_clean_webdata_path,      # Location of cleaned data (webdata)
                         data_monolingual_plain_path,  # Location for (mono) clean/plain language data
-                        data_multingual_plain_path)   # Location for (multi) clean/plain language data
+                        data_multingual_plain_path,   # Location for (multi) clean/plain language data
+                        languages_selected,
+                        args.executionMode)
 
 
     def author_review_by_rarity_classes():
@@ -557,6 +603,7 @@ def main(args, loglevel):
     def analyze_text():
         current_processing_step = "Analyze Text Data"
         logging.info(f'==== {current_processing_step} ====')
+        """
         list_of_data_paths_to_analyze = [
              # Datasets
             data_raw_dataset_path,           # Location to store downloaded data
@@ -581,6 +628,8 @@ def main(args, loglevel):
             data_multingual_gold_path,       #
             data_multingual_platinum_path    #
         ]
+        """
+        list_of_data_paths_to_analyze = [data_monolingual_plain_path]
         anal_text.main(languages_selected,              # Languages selected via input arguments
                        #info_datasets_ready,            # Only select datasets marked "ready"
                        list_of_data_paths_to_analyze,   #
@@ -659,7 +708,7 @@ def main(args, loglevel):
 
         # 
         if args.analyzeText:
-            pass
+            analyze_text()
 
 
 
@@ -714,6 +763,7 @@ if __name__ == "__main__":
     parser.add_argument('--trainMultilingualLanguageModel', action="store_true", help='')
 
     parser.add_argument('--analyzeText', action="store_true", help='')
+    parser.add_argument('--executionMode', type=str, default='None', help='for finer execution options.')
     # The 'action="store_true"' is used to store the default value "False" and only contain "True" if the flag has been set.
     # Example: we define --dwarf, action='store_true' and --fortress, action='store_false'
     #          we call the script with --dwarf --fortress → dwarf=True and fortress=False

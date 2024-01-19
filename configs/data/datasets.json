@@ -7,25 +7,12 @@
             "Notes":"notes",
             "Languages":["kmr"],
             "Access":"Manual-download from https://multicast.aspra.uni-bamberg.de/resources/kurdish/data/ccknt/ccknt.txt",
-            "Platform":"homepage",
+            "Platform":"URL",
             "Platform ID":[""],
             "Name":"The Corpus of Contemporary Kurdish Newspaper Texts (CCKNT) ",
             "Description":"The **CCKNT** comprises written Northern Kurdish (Kurmanjî) journalistic texts, compiled from online newspaper texts in 1999.",
             "Year":2001,
             "URL":"https://multicast.aspra.uni-bamberg.de/resources/kurdish/"
-        },
-        "2012MorisienGramer":
-        {
-            "Status":"ready",
-            "Notes":"Added manually",
-            "Languages":["mfe"],
-            "Access":"Manual-download from https://www.academia.edu/24691305/GRAMER_KREOL_MORISIEN_Volim_1_Dokiman_Referans_Government_of_Mauritius_Press_f%C3%A9vrier_2012_ISBN_978_99949_20_85_3",
-            "Platform":"website",
-            "Platform ID":["https://www.academia.edu/24691305/GRAMER_KREOL_MORISIEN_Volim_1_Dokiman_Referans_Government_of_Mauritius_Press_f%C3%A9vrier_2012_ISBN_978_99949_20_85_3"],
-            "Name":"Gramer Kreol Morisien",
-            "Description":"GRAMER KREOL MORISIEN. Volim 1: Dokiman Referans, Government of Mauritius Press, février 2012. ISBN: 978-99949-20-85-3",
-            "Year":2012,
-            "URL":"https://www.academia.edu/24691305/GRAMER_KREOL_MORISIEN_Volim_1_Dokiman_Referans_Government_of_Mauritius_Press_f%C3%A9vrier_2012_ISBN_978_99949_20_85_3"
         },
         "2013EsmailiPewan":
         {
@@ -39,6 +26,30 @@
             "Description":"description",
             "Year":2013,
             "URL":"url"
+        },
+        "2015JiaFlickr30k":
+        {
+            "Status":"todo",
+            "Notes":"TODO: Get access to entire corpus",
+            "Languages":["eng"],
+            "Access":"https://www.kaggle.com/datasets/hsankesara/flickr-image-dataset?resource=download",
+            "Platform":"website",
+            "Platform ID":[""],
+            "Name":"Flickr Image dataset",
+            "Description":"The Flickr30k dataset has become a standard benchmark for sentence-based image description. This paper presents Flickr30k Entities, which augments the 158k captions from Flickr30k with 244k coreference chains, linking mentions of the same entities across different captions for the same image, and associating them with 276k manually annotated bounding boxes. Such annotations are essential for continued progress in automatic image description and grounded language understanding. They enable us to define a new benchmark for localization of textual entity mentions in an image. We present a strong baseline for this task that combines an image-text embedding, detectors for common objects, a color classifier, and a bias towards selecting larger objects. While our baseline rivals in accuracy more complex state-of-the-art models, we show that its gains cannot be easily parlayed into improvements on such tasks as image-sentence retrieval, thus underlining the limitations of current methods and the need for further research.",
+            "Year":2015,
+            "URL":"https://datasets.activeloop.ai/docs/ml/datasets/flickr30k-dataset/",
+            "Publications":
+            {
+                "jia2015GuidingLongShortTerm":
+                {
+                    "Title":"Guiding Long-Short Term Memory for Image Caption Generation",
+                    "Year":2015,
+                    "URL":"https://arxiv.org/abs/1509.04942",
+                    "DOI":"DOI_of_publication",
+                    "Authors":["Xu Jia","Efstratios Gavves","Basura Fernando","Tinne Tuytelaars"]
+                }
+            }
         },
         "2016ElliottMulti30k":
         {
@@ -58,7 +69,7 @@
             "Description":"Multilingual English-German-French Image Descriptions. This work is expanding upon the Flickr30k dataset https://paperswithcode.com/dataset/flickr30k",
             "Year":2016,
             "Authors":["Desmond Elliott", "Stella Frank", "Khalil Sima'an", "Lucia Specia"],
-            "Homepage":"https://github.com/lium-lst/wmt17-mmt",
+            "URL":"https://github.com/lium-lst/wmt17-mmt",
             "Data":
             {
                 "URL":"https://github.com/lium-lst/wmt17-mmt",
@@ -146,7 +157,7 @@
             "Description":"Our pre-trained VinAI Translate models are state-of-the-art text-to-text translation models for Vietnamese-to-English and English-to-Vietnamese, respectively.",
             "Year":2000,
             "Authors":["Thien Hai Nguyen","Tuan-Duy H. Nguyen","Duy Phung","Duy Tran-Cong Nguyen","Hieu Minh Tran","Manh Luong","Tin Duy Vo","Hung Hai Bui","Dinh Phung","Dat Quoc Nguyen"],
-            "Homepage":"https://github.com/VinAIResearch/VinAI_Translate",
+            "URL":"https://github.com/VinAIResearch/VinAI_Translate",
             "Language Relations":
             {
                 "Language1":
@@ -314,7 +325,7 @@
             "Description":"MAC is a manually aligned Chinese-English parallel corpus of literary texts, consisting of chapters sampled from six Chinese novels and their English translations.",
             "Year":2021,
             "Authors":["bfsuason"],
-            "Homepage":"URL",
+            "URL":"URL",
             "Data":
             {
                 "URL":"https://github.com/bfsujason/mac",
@@ -381,13 +392,13 @@
             "Notes":"to not distribute the dataset or part of the dataset in any original or modified form.",
             "Languages":["vie","eng"],
             "Access":"Prior to download, this form has to be filled out: https://docs.google.com/forms/d/e/1FAIpQLSfShfLzQ3w9ErBc6sId55s83o9tOv2qz6zMd_6lNCD7n791NQ/viewform including agreement to (1) to use PhoMT for research or educational purposes only, (2) to not distribute PhoMT or part of PhoMT in any original or modified form, (3) and to cite the EMNLP 2021 paper (PhoMT: A High-Quality and Large-Scale Benchmark Dataset for Vietnamese-English Machine Translation) whenever PhoMT is employed to help produce published results. Then extract PhoMT into the raw-data-directory called 2021DoanPhoMT",
-            "Platform":"homepage",
+            "Platform":"URL",
             "Platform ID":"",
             "Name":"PhoMT: A High-Quality and Large-Scale Benchmark Dataset for Vietnamese-English Machine Translation",
             "Description":"PhoMT is a high-quality and large-scale Vietnamese-English parallel dataset of 3.02M sentence pairs.",
             "Year":2021,
             "Authors":["Long Doan","Linh The Nguyen","Nguyen Luong Tran","Thai Hoang","Dat Quoc Nguyen"],
-            "Homepage":"homepage",
+            "URL":"URL",
             "Data":
             {
                 "URL":"https://github.com/VinAIResearch/PhoMT#phomt-a-high-quality-and-large-scale-benchmark-dataset-for-vietnamese-english-machine-translation",
@@ -448,7 +459,7 @@
             "Description":"A parallel corpus of Kurdish (Sorani and Kurmanji) and English",
             "Year":2022,
             "Authors":["Sina Ahmadi","Hossein Hassani","Daban Q. Jaff"],
-            "Homepage":"homepage",
+            "URL":"URL",
             "Data":
             {
                 "URL":"https://github.com/KurdishBLARK/InterdialectCorpus",
@@ -529,7 +540,7 @@
             "Description":"A Dataset for Mauritian Creole Machine Translation & MorisienMT",
             "Year":2022,
             "Authors":["Raj Dabre","Aneerav Sukhoo"],
-            "Homepage":"https://github.com/prajdabre/KreolMorisienNLG",
+            "URL":"https://github.com/prajdabre/KreolMorisienNLG",
             "Data":
             {
                 "URL":"https://huggingface.co/datasets/prajdabre/KreolMorisienMT",
@@ -612,7 +623,7 @@
             "Description":"The data is collected from TED talks.",
             "Year":2022,
             "Authors":["Thi-Vinh Ngo","Phuong-Thai Nguyen","Thanh-Le Ha","Khac-Quy Dinh","Le-Minh Nguyen"],
-            "Homepage":"homepage",
+            "URL":"URL",
             "Data":
             {
                 "URL":"https://github.com/ngovinhtn/Low-resource-Machine-Translation",
@@ -712,7 +723,7 @@
             "Description":"The open source seed data as part of the NLLB project.",
             "Year":2023,
             "Authors":["Jean Maillard","Cynthia Gao","Elahe Kalbassi","Kaushik Ram Sadagopan","Vedanuj Goswami","Philipp Koehn","Angela Fan","Francisco Guzmán"],
-            "Homepage":"https://github.com/openlanguagedata/seed",
+            "URL":"https://github.com/openlanguagedata/seed",
             "Data":
             {
                 "URL":"https://github.com/openlanguagedata/seed/tree/main/seed",
@@ -777,7 +788,7 @@
             "Description":"Multi30K dataset is designed to develop multilingual multimodal researches. Initially this dataset extends the Flickr30K dataset by adding German translations. The descriptions were collected from a crowdsourcing platform, while the translations were collected from professionally contracted translators. We present a variation of this dataset manually translated for Ukrainian language.",
             "Year":2023,
             "Authors":["Nataliia Saichyshyna", "Daniil Maksymenko", "Oleksii Turuta", "Andriy Yerokhin", "Olena Turuta", "Andrii Babii"],
-            "Homepage":"https://huggingface.co/datasets/turuta/Multi30k-uk",
+            "URL":"https://huggingface.co/datasets/turuta/Multi30k-uk",
             "Data":
             {
                 "URL":"https://huggingface.co/datasets/turuta/Multi30k-uk/tree/main",
@@ -850,7 +861,7 @@
             "Description":"Decription_of_dataset",
             "Year":1234,
             "Authors":["Author_A_Name","Author_B_Name"],
-            "Homepage":"URL",
+            "URL":"URL",
             "Data":
             {
                 "URL":"URL_to_data",

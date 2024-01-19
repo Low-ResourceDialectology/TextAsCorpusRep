@@ -1,6 +1,19 @@
 {
     "Webdata":
     {
+        "2012MorisienGramer":
+        {
+            "Status":"ready",
+            "Notes":"Added manually",
+            "Languages":["mfe"],
+            "Access":"Manual-download from https://www.academia.edu/24691305/GRAMER_KREOL_MORISIEN_Volim_1_Dokiman_Referans_Government_of_Mauritius_Press_f%C3%A9vrier_2012_ISBN_978_99949_20_85_3",
+            "Platform":"website",
+            "Platform ID":["https://www.academia.edu/24691305/GRAMER_KREOL_MORISIEN_Volim_1_Dokiman_Referans_Government_of_Mauritius_Press_f%C3%A9vrier_2012_ISBN_978_99949_20_85_3"],
+            "Name":"Gramer Kreol Morisien",
+            "Description":"GRAMER KREOL MORISIEN. Volim 1: Dokiman Referans, Government of Mauritius Press, février 2012. ISBN: 978-99949-20-85-3",
+            "Year":2012,
+            "URL":"https://www.academia.edu/24691305/GRAMER_KREOL_MORISIEN_Volim_1_Dokiman_Referans_Government_of_Mauritius_Press_f%C3%A9vrier_2012_ISBN_978_99949_20_85_3"
+        },
         "2021MorisienDictionaryEnglish":
         {
             "Status":"ready",

@@ -267,7 +267,7 @@ Tramy Thi Tran - [@TranyMyy](https://github.com/TranMyy) - tramy.thi.tran@studiu
 
 Raman Ahmed - 
 
-Anran Wang - [@AnranW](https://github.com/AnranW) - echowanng1996(thesymbolforemail)hotmail.com
+Anran Wang - [@AnranW](https://github.com/AnranW) - anran.wang (thesymbolforemail)tum.de
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

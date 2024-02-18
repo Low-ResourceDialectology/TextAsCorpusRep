@@ -1,9 +1,0 @@
-nltk
-beautifulsoup4
-lxml
-pandas
-GitPython
-pybind11
-huggingface_hub
-SciPy
-fasttext

@@ -1,7 +1,0 @@
-{"id":"1","text":"What is your sex?","schema": "radio", "choices": ["Female", "Male", "Prefer not to disclose"],"label_requirement": {"required":true}}
-{"id":"2","text":"What is your current age?","schema": "radio", "choices": ["1-9","10-19","20-29","30-39","40-49","50-59","60-69","70+"],"label_requirement": {"required":true}}
-{"id":"3","text":"What is your education level?","schema": "radio", "choices": ["Less than a high school diploma", "High school diploma or equivalent", "College degree", "Graduate degree", "Other"], "label_requirement": {"required":true}}
-{"id":"4","text":"What is your country of birth?","schema": "select", "use_predefined_labels": "country", "label_requirement": {"required":true}}
-{"id":"5","text":"In which country did you spend most of your time before you turned 18?","schema": "select", "use_predefined_labels": "country", "label_requirement": {"required":true}}
-{"id":"6","text":"Which country are you currently living in?", "schema": "select", "use_predefined_labels": "country", "label_requirement": {"required":true}}
-{"id":"7","text":"Please feel free to leave any comments about our study (optional)","schema": "text"}

@@ -29,7 +29,7 @@ import sys
 sys.path.append(r"./../../")
 
 import utils.utilities_general as util_ge
-
+import evals.language_ident as lang_id
 
 """
 Transforming the collected Data into a normalized structure for easy processing.
@@ -880,7 +880,12 @@ OUTPUT: The same files, but now containing cleaned text (normalized encoding, no
 
 Some datasets can already be considered to be "cleaned" at this point and will just be copied to the new location.
 """
-def clean_data(current_dataset_key, current_dataset_info, input_path, output_path):
+def clean_data(current_dataset_key,
+                current_dataset_info,
+                input_path,
+                output_path,
+                language_identification_confidence_thresholds,
+                data_model_download_glotlid_path):
 
     logging.debug(f'====== Cleaning dataset')
     logging.debug(f'++++++ inputPath: {input_path}')
@@ -888,20 +893,54 @@ def clean_data(current_dataset_key, current_dataset_info, input_path, output_pat
     logging.debug(f'====== TODO: Implement - For now: Copy from Sort-Step')
 
     if current_dataset_key == '2012MorisienGramer':
-        # TODO: Implement cleaning - For now: Copy content from Sort-Step
-        util_ge.move_files_from_directory(input_path, output_path, current_dataset_key)
+        #util_ge.move_files_from_directory(input_path, output_path, current_dataset_key)
+        
+        # Identify language of content NOTE: output is input since it is just the info-file
+        for file in glob.glob(f'{input_path}{current_dataset_key}/*'):
+            # Text data files have an extension of lenght 3, next to the .info files also saved here
+            if len(util_ge.get_fileextension(file)) == 3:
+                lang_id.main(file, file, current_dataset_key, data_model_download_glotlid_path)
+        
+        # Use languageidentificationthresholds to separate the identified texts
+        for file in glob.glob(f'{input_path}{current_dataset_key}/*'):
+            # Text data files have an extension of lenght 3, next to the .info files also saved here
+            if len(util_ge.get_fileextension(file)) == 4:
+                
+                text_lines_identified = util_ge.read_text_file(file)
+        
 
     if current_dataset_key == '2021MorisienDictionaryEnglish':
-        # TODO: Implement cleaning - For now: Copy content from Sort-Step
-        util_ge.move_files_from_directory(input_path, output_path, current_dataset_key)
+        #util_ge.move_files_from_directory(input_path, output_path, current_dataset_key)
+
+        # Identify language of content NOTE: output is input since it is just the info-file
+        for file in glob.glob(f'{input_path}{current_dataset_key}/*'):
+            # Text data files have an extension of lenght 3, next to the .info files also saved here
+            if len(util_ge.get_fileextension(file)) == 3:
+                lang_id.main(file, file, current_dataset_key, data_model_download_glotlid_path)
+        
+        # Use languageidentificationthresholds to separate the identified texts
 
     if current_dataset_key == '2021MorisienEducationalBooksPupil':
-        # TODO: Implement cleaning - For now: Copy content from Sort-Step
-        util_ge.move_files_from_directory(input_path, output_path, current_dataset_key)
+        # util_ge.move_files_from_directory(input_path, output_path, current_dataset_key)
+
+        # Identify language of content NOTE: output is input since it is just the info-file
+        for file in glob.glob(f'{input_path}{current_dataset_key}/*'):
+            # Text data files have an extension of lenght 3, next to the .info files also saved here
+            if len(util_ge.get_fileextension(file)) == 3:
+                lang_id.main(file, file, current_dataset_key, data_model_download_glotlid_path)
+        
+        # Use languageidentificationthresholds to separate the identified texts
 
     if current_dataset_key == '2021MorisienEducationalBooksTeacher':
-        # TODO: Implement cleaning - For now: Copy content from Sort-Step
-        util_ge.move_files_from_directory(input_path, output_path, current_dataset_key)
+        # util_ge.move_files_from_directory(input_path, output_path, current_dataset_key)
+
+        # Identify language of content NOTE: output is input since it is just the info-file
+        for file in glob.glob(f'{input_path}{current_dataset_key}/*'):
+            # Text data files have an extension of lenght 3, next to the .info files also saved here
+            if len(util_ge.get_fileextension(file)) == 3:
+                lang_id.main(file, file, current_dataset_key, data_model_download_glotlid_path)
+        
+        # Use languageidentificationthresholds to separate the identified texts
 
     """
     Some ad-hoc text cleaning from previous experiments - Pre December 2023.
@@ -975,14 +1014,17 @@ def clean_data(current_dataset_key, current_dataset_info, input_path, output_pat
     execute_sorting,              # Flag if sorting step should be done (default=True)
     execute_cleaning              # Flag if cleaning step should be done (default=True) 
 """
-def main(info_datasets_ready, 
-         data_raw_dataset_path, 
-         data_transform_datasets_path, 
-         data_sort_datasets_path, 
-         data_clean_datasets_path,
-         execute_transforming,
-         execute_sorting,
-         execute_cleaning):
+def main(info_datasets_ready,          # Only select datasets marked "ready"
+        data_raw_webdata_path,        # Location of raw data to clean
+        data_transform_webdata_path,  # (Temp) Location for transformed data
+        data_sort_webdata_path,       # Location of sorted data (from webdata)
+        data_clean_webdata_path,
+        execute_transforming,     # Flag if transforming step should be done (default=True)
+        execute_sorting,          # Flag if sorting step should be done (default=True)
+        execute_cleaning,         # Flag if cleaning step should be done (default=True)
+        data_model_download_glotlid_path,
+        language_identification_confidence_thresholds):
+                      
 
     logging.debug(f'TODO: Build upon the download.py script for webdata, once the Raman-Selenium integration has been done.')
     logging.debug(f'TODO: OR: At least the file formats are known and certain not to change later on.')
@@ -1009,20 +1051,22 @@ def main(info_datasets_ready,
             if execute_transforming == True:
                 transform_data(current_dataset_key,
                                current_dataset_info,
-                               data_raw_dataset_path,
-                               data_transform_datasets_path)
+                               data_raw_webdata_path,
+                               data_transform_webdata_path)
 
             if execute_sorting == True:
                 sort_data(current_dataset_key,
                           current_dataset_info,
-                          data_transform_datasets_path,
-                          data_sort_datasets_path)
+                          data_transform_webdata_path,
+                          data_sort_webdata_path)
 
             if execute_cleaning == True:
                 clean_data(current_dataset_key,
                            current_dataset_info,
-                           data_sort_datasets_path,
-                           data_clean_datasets_path)
+                           data_sort_webdata_path,
+                           data_clean_webdata_path,
+                           language_identification_confidence_thresholds,
+                           data_model_download_glotlid_path)
 
 
 if __name__ == "__main__":

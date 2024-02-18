@@ -36,8 +36,13 @@ sys.path.append(r"./../../")
 import utils.utilities_general as util_ge
 
 
-"""
+""" ###########################################################################
+    ###########################################################################
+    ###########################################################################
 Transforming the collected Data into a normalized structure for easy processing.
+    ###########################################################################
+    ###########################################################################
+    ###########################################################################
 """
 def transform_data(current_dataset_key, current_dataset_info, inputPath, outputPath):
 
@@ -84,16 +89,24 @@ def transform_data(current_dataset_key, current_dataset_info, inputPath, outputP
     if current_dataset_key == '2013EsmailiPewan':
         download_path = inputPath + f'{current_dataset_key}/'
         transform_path = outputPath + f'{current_dataset_key}/'
-        current_filename = f'{download_path}Pewan.zip'
+        current_filename_1 = f'{download_path}Pewan.zip'
+        current_filename_2 = f'{download_path}Pewan_ckb.zip' # From Sina TODO: Check overlap
 
         # Create directory if not existing
         util_ge.create_directory(transform_path)
-        util_ge.extract_zipped_file(f'{current_filename}', f'{transform_path}')
+        util_ge.extract_zipped_file(f'{current_filename_1}', f'{transform_path}')
+        #util_ge.extract_zipped_file(f'{current_filename_2}', f'{transform_path}')
 
-        transform_path_02 = transform_path + f'Kurmanji'
-        current_filename_02 = f'{transform_path}Pewan/Corpora/Kurmanji.zip'
+        transform_path_01 = transform_path + f'Kurmanji'
+        current_filename_01 = f'{transform_path}Pewan/Corpora/Kurmanji.zip'
+
+        transform_path_02 = transform_path + f'Sorani'
+        current_filename_02 = f'{transform_path}Pewan/Corpora/Sorani.zip'
 
         # Create directory if not existing
+        util_ge.create_directory(transform_path_01)
+        util_ge.extract_zipped_file(f'{current_filename_01}', f'{transform_path_01}')
+
         util_ge.create_directory(transform_path_02)
         util_ge.extract_zipped_file(f'{current_filename_02}', f'{transform_path_02}')
 
@@ -496,42 +509,42 @@ def transform_data(current_dataset_key, current_dataset_info, inputPath, outputP
                 file.write('\n')
         """
 
-        data_morisien_mor = loaded_local_dataset['train'][3:45366]
+        data_morisien_mfe = loaded_local_dataset['train'][3:45366]
         #for dataset_row in data_morisien_mor:
-        logging.debug(f'Length of data_morisien_mor: {len(data_morisien_mor)}')
-        #print(transform_path+'mor.mor')
-        with open(transform_path+'mor.mor', 'w') as file:
-            mormor = data_morisien_mor['input']
-            for line in mormor:
+        logging.debug(f'Length of data_morisien_mfe: {len(data_morisien_mfe)}')
+        #print(transform_path+'mfe.mfe')
+        with open(transform_path+'mfe.mfe', 'w') as file:
+            mfemfe = data_morisien_mfe['input']
+            for line in mfemfe:
                 file.write(line)
                 file.write('\n')
 
         data_morisien_eng = loaded_local_dataset['train'][45366:68676]
         logging.debug(f'Length of data_morisien_eng: {len(data_morisien_eng)}')
-        #print(transform_path+'mor.eng')
-        with open(transform_path+'mor.eng', 'w') as file:
+        #print(transform_path+'mfe.eng')
+        with open(transform_path+'mfe.eng', 'w') as file:
             engeng = data_morisien_eng['input']
             for line in engeng:
                 file.write(line)
                 file.write('\n')
 
-        with open(transform_path+'eng.mor', 'w') as file:
-            engmor = data_morisien_eng['target']
-            for line in engmor:
+        with open(transform_path+'eng.mfe', 'w') as file:
+            engmfe = data_morisien_eng['target']
+            for line in engmfe:
                 file.write(line)
                 file.write('\n')
 
         data_morisien_fra = loaded_local_dataset['train'][68676:]
         logging.debug(f'Length of data_morisien_fra: {len(data_morisien_fra)}')
-        with open(transform_path+'mor.fra', 'w') as file:
+        with open(transform_path+'mfe.fra', 'w') as file:
             frafra = data_morisien_fra['input']
             for line in frafra:
                 file.write(line)
                 file.write('\n')
 
-        with open(transform_path+'fra.mor', 'w') as file:
-            framor = data_morisien_fra['target']
-            for line in framor:
+        with open(transform_path+'fra.mfe', 'w') as file:
+            framfe = data_morisien_fra['target']
+            for line in framfe:
                 file.write(line)
                 file.write('\n')
 
@@ -724,12 +737,17 @@ def transform_data(current_dataset_key, current_dataset_info, inputPath, outputP
                 file.write('\n')
 
 
-"""
+""" ###########################################################################
+    ###########################################################################
+    ###########################################################################
 Sorting the (collected and) transformed Data into a normalized structure for easy processing.
 INPUT: Various combinations of files, monolingual, bilingual, multilingual text data.
 OUTPUT: Single file for "words" and for "sentences" per language of dataset.
 
 Some datasets can already be considered to be "sorted" at this point and will just be copied to the new location.
+    ###########################################################################
+    ###########################################################################
+    ###########################################################################
 """
 def sort_data(current_dataset_key, current_dataset_info, input_path, output_path):
 
@@ -987,6 +1005,25 @@ def sort_data(current_dataset_key, current_dataset_info, input_path, output_path
         util_ge.write_text_file(output_file_name_vie, text_lines_vie)
         util_ge.write_text_file(output_file_name_eng, text_lines_eng)
 
+
+    if current_dataset_key == '2022AhmadiInterdialect':
+        transform_path = f'{input_path}{current_dataset_key}/'
+        sort_path = f'{output_path}{current_dataset_key}/'
+        # Create directory if not existing
+        util_ge.create_directory(sort_path)
+        
+        # Iterate over files in that directory
+        for filename in os.listdir(transform_path):
+            f = os.path.join(transform_path, filename)
+            # Checking if it is a file
+            if os.path.isfile(f):
+                # Read text file to text lines
+                text_lines_current_file = util_ge.read_text_file(f)
+                current_filename = util_ge.get_filename_with_extension(f)
+                
+                # Save text file
+                util_ge.write_text_file(f'{sort_path}{current_filename}', text_lines_current_file)
+
     
     if current_dataset_key == '2022DabreMorisienMT':
         transform_path = f'{input_path}{current_dataset_key}/'
@@ -1084,12 +1121,17 @@ def sort_data(current_dataset_key, current_dataset_info, input_path, output_path
                 util_ge.write_text_file(f'{sort_path}{current_filename}', text_lines_current_file)
 
 
-"""
+""" ###########################################################################
+    ###########################################################################
+    ###########################################################################
 Cleaning the (collected and transformed and) sorted Data into a normalized structure for easy processing.
 INPUT: Single file for "words" and for "sentences" per language of dataset.
 OUTPUT: The same files, but now containing cleaned text (normalized encoding, no special characters, removal of weird formatting).
 
 Some datasets can already be considered to be "cleaned" at this point and will just be copied to the new location.
+    ###########################################################################
+    ###########################################################################
+    ###########################################################################
 """
 def clean_data(current_dataset_key, current_dataset_info, input_path, output_path):
 
@@ -1242,32 +1284,47 @@ def clean_data(current_dataset_key, current_dataset_info, input_path, output_pat
             # Checking if it is a file
             if os.path.isfile(f):
                 # Read text file to text lines
-                text_lines_current_file = util_ge.read_text_file(f)
                 current_filename = util_ge.get_filename_with_extension(f)
                 
+                text_lines_current_file = util_ge.read_text_file(f)
+                
                 # Remove empty lines
-                text_lines_no_empty = util_ge.text_lines_remove_empty_lines(text_lines_current_file)
+                #text_lines_no_empty = util_ge.text_lines_remove_empty_lines(text_lines_current_file)
                 #logging.debug(f'text_lines_no_empty[0]: {text_lines_no_empty[0]}')
 
                 # Add full stop at end of lines without one (like article headlines) 
-                text_lines_fullstops = util_ge.text_lines_add_fullstop_end(text_lines_no_empty)
+                #text_lines_fullstops = util_ge.text_lines_add_fullstop_end(text_lines_no_empty)
                 #logging.debug(f'text_lines_fullstops[0]: {text_lines_fullstops[0]}')
 
+                # NOTE: This was probably the cause for the 3 hours run time!!!
                 # From text lines to clean sentences (per line)
-                text_lines_sorted = util_ge.text_lines_to_sentences_sophisticated(text_lines_fullstops)
+                #text_lines_sorted = util_ge.text_lines_to_sentences_sophisticated(text_lines_fullstops)
                 #logging.debug(f'text_lines_sorted[0]: {text_lines_sorted[0]}')
 
                 # Some minor post-processing
-                text_lines_cleaned = util_ge.text_lines_remove_almost_empty_lines(text_lines_sorted)
+                #text_lines_cleaned = util_ge.text_lines_remove_almost_empty_lines(text_lines_sorted)
                 #logging.debug(f'text_lines_cleaned[0]: {text_lines_cleaned[0]}')
 
-                text_lines_output = util_ge.text_lines_remove_excessive_punctuation(text_lines_cleaned)
+                #text_lines_output = util_ge.text_lines_remove_excessive_punctuation(text_lines_cleaned)
                 #logging.debug(f'text_lines_output[0]: {text_lines_output[0]}')
 
-                text_lines_detokenized = util_ge.text_lines_detokenize(text_lines_output)
+                #text_lines_detokenized = util_ge.text_lines_detokenize(text_lines_output)
+                # NOTE: Doing this locally and "in-place" in hope of speeding up the process
+                for index in range(len(text_lines_current_file)):
+                    # [^\s]+ == "At least one not whitespace character"
+                    text_lines_current_file[index] = text_lines_current_file[index] \
+                        .replace(' ,',',').replace(' ;',';') \
+                        .replace(' .','.').replace(' :',':') \
+                        .replace(' 。','。').replace(' ，','，') \
+                        .replace(' !','!').replace(' ?','?') \
+                        .replace('( ','(').replace(' )',')') \
+                        .replace(' ’ ','’').replace('\t',' ') \
+                        .replace('“ ','“').replace(' ”','”') \
+                        .replace('  ',' ').replace('  ',' ')
+                    
 
                 # Save text file
-                util_ge.write_text_file_lines(f'{clean_path}{current_filename}', text_lines_detokenized)
+                util_ge.write_text_file(f'{clean_path}{current_filename}', text_lines_current_file)
 
 
         #util_ge.move_files_from_directory(input_path, output_path, current_dataset_key)

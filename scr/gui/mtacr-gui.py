@@ -1,6 +1,6 @@
-# StudyToolkitVid - Graphical User Interface
+# MTACR - Graphical User Interface
 # 
-# Authors: Christian Schuler & Dominik Hauser & Anran Wang
+# Author: Anran Wang
 ################################################################################
 
 import sys, os 

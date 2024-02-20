@@ -43,19 +43,30 @@ class MainWindow(QMainWindow):
 		helpButton.setIcon(question)
 		helpButton.setFixedSize(20,30)
 		layout.addWidget(helpButton,alignment=Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTop)
-		# logo
-		logo = QLabel()
-		pixmap = QPixmap('TextAsCorpusRep-Auxiliary-Logo.png')
-		logo.setPixmap(pixmap)
-		layout.addWidget(logo,alignment=Qt.AlignmentFlag.AlignCenter)
 
 		# set up workspace folder - this can be considered to be the "root" of the project
 		self.workspaceFolder = os.getcwd()+"/"
 		self.inputDir = os.getcwd()+"/"
 		self.outputDir = os.getcwd()+"/"
 		self.configFileName = os.getcwd()+"/"
-
+		
+		# central layout
+		offset = 0
+		gridLayout = QGridLayout()
+		# logo area 
+		logo = QLabel()
+		pixmap = QPixmap('TextAsCorpusRep-Auxiliary-Logo.png')
+		logo.setPixmap(pixmap)
+		gridLayout.addWidget(logo,offset,0,1,3,alignment=Qt.AlignmentFlag.AlignCenter)
+		font = QFont()
+		font.setPointSize(20)
+		name = QLabel("Multilingual Text As Corpus Repository for Machine Translation of Low-Resource Languages")
+		name.setText("<font color=\"#6317dc\">Multilingual </font> <font color=\"#4272ea\">Text </font><font color=\"#e5a93a\">As </font><font color=\"#44922a\">Corpus </font><font color=\"#a83b51\">Repository </font><font>for Machine Translation of Low-Resource Languages</font>")
+		name.setFont(font)
+		gridLayout.addWidget(name,offset+1,0,1,3,alignment=Qt.AlignmentFlag.AlignCenter)
+		
 		# purple area
+		offset += 2
 		selectFolderButton = MyButton("Change Project Location", self.selectFolder, toSetEnabled=True)
 		selectFolderButton.setStyleSheet('QPushButton {background-color: '+purple+';}')
 		self.folderLabel = QLabel("Current: "+self.workspaceFolder)
@@ -66,9 +77,6 @@ class MainWindow(QMainWindow):
 		selectOutputButton.setStyleSheet('QPushButton {background-color: '+purple+';}')
 		self.outputLabel = QLabel("Current: "+self.workspaceFolder)
 		
-		# layout area, first line
-		gridLayout = QGridLayout()
-		offset = 0
 		gridLayout.addWidget(selectFolderButton,offset,0)
 		gridLayout.addWidget(self.folderLabel,offset+1,0)
 		gridLayout.addWidget(selectInputButton,offset,1)

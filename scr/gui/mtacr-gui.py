@@ -50,48 +50,89 @@ class MainWindow(QMainWindow):
 		layout.addWidget(logo,alignment=Qt.AlignmentFlag.AlignCenter)
 
 		# set up workspace folder - this can be considered to be the "root" of the project
-		self.workspaceFolder = "."
-		self.inputDir = "."
-		self.outputDir = "."
+		self.workspaceFolder = os.getcwd()+"/"
+		self.inputDir = os.getcwd()+"/"
+		self.outputDir = os.getcwd()+"/"
+		self.configFileName = os.getcwd()+"/"
 
+		# purple area
 		selectFolderButton = MyButton("Change Project Location", self.selectFolder, toSetEnabled=True)
 		selectFolderButton.setStyleSheet('QPushButton {background-color: '+purple+';}')
+		self.folderLabel = QLabel("Current: "+self.workspaceFolder)
 		selectInputButton = MyButton("Select Input Directory", self.selectInputDir)
 		selectInputButton.setStyleSheet('QPushButton {background-color: '+purple+';}')
+		self.inputLabel = QLabel("Current: "+self.workspaceFolder)
 		selectOutputButton = MyButton("Select Output Directory", self.selectOutputDir)
 		selectOutputButton.setStyleSheet('QPushButton {background-color: '+purple+';}')
-		# layout.addWidget(selectFolderButton,0,0,1,2,alignment=Qt.AlignmentFlag.AlignCenter)
-
-		# parameters
-		# paramLayout = QGridLayout()
-		# requires n*m matrix
-		# parameters = ["Language", "Data Type", "Input Directory", "Parameter 4"]
-		# for i in range(0,len(parameters)) : 
-		# 	for j in range(0,len(parameters[0])) : 
-		# 		paramLayout.addWidget(QLabel(parameters[i][j]+": "),i*2,j)
-		# 		paramLayout.addWidget(QLineEdit(placeholderText=parameters[i][j]), i*2+1,j)
-		# layout.addLayout(paramLayout,1,0,2,2,alignment=Qt.AlignmentFlag.AlignCenter)
+		self.outputLabel = QLabel("Current: "+self.workspaceFolder)
+		
 		# layout area, first line
-		lineLayout1 = QHBoxLayout()
-		lineLayout1.addWidget(selectFolderButton)
-		lineLayout1.addWidget(selectInputButton)
-		lineLayout1.addWidget(selectOutputButton)
-		layout.addLayout(lineLayout1)
-		lineLayout15 = QHBoxLayout()
-		lineLayout15.addWidget(QLabel("Language:"))
-		lineLayout15.addWidget(QLineEdit(placeholderText="German, English, ..."))
-		lineLayout15.addWidget(QLabel("Data Type:"))
-		lineLayout15.addWidget(QLineEdit(placeholderText="Word, Sentences, ..."))
-		layout.addLayout(lineLayout15)
+		gridLayout = QGridLayout()
+		offset = 0
+		gridLayout.addWidget(selectFolderButton,offset,0)
+		gridLayout.addWidget(self.folderLabel,offset+1,0)
+		gridLayout.addWidget(selectInputButton,offset,1)
+		gridLayout.addWidget(self.inputLabel,offset+1,1)
+		gridLayout.addWidget(selectOutputButton,offset,2)
+		gridLayout.addWidget(self.outputLabel,offset+1,2)
 
-		lineLayout2 = QHBoxLayout()
-		# functional buttons
-		loadConfigButton = MyButton("Load Config File")
+		layout.addLayout(gridLayout)
+
+		# add space
+		gridLayout.addWidget(QLabel(""))
+		
+		# blue area
+		offset += 3
+		languageLabel = QLabel("Select Target Languages:")
+		languageLabel.setStyleSheet('QLabel {background-color: '+blue+';}')
+		typeLabel = QLabel("Select Data Types:")
+		typeLabel.setStyleSheet('QLabel {background-color: '+blue+';}')
+		loadConfigButton = MyButton("Load Config File",self.loadConfig)
 		loadConfigButton.setStyleSheet('QPushButton {background-color: '+blue+';}')
+		self.configLabel = QLabel("Current: "+self.configFileName)
+
+		gridLayout.addWidget(languageLabel,offset,0)
+		gridLayout.addWidget(QLineEdit(placeholderText="German, English, ..."),offset+1,0)
+		gridLayout.addWidget(typeLabel,offset,1)
+		gridLayout.addWidget(QLineEdit(placeholderText="Word, Sentences, ..."),offset+1,1)
+		gridLayout.addWidget(loadConfigButton,offset,2)
+		gridLayout.addWidget(self.configLabel,offset+1,2)
+
+		# add space
+		gridLayout.addWidget(QLabel(""))
+
+		# yellow area 
+		offset += 3
 		acquireButton = MyButton("Acquire Data")
 		acquireButton.setStyleSheet('QPushButton {background-color: '+yellow+';}')
-		transformButton = MyButton("Transform&Clean Data")
+		cleanButton = MyButton("Clean Data")
+		cleanButton.setStyleSheet('QPushButton {background-color: '+yellow+';}')
+		transformButton = MyButton("Transform Data")
 		transformButton.setStyleSheet('QPushButton {background-color: '+yellow+';}')
+
+		gridLayout.addWidget(QLineEdit(placeholderText="Location (URLs)"),offset,0)
+		gridLayout.addWidget(QLineEdit(placeholderText="Mode of Collection"),offset+1,0)
+		gridLayout.addWidget(QLineEdit(placeholderText="Exploration Depth"),offset+2,0)
+		gridLayout.addWidget(QLineEdit(placeholderText="Error Handling"),offset+3,0)
+		gridLayout.addWidget(acquireButton,offset+4,0)
+
+		gridLayout.addWidget(QLineEdit(placeholderText="NLP-Tool 1"),offset,1)
+		gridLayout.addWidget(QLineEdit(placeholderText="NLP-Tool 2"),offset+1,1)
+		gridLayout.addWidget(QLineEdit(placeholderText="Parameter 1"),offset+2,1)
+		gridLayout.addWidget(QLineEdit(placeholderText="Parameter 2"),offset+3,1)
+		gridLayout.addWidget(cleanButton,offset+4,1)
+
+		gridLayout.addWidget(QLineEdit(placeholderText="NLP-Tool 1"),offset,2)
+		gridLayout.addWidget(QLineEdit(placeholderText="NLP-Tool 2"),offset+1,2)
+		gridLayout.addWidget(QLineEdit(placeholderText="Parameter 1"),offset+2,2)
+		gridLayout.addWidget(QLineEdit(placeholderText="Parameter 2"),offset+3,2)
+		gridLayout.addWidget(transformButton,offset+4,2)
+
+		# add space
+		gridLayout.addWidget(QLabel(""))
+		
+		# green area
+		offset += 6
 		identifyButton = MyButton("Identify Language")
 		identifyButton.setStyleSheet('QPushButton {background-color: '+green+';}')
 		alignButton = MyButton("Align Text")
@@ -99,38 +140,27 @@ class MainWindow(QMainWindow):
 		evalButton = MyButton("Evaluate Quality")
 		evalButton.setStyleSheet('QPushButton {background-color: '+green+';}')
 
-		lineLayout2.addWidget(loadConfigButton)
-		lineLayout2.addWidget(acquireButton)
-		lineLayout2.addWidget(transformButton)
-		layout.addLayout(lineLayout2)
-		lineLayout25 = QHBoxLayout()
-		lineLayout25.addWidget(identifyButton)
-		lineLayout25.addWidget(alignButton)
-		lineLayout25.addWidget(evalButton)
-		layout.addLayout(lineLayout25)
+		gridLayout.addWidget(QLineEdit(placeholderText="Select Identification Tool"),offset,0)
+		gridLayout.addWidget(QLineEdit(placeholderText="Confidence Thresholds"),offset+1,0)
+		gridLayout.addWidget(QLineEdit(placeholderText="Secondary Languages"),offset+2,0)
+		gridLayout.addWidget(QLineEdit(placeholderText="Detail Level of Output"),offset+3,0)
+		gridLayout.addWidget(identifyButton,offset+4,0)
 
-		# save to config file button
-		# saveConfigButton = MyButton("Save as .config File", self.saveConfig)
-		# layout.addWidget(saveConfigButton,3,0,1,2,alignment=Qt.AlignmentFlag.AlignCenter)
+		gridLayout.addWidget(QLineEdit(placeholderText="Alignment Method"),offset,1)
+		gridLayout.addWidget(QLineEdit(placeholderText="Pivot Language"),offset+1,1)
+		gridLayout.addWidget(QLineEdit(placeholderText="Plot Frequencies"),offset+2,1)
+		gridLayout.addWidget(QLineEdit(placeholderText="Detail Level of Output"),offset+3,1)
+		gridLayout.addWidget(alignButton,offset+4,1)
 
-		# column number of the right part
-		# rightLayout = QVBoxLayout()
+		gridLayout.addWidget(QLineEdit(placeholderText="Automatic Assessment"),offset,2)
+		gridLayout.addWidget(QLineEdit(placeholderText="Generate Potato Task"),offset+1,2)
+		gridLayout.addWidget(QLineEdit(placeholderText="Server Setup (Local and Online)"),offset+2,2)
+		gridLayout.addWidget(QLineEdit(placeholderText="Post-Process Results"),offset+3,2)
+		gridLayout.addWidget(evalButton,offset+4,2)
 
-		# # load config file
-		# loadButton = MyButton("Load .config File", self.loadConfig)
-		# rightLayout.addWidget(loadButton)
-		# # make space 
-		# rightLayout.addWidget(QLabel(""))
-		# # download files
-		# rightLayout.addWidget(MyButton("Download Files", self.download))
-		# # process files
-		# rightLayout.addWidget(MyButton("Process Files", self.process))
-		# # align files
-		# rightLayout.addWidget(MyButton("Align Files", self.align))
-
-		# layout.addLayout(rightLayout,0,2,5,1,alignment=Qt.AlignmentFlag.AlignCenter)
-
-
+		# add space
+		gridLayout.addWidget(QLabel(""))
+		
 		widget = QWidget()
 		widget.setLayout(layout)
 		self.setCentralWidget(widget)
@@ -146,18 +176,22 @@ class MainWindow(QMainWindow):
 			"Choose Workspace Directory", 
 			"${PWD}",
 			) + "/"
+		self.folderLabel.setText("Current: "+self.workspaceFolder)
+
 	def selectInputDir(self) : 
-		self.workspaceFolder = QFileDialog.getExistingDirectory(
+		self.inputDir = QFileDialog.getExistingDirectory(
 			self,
 			"Choose Input Directory", 
 			"${PWD}",
 			) + "/"
+		self.inputLabel.setText("Current: "+self.inputDir)
 	def selectOutputDir(self) : 
-		self.workspaceFolder = QFileDialog.getExistingDirectory(
+		self.outputDir = QFileDialog.getExistingDirectory(
 			self,
 			"Choose Output Directory", 
 			"${PWD}",
 			) + "/"
+		self.outputLabel.setText("Current: "+self.outputDir)
 
 	# pop an error message 
 	def popMsg(self, msg) : 
@@ -178,7 +212,8 @@ class MainWindow(QMainWindow):
 			self.workspaceFolder,
 			"All Files (*);; Python Files (*.py);; PNG Files (*.png)",
 		)
-		# TODO: load config file
+		self.configFileName = self.configFileName[0]
+		self.configLabel.setText("Current: "+self.configFileName)
 
 	# download files
 	def download(self) : 

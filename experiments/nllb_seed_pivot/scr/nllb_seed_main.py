@@ -41,7 +41,6 @@ python nllb_seed_main.py --inputPath ./../data/input/ --outputPath ./../data/aut
 python nllb_seed_main.py --inputPath ./../data/automatic/ --outputPath ./../data/evaluated/ --scriptMode evaluateTranslations --language deu vie -v
 
 
-
 """
 
 

@@ -1,3 +1,5 @@
+wheel
+matplotlib
 nltk
 beautifulsoup4
 lxml

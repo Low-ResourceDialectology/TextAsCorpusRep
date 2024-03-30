@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 
 """
 This method collects links until reaching the maximum number of links
-By default it sets the max number on 1; whoch mean it will crawl only the given url
+By default it sets the max number on 1; which means it will crawl only the given url
 """
 def collect_links(url, max_links_num):
     all_links = [url]
@@ -34,7 +34,7 @@ def get_links(url):
     return links_list
 
 """
-This method write all extracted texts from the links, which was found
+This method writes all extracted texts from the links, which were found
 """
 def write_extracted_text(urls):
     with open("output.txt", "w", encoding="utf-8") as file:
@@ -49,7 +49,7 @@ def write_extracted_text(urls):
 
 
 """
-This is the main method, alle crwaling method are called from here 
+This is the main method, all crawling methods are called from here 
 """
 def do_crawl(url, max_links_num=1):
     urls = collect_links(url, max_links_num)
@@ -67,7 +67,7 @@ def setUp_driver():
 
 
 """ 
-To run the application give your target url and the maximum number of links
+To run the application, give your target url and the maximum number of links
 for example:
 do_crawl("https://www.exmaple.com", 20)
 """

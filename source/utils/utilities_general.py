@@ -9,6 +9,7 @@
 ###############################################################################
 
 import gzip # Reading compressed files .gz
+import json
 import logging
 import os
 import re
@@ -329,10 +330,18 @@ def write_text_file_append_plus_line_lines(output_file, text_data, file_encoding
 Read text from file
 """
 def read_json_file(input_file):
-    pass
+    with open(input_file, 'r') as f:
+        data = json.load(f)
+
+        return data
 
 def write_json_file(output_file, dictionary):
-    pass
+    # Serializing json
+    json_object = json.dumps(dictionary, indent=4)
+ 
+    # Writing to sample.json
+    with open(output_file, "w") as outfile:
+        outfile.write(json_object)
 
 # ++++++++++++++++++++++++++++++++++++++ .csv
 def read_csv_file(input_file):

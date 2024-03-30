@@ -4,7 +4,7 @@
         "2001HaigKurdishNewspaper":
         {
             "Status":"ready",
-            "Notes":"notes",
+            "Notes":"Old text encoding (latin-1) intead of (UTF-8)",
             "Languages":["kmr"],
             "Access":"Manual-download from https://multicast.aspra.uni-bamberg.de/resources/kurdish/data/ccknt/ccknt.txt",
             "Platform":"URL",

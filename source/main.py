@@ -242,7 +242,7 @@ python main.py --debug --extractCleanData --languages mfe kmr vie deu eng zho uk
 # DESCRIPTION: Collect words and frequency dictionaries from extracted data
 # TODO: Repeated execution create duplicates!
 python main.py --debug --extractCleanData --executionMode count --languages mfe --specificDataset 2022DabreMorisienMT
-python main.py --debug --extractCleanData --executionMode count --languages mfe kmr vie deu eng zho ukr --specificDataset 2022DabreMorisienMT
+python main.py --debug --extractCleanData --executionMode count --languages deu eng fra jap kmr mfe ukr vie zho --specificDataset 2022DabreMorisienMT
 
 
 # ============================================

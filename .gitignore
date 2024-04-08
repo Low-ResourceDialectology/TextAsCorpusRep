@@ -8,6 +8,12 @@ data/multilingual/
 data/output/
 data_old/
 logs/
+data/flikr30k/kob/
+data/flikr30k/mfe/
+data/flikr30k/vie/
+data/flikr30k/zho/
+data/flikr30k/
+data/nllb/
 
 Additional/
 Datasets/

@@ -3,10 +3,14 @@ import json
 import io
 import csv
 
+"""
+Mapping the Potato-Annotation-Task-IDs back to the original image filenames from the Flickr30k Dataset
+"""
+
 flickr_data = {}
-aligned_file = './../data/flickr30k-aligned'
+aligned_file = './../data/Multi30k_data/Flickr30k-MTACR/flickr30k-aligned'
 info_file = './../data/flickr30k/filenames/flickr30k_1_500'
-output_file = './../data/flickr30k-adjusted'
+output_file = './../data/Multi30k_data/data/Flickr30k-MTACR/flickr30k-adjusted'
 
 def read_aligned_json(file_path):
     with open(f'{file_path}.json', 'r') as json_file:

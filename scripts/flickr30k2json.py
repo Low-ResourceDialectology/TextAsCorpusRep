@@ -28,7 +28,7 @@ def zero_pad_numbers(s):
 
 
 flickr_data = {}
-output_file = './../data/flickr30k-aligned'
+output_file = './../data/Multi30k_data/Flickr30k-MTACR/flickr30k-aligned'
 
 def read_flickr_files(flickr_data, input_file, language):
     csv_rows_list = []

@@ -14,6 +14,7 @@ data/flickr30k/vie/
 data/flickr30k/zho/
 data/flickr30k/*
 data/nllb/
+data/Multi30k_data/data/
 
 Additional/
 Datasets/

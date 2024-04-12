@@ -41,10 +41,10 @@ def get_docx_text(path):
 
 #input_t07 = './nllb/T07-kob-small_100.docx'
 #output_t07 = './nllb/T07-kob-small_100-clean.txt'
-input_t07 = './nllb/T07-kob-anchor.docx'
-output_t07 = './nllb/T07-kob-anchor-clean.txt'
-input_t07 = './nllb/T07-kob-small.docx'
-output_t07 = './nllb/T07-kob-small-clean.txt'
+input_t07 = './../data/nllb/T07-kob-anchor.docx'
+output_t07 = './../data/nllb/T07-kob-anchor-clean.txt'
+input_t07 = './../data/nllb/T07-kob-small.docx'
+output_t07 = './../data/nllb/T07-kob-small-clean.txt'
 
 text_from_docx_file = get_docx_text(input_t07)
 # Open output file for writing
@@ -85,11 +85,11 @@ def pdf2txt(input_file, output_file):
         output_file.write(output_text)
 
 # Input and output file paths
-input_t01 = './nllb/T01-mfe-small.txt'
-output_t01 = './nllb/T01-mfe-small-clean.txt'
+input_t01 = './../data/nllb/T01-mfe-small.txt'
+output_t01 = './../data/nllb/T01-mfe-small-clean.txt'
 
-input_t04 = './nllb/T04-vie-huge_622.txt'
-output_t04 = './nllb/T04-vie-huge_622-clean.txt'
+input_t04 = './../data/nllb/T04-vie-huge_622.txt'
+output_t04 = './../data/nllb/T04-vie-huge_622-clean.txt'
 
 pdf2txt(input_t01, output_t01)
 pdf2txt(input_t04, output_t04)
@@ -148,14 +148,14 @@ def json2txt(input_file, output_file, annotator_id):
     #        text_file.write(line)
 
 # Input and output file paths
-input_t08 = './nllb/T08-zho-tiny_90.jsonl'
-output_t08 = './nllb/T08-zho-tiny_90-clean.json'
+input_t08 = './../data/nllb/T08-zho-tiny_90.jsonl'
+output_t08 = './../data/nllb/T08-zho-tiny_90-clean.json'
 
-input_t09 = './nllb/T09-zho-tiny_90.jsonl'
-output_t09 = './nllb/T09-zho-tiny_90-clean.json'
+input_t09 = './../data/nllb/T09-zho-tiny_90.jsonl'
+output_t09 = './../data/nllb/T09-zho-tiny_90-clean.json'
 
-input_t10 = './nllb/T10-zho-tiny.jsonl'
-output_t10 = './nllb/T10-zho-tiny-clean.json'
+input_t10 = './../data/nllb/T10-zho-tiny.jsonl'
+output_t10 = './../data/nllb/T10-zho-tiny-clean.json'
 
 json2txt(input_t08, output_t08, "T08")
 json2txt(input_t09, output_t09, "T09")

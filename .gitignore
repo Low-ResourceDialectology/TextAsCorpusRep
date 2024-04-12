@@ -8,11 +8,11 @@ data/multilingual/
 data/output/
 data_old/
 logs/
-data/flikr30k/kob/
-data/flikr30k/mfe/
-data/flikr30k/vie/
-data/flikr30k/zho/
-data/flikr30k/
+data/flickr30k/kob/
+data/flickr30k/mfe/
+data/flickr30k/vie/
+data/flickr30k/zho/
+data/flickr30k/*
 data/nllb/
 
 Additional/

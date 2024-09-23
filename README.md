@@ -20,9 +20,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/christianschuler8989/TextAsCorpusRep">
     <img src="images/logo.png" alt="Logo" width="480" height="120">
-  </a>
 
   <h3 align="center">TextAsCorpusRep</h3>
 
@@ -36,10 +34,13 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
+<div align="center">
+    <img src="images/title-banner.png" alt="Logo" width="500" height="350">
+</div>
 
 ### Initial Approach
 
-[![Project Name Screen Shot][project-screenshot]](https://example.com)
+[![Project Name Screen Shot][project-screenshot]](https://www.isa.uni-hamburg.de/ddlitlab/data-literacy-studierendenprojekte/dritte-foerderrunde/textcorpus.html)
 
 Our project started as an idea to addresses low-resource languages, focusing on Mauritian Creole and the Kurdish dialect Kobani. We aim to collect and curate language data to support natural language processing, especially the development of robust translation systems for low-resource languages. 
 
@@ -99,31 +100,41 @@ Distributed under the Apache License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Christian Schuler - [@christians89898](https://twitter.com/christians89898) - christianschuler8989(4T)gmail.com
+Christian Schuler - [@christianschuler8989](https://github.com/christianschuler8989) & [Homepage](https://christianschuler8989.github.io/) - christianschuler8989(4T)gmail.com
 
 Deepesha Saurty - deepesha.saurty@studium.uni-hamburg.de
 
 Tramy Thi Tran - [@TranyMyy](https://github.com/TranMyy) - tramy.thi.tran@studium.uni-hamburg.de
 
-Raman Ahmed - 
+Raman Ahmed - [@RamanAhmad](https://github.com/RamanAhmad) & [Homepage](https://ramanahmad.github.io/)
 
 Anran Wang - [@AnranW](https://github.com/AnranW) - anran.wang (thesymbolforemail)tum.de
 
+
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
+* [Digital and Data Literacy in Teaching Lab](https://www.isa.uni-hamburg.de/ddlitlab.html) who funded this student's project with 10,000€.
+
 A list of helpful resources we would like to give credit to:
 
-* [Digital and Data Literacy in Teaching Lab](https://www.isa.uni-hamburg.de/ddlitlab.html)
 * [Best-README-Template](https://github.com/othneildrew/Best-README-Template) 
+* [Potato: the POrtable Text Annotation TOol](https://github.com/davidjurgens/potato#potato-the-portable-text-annotation-tool)
+* [Language Identification with Support for More Than 2000 Labels](https://github.com/cisnlp/GlotLID)
+* [NLLB as part of Fairseq](https://github.com/facebookresearch/fairseq/tree/nllb)
+* [NLLB Seed Data](https://github.com/openlanguagedata/seed)
+* [(Young et al., 2014) Flickr30k](https://paperswithcode.com/dataset/flickr30k)
+* [(Saichyshyna et al., 2023) Extension Multi30K: Multimodal Dataset for Integrated Vision and Language Research in Ukrainian](https://aclanthology.org/2023.unlp-1.7)
+* [(Xie et al., 2023) CCMB: A Large-scale Chinese Cross-modal Benchmark](https://arxiv.org/abs/2205.03860)
+* [(Elliot et al., 2017) Findings of the Second Shared Task on Multimodal Machine Translation and Multilingual Image Description](https://aclanthology.org/W17-4718/)
+
+
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->

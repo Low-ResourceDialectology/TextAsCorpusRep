@@ -106,7 +106,7 @@ Deepesha Saurty - deepesha.saurty@studium.uni-hamburg.de
 
 Tramy Thi Tran - [@TranyMyy](https://github.com/TranMyy) - tramy.thi.tran@studium.uni-hamburg.de
 
-Raman Ahmed - [@RamanAhmad](https://github.com/RamanAhmad) & [Homepage](https://ramanahmad.github.io/)
+Raman Ahmad - [@RamanAhmad](https://github.com/RamanAhmad) & [Homepage](https://ramanahmad.github.io/)
 
 Anran Wang - [@AnranW](https://github.com/AnranW) - anran.wang (thesymbolforemail)tum.de
 

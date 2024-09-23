@@ -1,0 +1,15 @@
+{
+  "total_files": 2,
+  "total_words": 149219,
+  "unique_words": 10698,
+  "files": {
+    "Vietnamese.txt": {
+      "total_words": 4940,
+      "unique_words": 844
+    },
+    "English.txt": {
+      "total_words": 144279,
+      "unique_words": 10516
+    }
+  }
+}

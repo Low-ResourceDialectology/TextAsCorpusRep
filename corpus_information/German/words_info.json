@@ -1,0 +1,11 @@
+{
+  "total_files": 1,
+  "total_words": 344855,
+  "unique_words": 25261,
+  "files": {
+    "German.txt": {
+      "total_words": 344855,
+      "unique_words": 25261
+    }
+  }
+}

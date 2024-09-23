@@ -1,0 +1,84 @@
+{
+  "total_lines": 197742,
+  "unique_sentences": 160778,
+  "sentence_lengths": [
+    6,
+    59,
+    5,
+    60,
+    6,
+    57,
+    5,
+    116,
+    6,
+    57,
+    2,
+    78
+  ],
+  "shortest_sentence": "Two skateboarders.",
+  "longest_sentence": "A man wearing a helmet, red pants with white stripes going down the sides and a white and red shirt is on a small bicycle using only his hands while his legs are up in the air, while another man wearing a light blue shirt with dark blue trim and black pants with red stripes going up the sides is standing nearby, gesturing toward the first man and holding a small figurine of one of the seven dwarves.",
+  "files": {
+    "Chinese.txt": {
+      "line_count": 186,
+      "unique_sentences": 90,
+      "sentence_length": {
+        "min": 6,
+        "max": 59,
+        "mean": 20.70967741935484,
+        "shortest_sentence": "Similar empirical testing occurs in neuroeconomics.",
+        "longest_sentence": "A good deal of twentieth-century and twenty-first-century philosophy has been devoted to the analysis of language and to the question of whether, as Wittgenstein claimed, many of our philosophical confusions derive from the vocabulary we use; literary theory has explored the rhetorical, associative, and ordering features of language; and historical linguists have studied the development of languages across time."
+      }
+    },
+    "Vietnamese.txt": {
+      "line_count": 4743,
+      "unique_sentences": 3724,
+      "sentence_length": {
+        "min": 5,
+        "max": 60,
+        "mean": 21.783681214421254,
+        "shortest_sentence": "His paternal great-grandparents were Welsh.",
+        "longest_sentence": "The originality of Ibn Khaldun was to claim that the cultural difference of another age must govern the evaluation of relevant historical material, to distinguish the principles according to which it might be possible to attempt the evaluation, and lastly, to feel the need for experience, in addition to rational principles, in order to assess a culture of the past."
+      }
+    },
+    "Mauritian.txt": {
+      "line_count": 244,
+      "unique_sentences": 156,
+      "sentence_length": {
+        "min": 6,
+        "max": 57,
+        "mean": 21.483606557377048,
+        "shortest_sentence": "The treaty permitted underground nuclear testing.",
+        "longest_sentence": "These developments, as well as the results from embryology and paleontology, were synthesized in the 1859 publication of Charles Darwin's theory of evolution by natural selection; in this Darwin placed the theory of organic evolution on a new footing, by explaining the processes by which it can occur, and providing observational evidence that it had done so."
+      }
+    },
+    "English.txt": {
+      "line_count": 186084,
+      "unique_sentences": 154590,
+      "sentence_length": {
+        "min": 2,
+        "max": 78,
+        "mean": 12.209953569355775,
+        "shortest_sentence": "Two skateboarders.",
+        "longest_sentence": "A man wearing a helmet, red pants with white stripes going down the sides and a white and red shirt is on a small bicycle using only his hands while his legs are up in the air, while another man wearing a light blue shirt with dark blue trim and black pants with red stripes going up the sides is standing nearby, gesturing toward the first man and holding a small figurine of one of the seven dwarves."
+      }
+    },
+    "Kobani.txt": {
+      "line_count": 292,
+      "unique_sentences": 244,
+      "sentence_length": {
+        "min": 6,
+        "max": 57,
+        "mean": 20.79794520547945,
+        "shortest_sentence": "Current Anthropology 43(Supplement):S5-17.Schieffelin, Bambi B. 2006.",
+        "longest_sentence": "These developments, as well as the results from embryology and paleontology, were synthesized in the 1859 publication of Charles Darwin's theory of evolution by natural selection; in this Darwin placed the theory of organic evolution on a new footing, by explaining the processes by which it can occur, and providing observational evidence that it had done so."
+      }
+    }
+  },
+  "sentence_length": {
+    "min": 2,
+    "max": 116,
+    "mean": 38.083333333333336,
+    "shortest_sentence": "Two skateboarders.",
+    "longest_sentence": "A man wearing a helmet, red pants with white stripes going down the sides and a white and red shirt is on a small bicycle using only his hands while his legs are up in the air, while another man wearing a light blue shirt with dark blue trim and black pants with red stripes going up the sides is standing nearby, gesturing toward the first man and holding a small figurine of one of the seven dwarves."
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "total_lines": 5306,
+  "unique_sentences": 5278,
+  "sentence_lengths": [
+    3,
+    34,
+    5,
+    142
+  ],
+  "shortest_sentence": "Một bể quậy.",
+  "longest_sentence": "Một nhóm kỹ thuật công nghệ nano khác bao gồm các kỹ thuật được sử dụng để chế tạo ống nano và dây nano, các kỹ thuật được sử dụng trong sản xuất bán dẫn như kỹ thuật quang học sâu tử ngoại (deep ultraviolet lithography), kỹ thuật in chùm tia điện tử (electron beam lithography), gia công chùm ion định hướng (focused ion beam machining), kỹ thuật in nano imprint (nanoimprint lithography), lắng đọng lớp nguyên tử (atomic layer deposition) và lắng đọng hơi phân tử (molecular vapor deposition), và bao gồm cả các kỹ thuật tự lắp ráp phân tử (molecular self-assembly) chẳng hạn như kỹ thuật sử dụng các copolymer khối di-block (di-block copolymers).",
+  "files": {
+    "Vietnamese.txt": {
+      "line_count": 563,
+      "unique_sentences": 556,
+      "sentence_length": {
+        "min": 3,
+        "max": 34,
+        "mean": 8.77442273534636,
+        "shortest_sentence": "Một bể quậy.",
+        "longest_sentence": "Đây là hình ảnh những người khách hàng đang đẩu xe đi khắp các quầy hàng rất nhiều mẫu mã, đa dạng và phong phú để mua những mặt hàng cần thiết cho họ."
+      }
+    },
+    "English.txt": {
+      "line_count": 4743,
+      "unique_sentences": 4722,
+      "sentence_length": {
+        "min": 5,
+        "max": 142,
+        "mean": 30.419354838709676,
+        "shortest_sentence": "Tôi tin là Ginger Rogers.",
+        "longest_sentence": "Một nhóm kỹ thuật công nghệ nano khác bao gồm các kỹ thuật được sử dụng để chế tạo ống nano và dây nano, các kỹ thuật được sử dụng trong sản xuất bán dẫn như kỹ thuật quang học sâu tử ngoại (deep ultraviolet lithography), kỹ thuật in chùm tia điện tử (electron beam lithography), gia công chùm ion định hướng (focused ion beam machining), kỹ thuật in nano imprint (nanoimprint lithography), lắng đọng lớp nguyên tử (atomic layer deposition) và lắng đọng hơi phân tử (molecular vapor deposition), và bao gồm cả các kỹ thuật tự lắp ráp phân tử (molecular self-assembly) chẳng hạn như kỹ thuật sử dụng các copolymer khối di-block (di-block copolymers)."
+      }
+    }
+  },
+  "sentence_length": {
+    "min": 3,
+    "max": 142,
+    "mean": 46,
+    "shortest_sentence": "Một bể quậy.",
+    "longest_sentence": "Một nhóm kỹ thuật công nghệ nano khác bao gồm các kỹ thuật được sử dụng để chế tạo ống nano và dây nano, các kỹ thuật được sử dụng trong sản xuất bán dẫn như kỹ thuật quang học sâu tử ngoại (deep ultraviolet lithography), kỹ thuật in chùm tia điện tử (electron beam lithography), gia công chùm ion định hướng (focused ion beam machining), kỹ thuật in nano imprint (nanoimprint lithography), lắng đọng lớp nguyên tử (atomic layer deposition) và lắng đọng hơi phân tử (molecular vapor deposition), và bao gồm cả các kỹ thuật tự lắp ráp phân tử (molecular self-assembly) chẳng hạn như kỹ thuật sử dụng các copolymer khối di-block (di-block copolymers)."
+  }
+}

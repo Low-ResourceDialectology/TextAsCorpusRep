@@ -1,0 +1,27 @@
+{
+  "total_files": 6,
+  "total_words": 2527051,
+  "unique_words": 49137,
+  "files": {
+    "Chinese.txt": {
+      "total_words": 3852,
+      "unique_words": 1023
+    },
+    "Vietnamese.txt": {
+      "total_words": 103320,
+      "unique_words": 17873
+    },
+    "Mauritian.txt": {
+      "total_words": 5242,
+      "unique_words": 1604
+    },
+    "English.txt": {
+      "total_words": 2272077,
+      "unique_words": 31109
+    },
+    "Kobani.txt": {
+      "total_words": 6073,
+      "unique_words": 2258
+    }
+  }
+}

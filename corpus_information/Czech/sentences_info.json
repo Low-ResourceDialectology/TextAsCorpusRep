@@ -1,0 +1,30 @@
+{
+  "total_lines": 31014,
+  "unique_sentences": 30980,
+  "sentence_lengths": [
+    2,
+    33
+  ],
+  "shortest_sentence": "Horolezec stoupá.",
+  "longest_sentence": "Dva muži na motorkách, jeden z nichž má stříbrnou helmu a druhý černou helmu, jedou ve městě, zatímco k jedné z motorek přichází chlapec, který má na sobě bílou košili s dlouhými rukávy.",
+  "files": {
+    "Czech.txt": {
+      "line_count": 31014,
+      "unique_sentences": 30980,
+      "sentence_length": {
+        "min": 2,
+        "max": 33,
+        "mean": 9.052556909782679,
+        "shortest_sentence": "Horolezec stoupá.",
+        "longest_sentence": "Dva muži na motorkách, jeden z nichž má stříbrnou helmu a druhý černou helmu, jedou ve městě, zatímco k jedné z motorek přichází chlapec, který má na sobě bílou košili s dlouhými rukávy."
+      }
+    }
+  },
+  "sentence_length": {
+    "min": 2,
+    "max": 33,
+    "mean": 17.5,
+    "shortest_sentence": "Horolezec stoupá.",
+    "longest_sentence": "Dva muži na motorkách, jeden z nichž má stříbrnou helmu a druhý černou helmu, jedou ve městě, zatímco k jedné z motorek přichází chlapec, který má na sobě bílou košili s dlouhými rukávy."
+  }
+}

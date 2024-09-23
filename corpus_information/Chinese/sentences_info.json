@@ -1,0 +1,56 @@
+{
+  "total_lines": 155576,
+  "unique_sentences": 154484,
+  "sentence_lengths": [
+    2,
+    20,
+    7,
+    77,
+    2,
+    90
+  ],
+  "shortest_sentence": "一个女人穿着滑冰鞋站在地上打电话。",
+  "longest_sentence": "人们在街头集会",
+  "files": {
+    "Chinese_mtacr.txt": {
+      "line_count": 326,
+      "unique_sentences": 326,
+      "sentence_length": {
+        "min": 2,
+        "max": 20,
+        "mean": 7.960122699386503,
+        "shortest_sentence": "一个女人穿着滑冰鞋站在地上打电话。",
+        "longest_sentence": "人们在街头集会"
+      }
+    },
+    "English.txt": {
+      "line_count": 186,
+      "unique_sentences": 180,
+      "sentence_length": {
+        "min": 7,
+        "max": 77,
+        "mean": 24.231182795698924,
+        "shortest_sentence": "莉莲·戴安娜·吉什（1893年10月14日-1993年2月27日），美国女演员、导演和编剧。",
+        "longest_sentence": "为了说明这一点，假设我们将整数n除以m（其中m为非零）。"
+      }
+    },
+    "Chinese.txt": {
+      "line_count": 155064,
+      "unique_sentences": 153980,
+      "sentence_length": {
+        "min": 2,
+        "max": 90,
+        "mean": 12.726648351648352,
+        "shortest_sentence": "两个肌肉发达的白人男子在外面的灌木丛附近。",
+        "longest_sentence": "一个男人在一艘停泊的蓝白相间的小船上，后面是山丘和雾。"
+      }
+    }
+  },
+  "sentence_length": {
+    "min": 2,
+    "max": 90,
+    "mean": 33,
+    "shortest_sentence": "一个女人穿着滑冰鞋站在地上打电话。",
+    "longest_sentence": "人们在街头集会"
+  }
+}

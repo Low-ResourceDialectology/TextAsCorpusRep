@@ -1,0 +1,11 @@
+{
+  "total_files": 1,
+  "total_words": 278072,
+  "unique_words": 26634,
+  "files": {
+    "Ukrainian.txt": {
+      "total_words": 278072,
+      "unique_words": 26634
+    }
+  }
+}

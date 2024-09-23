@@ -1,0 +1,43 @@
+{
+  "total_lines": 413,
+  "unique_sentences": 413,
+  "sentence_lengths": [
+    3,
+    20,
+    5,
+    75
+  ],
+  "shortest_sentence": "gelar lor baz",
+  "longest_sentence": "Lezot bann teknik Nanoteknolozik inplik tou bann teknik ki'nn servi pou prodir bann Nanotib ek bann Nanofil; tou bann teknik ki'nn servi pou prodir semi-kondikter kouma Litografi an iltraviole profon, Litografi par Feso Elektron (EBL), teknik itilizasion par Feso Ion fokalize, Litografi par nano-lanprint, depo an kous atomik ek depo an vaper molekiler, ek bann teknik Nanoteknolozik inplik ousi bann teknik oto-asanblaz molekiler kouma tou bann teknik ki'nn servi pou prodir bann Kopolimer ar Blok.",
+  "files": {
+    "Morisian.txt": {
+      "line_count": 169,
+      "unique_sentences": 169,
+      "sentence_length": {
+        "min": 3,
+        "max": 20,
+        "mean": 8.733727810650887,
+        "shortest_sentence": "gelar lor baz",
+        "longest_sentence": "Enn ti garson in gagn somey labous ouver dan cales ek bwat seki li ti pe trape la pe tombe."
+      }
+    },
+    "English.txt": {
+      "line_count": 244,
+      "unique_sentences": 244,
+      "sentence_length": {
+        "min": 5,
+        "max": 75,
+        "mean": 25.729508196721312,
+        "shortest_sentence": "Seki nou apel lar performans.",
+        "longest_sentence": "Lezot bann teknik Nanoteknolozik inplik tou bann teknik ki'nn servi pou prodir bann Nanotib ek bann Nanofil; tou bann teknik ki'nn servi pou prodir semi-kondikter kouma Litografi an iltraviole profon, Litografi par Feso Elektron (EBL), teknik itilizasion par Feso Ion fokalize, Litografi par nano-lanprint, depo an kous atomik ek depo an vaper molekiler, ek bann teknik Nanoteknolozik inplik ousi bann teknik oto-asanblaz molekiler kouma tou bann teknik ki'nn servi pou prodir bann Kopolimer ar Blok."
+      }
+    }
+  },
+  "sentence_length": {
+    "min": 3,
+    "max": 75,
+    "mean": 25.75,
+    "shortest_sentence": "gelar lor baz",
+    "longest_sentence": "Lezot bann teknik Nanoteknolozik inplik tou bann teknik ki'nn servi pou prodir bann Nanotib ek bann Nanofil; tou bann teknik ki'nn servi pou prodir semi-kondikter kouma Litografi an iltraviole profon, Litografi par Feso Elektron (EBL), teknik itilizasion par Feso Ion fokalize, Litografi par nano-lanprint, depo an kous atomik ek depo an vaper molekiler, ek bann teknik Nanoteknolozik inplik ousi bann teknik oto-asanblaz molekiler kouma tou bann teknik ki'nn servi pou prodir bann Kopolimer ar Blok."
+  }
+}

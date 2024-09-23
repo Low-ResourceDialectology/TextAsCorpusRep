@@ -1,0 +1,30 @@
+{
+  "total_lines": 31014,
+  "unique_sentences": 30979,
+  "sentence_lengths": [
+    3,
+    43
+  ],
+  "shortest_sentence": "Un chien s'ébroue",
+  "longest_sentence": "Un homme avec un masque intégral, des chaussures kaki et une chemise bleue est assis sur une valise à côté de barils de construction oranges et blancs, et il joue de l'accordéon pour cinq personnes assises dans des chaises longues vertes et blanches.",
+  "files": {
+    "French.txt": {
+      "line_count": 31014,
+      "unique_sentences": 30979,
+      "sentence_length": {
+        "min": 3,
+        "max": 43,
+        "mean": 12.480524924227769,
+        "shortest_sentence": "Un chien s'ébroue",
+        "longest_sentence": "Un homme avec un masque intégral, des chaussures kaki et une chemise bleue est assis sur une valise à côté de barils de construction oranges et blancs, et il joue de l'accordéon pour cinq personnes assises dans des chaises longues vertes et blanches."
+      }
+    }
+  },
+  "sentence_length": {
+    "min": 3,
+    "max": 43,
+    "mean": 23,
+    "shortest_sentence": "Un chien s'ébroue",
+    "longest_sentence": "Un homme avec un masque intégral, des chaussures kaki et une chemise bleue est assis sur une valise à côté de barils de construction oranges et blancs, et il joue de l'accordéon pour cinq personnes assises dans des chaises longues vertes et blanches."
+  }
+}

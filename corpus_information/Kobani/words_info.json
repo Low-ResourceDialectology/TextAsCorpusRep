@@ -1,0 +1,15 @@
+{
+  "total_files": 2,
+  "total_words": 8185,
+  "unique_words": 3234,
+  "files": {
+    "Kobani.txt": {
+      "total_words": 1798,
+      "unique_words": 595
+    },
+    "English.txt": {
+      "total_words": 6387,
+      "unique_words": 2781
+    }
+  }
+}

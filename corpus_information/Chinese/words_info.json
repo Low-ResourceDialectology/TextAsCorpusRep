@@ -1,0 +1,19 @@
+{
+  "total_files": 3,
+  "total_words": 1980547,
+  "unique_words": 29186,
+  "files": {
+    "Chinese_mtacr.txt": {
+      "total_words": 2595,
+      "unique_words": 782
+    },
+    "English.txt": {
+      "total_words": 4507,
+      "unique_words": 1192
+    },
+    "Chinese.txt": {
+      "total_words": 1973445,
+      "unique_words": 28714
+    }
+  }
+}

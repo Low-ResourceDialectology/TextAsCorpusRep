@@ -1,0 +1,11 @@
+{
+  "total_files": 1,
+  "total_words": 280756,
+  "unique_words": 29880,
+  "files": {
+    "Czech.txt": {
+      "total_words": 280756,
+      "unique_words": 29880
+    }
+  }
+}

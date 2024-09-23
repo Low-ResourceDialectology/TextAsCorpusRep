@@ -1,0 +1,30 @@
+{
+  "total_lines": 31013,
+  "unique_sentences": 30988,
+  "sentence_lengths": [
+    1,
+    39
+  ],
+  "shortest_sentence": "@@",
+  "longest_sentence": "Drei junge Erwachsenen sitzen herum, wobei eine junge Frau so tut, als ob sie einem der jungen Männer ins Gesicht tritt und dabei lacht, und der junge Mann hinter sieht aus, als ob er gerade mitten im Satz ist.",
+  "files": {
+    "German.txt": {
+      "line_count": 31013,
+      "unique_sentences": 30988,
+      "sentence_length": {
+        "min": 1,
+        "max": 39,
+        "mean": 11.119691742172638,
+        "shortest_sentence": "@@",
+        "longest_sentence": "Drei junge Erwachsenen sitzen herum, wobei eine junge Frau so tut, als ob sie einem der jungen Männer ins Gesicht tritt und dabei lacht, und der junge Mann hinter sieht aus, als ob er gerade mitten im Satz ist."
+      }
+    }
+  },
+  "sentence_length": {
+    "min": 1,
+    "max": 39,
+    "mean": 20,
+    "shortest_sentence": "@@",
+    "longest_sentence": "Drei junge Erwachsenen sitzen herum, wobei eine junge Frau so tut, als ob sie einem der jungen Männer ins Gesicht tritt und dabei lacht, und der junge Mann hinter sieht aus, als ob er gerade mitten im Satz ist."
+  }
+}

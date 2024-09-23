@@ -1,0 +1,11 @@
+{
+  "total_files": 1,
+  "total_words": 387071,
+  "unique_words": 17241,
+  "files": {
+    "French.txt": {
+      "total_words": 387071,
+      "unique_words": 17241
+    }
+  }
+}

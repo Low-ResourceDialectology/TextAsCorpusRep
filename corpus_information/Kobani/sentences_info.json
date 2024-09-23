@@ -1,0 +1,43 @@
+{
+  "total_lines": 485,
+  "unique_sentences": 485,
+  "sentence_lengths": [
+    2,
+    26,
+    5,
+    70
+  ],
+  "shortest_sentence": "Kurik dilîzê.",
+  "longest_sentence": "Her çend ji hêlê têgînî va dişibin mîkroskopa konfokal a şopandinê a ku di sala 1961'an da ji hêlê Marvin Minsky va hatî pêşva xistin û mîkroskopa akustîk a şopandinê (SAM) ku di salên 1970'an da ji hêlê Calvin Quate û hevkarên wî va hatî pêşvaxistin, mîkroskopên eezmûnkirinê ê nûtir xwedan rezîlîya pir bilindtir in, ji ber ku ew ji hêlê dirêjahîya pêlê va ne sînorkirî ne. deng an ronahî.",
+  "files": {
+    "Kobani.txt": {
+      "line_count": 193,
+      "unique_sentences": 193,
+      "sentence_length": {
+        "min": 2,
+        "max": 26,
+        "mean": 9.316062176165802,
+        "shortest_sentence": "Kurik dilîzê.",
+        "longest_sentence": "Qîzkek û mêrekî li baxçakî ne, li ber qîzikê hespek hê û li paş merik jî yek hê. Qîzik û hespî xwe li ber êr in."
+      }
+    },
+    "English.txt": {
+      "line_count": 292,
+      "unique_sentences": 292,
+      "sentence_length": {
+        "min": 5,
+        "max": 70,
+        "mean": 21.873287671232877,
+        "shortest_sentence": "Carina sêgoşeyê holîkîn têne bikaranîn.",
+        "longest_sentence": "Her çend ji hêlê têgînî va dişibin mîkroskopa konfokal a şopandinê a ku di sala 1961'an da ji hêlê Marvin Minsky va hatî pêşva xistin û mîkroskopa akustîk a şopandinê (SAM) ku di salên 1970'an da ji hêlê Calvin Quate û hevkarên wî va hatî pêşvaxistin, mîkroskopên eezmûnkirinê ê nûtir xwedan rezîlîya pir bilindtir in, ji ber ku ew ji hêlê dirêjahîya pêlê va ne sînorkirî ne. deng an ronahî."
+      }
+    }
+  },
+  "sentence_length": {
+    "min": 2,
+    "max": 70,
+    "mean": 25.75,
+    "shortest_sentence": "Kurik dilîzê.",
+    "longest_sentence": "Her çend ji hêlê têgînî va dişibin mîkroskopa konfokal a şopandinê a ku di sala 1961'an da ji hêlê Marvin Minsky va hatî pêşva xistin û mîkroskopa akustîk a şopandinê (SAM) ku di salên 1970'an da ji hêlê Calvin Quate û hevkarên wî va hatî pêşvaxistin, mîkroskopên eezmûnkirinê ê nûtir xwedan rezîlîya pir bilindtir in, ji ber ku ew ji hêlê dirêjahîya pêlê va ne sînorkirî ne. deng an ronahî."
+  }
+}

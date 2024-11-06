@@ -34,15 +34,11 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<div align="center">
-    <img src="images/title-banner.png" alt="Logo" width="500" height="350">
-</div>
-
-### Initial Approach
-
-[![Project Name Screen Shot][project-screenshot]](https://www.isa.uni-hamburg.de/ddlitlab/data-literacy-studierendenprojekte/dritte-foerderrunde/textcorpus.html)
-
 Our project started as an idea to addresses low-resource languages, focusing on Mauritian Creole and the Kurdish dialect Kobani. We aim to collect and curate language data to support natural language processing, especially the development of robust translation systems for low-resource languages. 
+
+<div align="center">
+    <a href="https://www.isa.uni-hamburg.de/ddlitlab/data-literacy-studierendenprojekte/dritte-foerderrunde/textcorpus.html"><img src="images/title-banner.png" alt="Logo" width="500" height="350"></a>
+</div>
 
 Guiding questions are: 
 * (Q1) How to create comprehensive, high-quality language datasets from diverse data sources
@@ -51,6 +47,16 @@ of varying quality?
 annotations considering variations and dialectal nuances? 
 
 The project targets native speakers, language experts, and language technology practitioners. We follow a data-driven approach, including data acquisition, evaluation, and risk mitigation. Our project can contribute to UN's sustainability goals of Quality Education and Reduced Inequalities by preserving languages, promoting inclusivity, and fostering data literacy.
+
+
+### Initial Approach
+
+Starting with an ambitious plan made of four phases (see figure below), we sometimes felt like we were only scratching the surface during our one semester long student's project.
+ 
+[![Project Name Screen Shot][project-phases]]()
+
+Nonetheless, we got to learn a lot working on this project and believe to have built a strong foundation for future work to expand on with new translations and annotations.
+
 
 
 
@@ -108,7 +114,7 @@ Tramy Thi Tran - [@TranyMyy](https://github.com/TranMyy) - tramy.thi.tran@studiu
 
 Raman Ahmad - [@RamanAhmad](https://github.com/RamanAhmad) & [Homepage](https://ramanahmad.github.io/)
 
-Anran Wang - [@AnranW](https://github.com/AnranW) - anran.wang (thesymbolforemail)tum.de
+Ānrán Wáng - [@AnranW](https://github.com/AnranW) - anran.wang (thesymbolforemail)tum.de
 
 
 
@@ -150,7 +156,8 @@ A list of helpful resources we would like to give credit to:
 [license-url]: https://github.com/christianschuler8989/TextAsCorpusRep/blob/main/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/christian-schuler-59090a177/
-[project-screenshot]: images/screenshot2.png
+[project-screenshot]: images/title-banner.png
+[project-phases]: images/screenshot2.png
 
 
 
